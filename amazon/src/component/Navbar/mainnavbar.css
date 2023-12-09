@@ -5,7 +5,15 @@
 .amazone-img {
   height: 69px;
 }
-.delivery-add {
+
+.amazone-search:hover {
+  border: 3px solid #febd69;
 }
-.update-location {
+#demo-customized-button:hover {
+  background-color: #a3a0a0;
+}
+
+.Account-list:hover {
+  margin-top: 10px;
+  border: 2px solid white;
 }

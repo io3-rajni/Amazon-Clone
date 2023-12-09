@@ -19,8 +19,9 @@ import Navlogo from "../../assets/ama.png";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 
 import "./mainnavbar.css";
-import DropdownButton from "./DropdownButton";
 import { TextField } from "@mui/material";
+import DropdownButton from "./DropdownButton";
+import AccountList from "./AccountList";
 const Search = styled("div")(({ theme }) => ({
   // position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -158,7 +159,7 @@ const MainNavbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }} class="main-nav">
-      <AppBar position="static">
+      <AppBar position="static" sx={{ background: "#000" }}>
         <Toolbar>
           {/* <IconButton
             size="large"
@@ -207,30 +208,36 @@ const MainNavbar = () => {
           <Typography
             component="div"
             background="#fff"
+            border="2px solid orange"
+            height="44px"
             sx={{
               border: "1px solid black",
               background: "#fff",
               marginLeft: "22px",
-              width: "42%",
-              border: "none",
+              width: "47%",
+              borderRadius: "6px",
             }}
             display="flex"
+            className="amazone-search"
           >
             <DropdownButton />
-            <Typography variant="h6" component="div">
-              <TextField placeholder="search here" sx={{ width: "29rem" }} />
-              <SearchIcon />
-              {/* <Search>
-                <SearchIconWrapper>
-                  <StyledInputBase
-                    placeholder="Search Amazon.in"
-                    inputProps={{ "aria-label": "search" }}
-                  />
-                  <SearchIcon />
-                </SearchIconWrapper>
-              </Search> */}
+            <Typography variant="h6" component="div" display="flex">
+              <TextField placeholder="search here" sx={{ width: "34.3rem" }} />
+              <Typography
+                sx={{
+                  color: "#000",
+                  background: "orange",
+                  padding: "9px 0px 2px 6px",
+                  // borderRadius: "0px,6px,6px,0px important",
+                }}
+                borderRadius="0px, 6px,6px,0px"
+                component="div"
+              >
+                <SearchIcon />
+              </Typography>
             </Typography>
           </Typography>
+          <AccountList />
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton

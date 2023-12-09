@@ -3,11 +3,8 @@ import { styled, alpha } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-// import EditIcon from "@mui/icons-material/Edit";
 import Divider from "@mui/material/Divider";
-// import ArchiveIcon from "@mui/icons-material/Archive";
-// import FileCopyIcon from "@mui/icons-material/FileCopy";
-// import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import Typography from "@mui/material/Typography";
 import "./mainnavbar.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const StyledMenu = styled((props) => (
@@ -53,7 +50,7 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-const DropdownButton = () => {
+const AccountList = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -66,7 +63,7 @@ const DropdownButton = () => {
   return (
     <>
       <Button
-        id="demo-customized-button"
+        id="demo-customized-button2"
         aria-controls={open ? "demo-customized-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
@@ -74,15 +71,29 @@ const DropdownButton = () => {
         disableElevation
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
-        sx={{ background: "#E6E6E6", border: "none", color: "grey" }}
-        className="Dropdown"
+        sx={{ border: "none", color: "white", background: "transparent" }}
+        className="Account-list"
       >
-        Options
+        <Typography
+          variant="h6"
+          component="span"
+          sx={{
+            display: {
+              xs: "none",
+              sm: "block",
+              fontSize: "13px",
+              fontWeight: "900",
+            },
+          }}
+          className="update-location"
+        >
+          Updated Location
+        </Typography>
       </Button>
       <StyledMenu
         id="demo-customized-menu"
         MenuListProps={{
-          "aria-labelledby": "demo-customized-button",
+          "aria-labelledby": "demo-customized-button2",
         }}
         anchorEl={anchorEl}
         open={open}
@@ -110,4 +121,4 @@ const DropdownButton = () => {
   );
 };
 
-export default DropdownButton;
+export default AccountList;
