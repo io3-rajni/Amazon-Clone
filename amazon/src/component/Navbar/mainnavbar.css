@@ -16,4 +16,5 @@
 .Account-list:hover {
   margin-top: 10px;
   border: 2px solid white;
+  background-color: #fff;
 }
