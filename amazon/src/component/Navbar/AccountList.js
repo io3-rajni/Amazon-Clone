@@ -25,22 +25,22 @@ const StyledMenu = styled((props) => (
     borderRadius: 6,
     marginTop: theme.spacing(1),
     minWidth: 180,
-    color:
-      theme.palette.mode === "light"
-        ? "rgb(55, 65, 81)"
-        : theme.palette.grey[300],
-    boxShadow:
-      "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
-    "& .MuiMenu-list": {
-      padding: "4px 0",
-    },
+    // color:
+    //   theme.palette.mode === "light"
+    //     ? "rgb(55, 65, 81)"
+    // : theme.palette.grey[300],
+    // boxShadow:
+    //   "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
+    // "& .MuiMenu-list": {
+    //   padding: "4px 0",
+    // },
     "& .MuiMenuItem-root": {
-      "& .MuiSvgIcon-root": {
-        fontSize: 18,
-        color: theme.palette.text.secondary,
-        marginRight: theme.spacing(1.5),
-      },
-      "&:active": {
+      //   "& .MuiSvgIcon-root": {
+      //     fontSize: 18,
+      //     color: theme.palette.text.secondary,
+      //     marginRight: theme.spacing(1.5),
+      //   },
+      "&:focus": {
         backgroundColor: alpha(
           theme.palette.primary.main,
           theme.palette.action.selectedOpacity
@@ -74,20 +74,30 @@ const AccountList = () => {
         sx={{ border: "none", color: "white", background: "transparent" }}
         className="Account-list"
       >
-        <Typography
-          variant="h6"
-          component="span"
-          sx={{
-            display: {
-              xs: "none",
-              sm: "block",
-              fontSize: "13px",
-              fontWeight: "900",
-            },
-          }}
-          className="update-location"
-        >
-          Updated Location
+        <Typography component="div">
+          <Typography
+            variant="h6"
+            component="span"
+            sx={{ display: { xs: "none", sm: "block", fontSize: "13px" } }}
+            className="delivery-add"
+          >
+            Hello,sign in
+          </Typography>
+          <Typography
+            variant="h6"
+            component="span"
+            sx={{
+              display: {
+                xs: "none",
+                sm: "block",
+                fontSize: "13px",
+                fontWeight: "900",
+              },
+            }}
+            className="update-location"
+          >
+            Account & List
+          </Typography>
         </Typography>
       </Button>
       <StyledMenu
