@@ -19,15 +19,16 @@ import Navlogo from "../../assets/ama.png";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 
 import "./mainnavbar.css";
-
+import DropdownButton from "./DropdownButton";
+import { TextField } from "@mui/material";
 const Search = styled("div")(({ theme }) => ({
-  position: "relative",
+  // position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: theme.spacing(2),
+  // backgroundColor: alpha(theme.palette.common.white, 0.15),
+  // "&:hover": {
+  //   backgroundColor: alpha(theme.palette.common.white, 0.25),
+  // },
+  // marginRight: theme.spacing(2),
   marginLeft: 0,
   width: "100%",
   [theme.breakpoints.up("sm")]: {
@@ -157,17 +158,17 @@ const MainNavbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }} class="main-nav">
-      <AppBar position="static" style={{ background: "black" }}>
+      <AppBar position="static">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            {/* <MenuIcon /> */}
-          </IconButton>
+            sx={{ mr: 2, background: "#fff" }}
+          > */}
+          {/* <MenuIcon /> */}
+          {/* </IconButton> */}
           <Typography
             variant="h6"
             noWrap
@@ -176,7 +177,6 @@ const MainNavbar = () => {
           >
             <img src={Navlogo} alt="amazon logo" class="amazone-img" />
           </Typography>
-
           <FmdGoodOutlinedIcon sx={{ marginTop: "11px" }} />
           <Typography>
             {/* <FmdGoodOutlinedIcon /> */}
@@ -204,15 +204,33 @@ const MainNavbar = () => {
               Updated Location
             </Typography>
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
+          <Typography
+            component="div"
+            background="#fff"
+            sx={{
+              border: "1px solid black",
+              background: "#fff",
+              marginLeft: "22px",
+              width: "42%",
+              border: "none",
+            }}
+            display="flex"
+          >
+            <DropdownButton />
+            <Typography variant="h6" component="div">
+              <TextField placeholder="search here" sx={{ width: "29rem" }} />
               <SearchIcon />
-            </SearchIconWrapper>
-          </Search>
+              {/* <Search>
+                <SearchIconWrapper>
+                  <StyledInputBase
+                    placeholder="Search Amazon.in"
+                    inputProps={{ "aria-label": "search" }}
+                  />
+                  <SearchIcon />
+                </SearchIconWrapper>
+              </Search> */}
+            </Typography>
+          </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
@@ -245,7 +263,7 @@ const MainNavbar = () => {
               <AccountCircle />
             </IconButton>
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="show more"
@@ -256,7 +274,7 @@ const MainNavbar = () => {
             >
               <MoreIcon />
             </IconButton>
-          </Box>
+          </Box> */}
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
