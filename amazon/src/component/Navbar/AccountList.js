@@ -71,7 +71,12 @@ const AccountList = () => {
         disableElevation
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
-        sx={{ border: "none", color: "white", background: "transparent" }}
+        sx={{
+          border: "none",
+          color: "white",
+          background: "transparent",
+          textTransform: "capitalize",
+        }}
         className="Account-list"
       >
         <Typography component="div">
@@ -79,7 +84,7 @@ const AccountList = () => {
             variant="h6"
             component="span"
             sx={{ display: { xs: "none", sm: "block", fontSize: "13px" } }}
-            className="delivery-add"
+            // className="delivery-add"
           >
             Hello,sign in
           </Typography>

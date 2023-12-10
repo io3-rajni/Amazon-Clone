@@ -17,7 +17,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import Navlogo from "../../assets/ama.png";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
-
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import "./mainnavbar.css";
 import { TextField } from "@mui/material";
 import DropdownButton from "./DropdownButton";
@@ -178,33 +178,43 @@ const MainNavbar = () => {
           >
             <img src={Navlogo} alt="amazon logo" class="amazone-img" />
           </Typography>
-          <FmdGoodOutlinedIcon sx={{ marginTop: "11px" }} />
           <Typography>
-            {/* <FmdGoodOutlinedIcon /> */}
-            <Typography
-              variant="h6"
-              component="span"
-              sx={{ display: { xs: "none", sm: "block", fontSize: "13px" } }}
-              className="delivery-add"
-            >
-              Delivering to Ludhiana 141016
-            </Typography>
-            <Typography
-              variant="h6"
-              component="span"
-              sx={{
-                display: {
-                  xs: "none",
-                  sm: "block",
-                  fontSize: "13px",
-                  fontWeight: "900",
-                },
-              }}
-              className="update-location"
-            >
-              Updated Location
+            <Typography className="deliveryAndupdate">
+              {/* <FmdGoodOutlinedIcon /> */}
+              <Typography
+                variant="h6"
+                component="span"
+                sx={{ display: { xs: "none", sm: "block", fontSize: "13px" } }}
+                className="delivery-add"
+              >
+                Delivering to Ludhiana 141016
+              </Typography>
+              <Typography
+                component="div"
+                sx={{ display: "flex", marginTop: "8px" }}
+              >
+                <Typography component="div">
+                  <FmdGoodOutlinedIcon />
+                </Typography>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    display: {
+                      xs: "none",
+                      sm: "block",
+                      fontSize: "13px",
+                      fontWeight: "900",
+                    },
+                  }}
+                  className="update-location"
+                >
+                  Updated Location
+                </Typography>
+              </Typography>
             </Typography>
           </Typography>
+
           <Typography
             component="div"
             background="#fff"
@@ -214,7 +224,7 @@ const MainNavbar = () => {
               border: "1px solid black",
               background: "#fff",
               marginLeft: "22px",
-              width: "47%",
+              width: "46%",
               borderRadius: "6px",
             }}
             display="flex"
@@ -228,48 +238,50 @@ const MainNavbar = () => {
                   color: "#000",
                   background: "orange",
                   padding: "9px 0px 2px 6px",
-                  // borderRadius: "0px,6px,6px,0px important",
                 }}
-                borderRadius="0px, 6px,6px,0px"
+                borderRadius="0px 6px 6px 0px"
                 component="div"
               >
                 <SearchIcon />
               </Typography>
             </Typography>
           </Typography>
-          <AccountList />
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
+          <Typography
+            sx={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              width: " 31%",
+            }}
+          >
+            <AccountList />
+            <Box
+              sx={{
+                marginTop: "6px",
+                width: "5rem",
+                // border: "1px solid white",
+              }}
+              className="returnOrder"
             >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
+              <Typography sx={{ fontSize: "13px" }}>Returns</Typography>
+              <Typography sx={{ fontWeight: "700" }}>& Order</Typography>
+            </Box>
+            <Box
+              sx={{
+                display: {
+                  xs: "none",
+                  md: "flex",
+
+                  marginTop: "6px",
+                },
+              }}
+              className="cartIcon"
             >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
+              <ShoppingCartOutlinedIcon sx={{ fontSize: "36px" }} />
+              <Typography sx={{ fontSize: "20px", fontWeight: "700" }}>
+                Cart
+              </Typography>
+            </Box>
+          </Typography>
           {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"

@@ -71,10 +71,15 @@ const DropdownButton = () => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         variant="contained"
-        disableElevation
+        // disableElevation
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
-        sx={{ background: "#E6E6E6", border: "none", color: "grey" }}
+        sx={{
+          background: "#E6E6E6",
+          border: "none",
+          color: "grey",
+          textTransform: "capitalize",
+        }}
         className="Dropdown"
       >
         Options

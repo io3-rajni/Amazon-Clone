@@ -5,16 +5,33 @@
 .amazone-img {
   height: 69px;
 }
-
+.amazone-img:hover {
+  border: 2px solid white;
+}
 .amazone-search:hover {
   border: 3px solid #febd69;
 }
+.deliveryAndupdate:hover {
+  border: 2px solid white;
+}
+
+#demo-customized-button2:hover {
+  background-color: transparent;
+  /* text-transform: capitalize; */
+}
 #demo-customized-button:hover {
   background-color: #a3a0a0;
+  text-transform: capitalize;
 }
 
 .Account-list:hover {
   margin-top: 10px;
   border: 2px solid white;
   background-color: #fff;
+}
+.returnOrder:hover {
+  border: 2px solid white;
+}
+.cartIcon:hover {
+  border: 2px solid white;
 }
