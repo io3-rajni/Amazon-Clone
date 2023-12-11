@@ -232,7 +232,10 @@ const MainNavbar = () => {
           >
             <DropdownButton />
             <Typography variant="h6" component="div" display="flex">
-              <TextField placeholder="search here" sx={{ width: "34.3rem" }} />
+              <TextField
+                placeholder="search here"
+                sx={{ width: "34.3rem", height: "1rem" }}
+              />
               <Typography
                 sx={{
                   color: "#000",

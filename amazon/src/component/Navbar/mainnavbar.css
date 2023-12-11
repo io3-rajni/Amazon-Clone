@@ -1,5 +1,5 @@
 .main-nav {
-  height: 64px;
+  /* height: 64px; */
   /* background-color: black; */
 }
 .amazone-img {
@@ -25,13 +25,18 @@
 }
 
 .Account-list:hover {
-  margin-top: 10px;
+  margin-top: 0px;
   border: 2px solid white;
   background-color: #fff;
 }
+
 .returnOrder:hover {
+  margin-top: 0px;
+
   border: 2px solid white;
 }
 .cartIcon:hover {
+  margin-top: 0px;
+
   border: 2px solid white;
 }
