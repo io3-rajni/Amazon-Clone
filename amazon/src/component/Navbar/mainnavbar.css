@@ -43,3 +43,12 @@
 .tooltips {
   text-transform: capitalize;
 }
+.tooltips:hover {
+  border: 2px solid white;
+}
+.services:hover {
+  border: 2px solid white;
+}
+.shoppingEasyLine:hover {
+  border: 2px solid white;
+}
