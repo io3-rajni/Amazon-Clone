@@ -48,7 +48,13 @@
 }
 .services:hover {
   border: 2px solid white;
+  line-height: 0;
+  letter-spacing: 0;
 }
 .shoppingEasyLine:hover {
   border: 2px solid white;
+}
+.menuIcon:hover {
+  border: 2px solid white;
+  border-radius: 0;
 }
