@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
@@ -12,80 +12,70 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 
 const SideBar = () => {
-  const [state, setState] = React.useState({
-    left: false,
-  });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-    console.log("event", event.type);
-
-    setState({ ...state, [anchor]: open });
+  const [openSideDrawer, setOpenSideDrawer] = useState(false);
+  // const [textClose, setTextClose] = useState();
+  const handleOpenSideDrawer = () => {
+    setOpenSideDrawer(true);
   };
-  const list = (anchor) => (
-    <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-              {console.log("text1", text)}
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-              {console.log("Text", text)}
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      {/* console.log() */}
-    </Box>
-  );
+
+  const handleClose = () => {
+    setOpenSideDrawer(false);
+  };
+
+  const list = (anchor) => {
+    return (
+      <Box
+        onClick={handleClose}
+        sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+        role="presentation"
+
+        //   onKeyDown={toggleDrawer(anchor, false)}
+      >
+        <List>
+          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+                {console.log("text1", text)}
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {["All mail", "Trash", "Spam"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+                {console.log("Text", text)}
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+    );
+  };
 
   return (
     <>
-      {["left", "right", "top", "bottom"].map((anchor) => {
-        console.log("rajni", anchor);
-
-        return (
-          <React.Fragment key={anchor}>
-            <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-            <SwipeableDrawer
-              anchor={anchor}
-              open={state[anchor]}
-              onClose={toggleDrawer(anchor, false)}
-              onOpen={toggleDrawer(anchor, true)}
-              // {console.log("rajni",text)}
-            >
-              {list(anchor)}
-            </SwipeableDrawer>
-          </React.Fragment>
-        );
-      })}
+      <React.Fragment>
+        {/* <Button onClick={printName}>Button</Button> */}
+        <Button onClick={handleOpenSideDrawer}>LEFT</Button>
+        <SwipeableDrawer
+          anchor="left"
+          open={openSideDrawer}
+          onClose={handleClose}
+          onOpen={handleOpenSideDrawer}
+        >
+          {list("Left")}
+        </SwipeableDrawer>
+      </React.Fragment>
     </>
   );
 };
