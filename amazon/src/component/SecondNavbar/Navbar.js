@@ -10,9 +10,15 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "../Navbar/mainnavbar.css";
 import { NavlinkData } from "../DataConfig";
 import shoppingEsay from "../../assets/shopping esay.jpg";
+import SideBar from "../SideDrawer/SideBar";
 const preventDefault = (event) => event.preventDefault();
 
 const Navbar = () => {
+  const [openSideBar, setOpenSideBar] = React.useState(false);
+  const handleAll = () => {
+    setOpenSideBar(true);
+    console.log("rajni maurya");
+  };
   return (
     <>
       <Box
@@ -34,6 +40,7 @@ const Navbar = () => {
         <IconButton sx={{ ml: 1, color: "#fff", p: 0 }} className="menuIcon">
           <MenuIcon />
           <Typography
+            onClick={handleAll}
             component="span"
             sx={{ p: 1, lineHeight: 1, fontSize: "13px" }}
           >
@@ -89,6 +96,7 @@ const Navbar = () => {
           className="shoppingEasyLine"
         />
       </Box>
+      <SideBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
     </>
   );
 };

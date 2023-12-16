@@ -61,3 +61,106 @@ export const NavlinkData = [
     title: "Gift Ideas",
   },
 ];
+export const SideBarTrendingData = [
+  {
+    id: 1,
+    title: "Best Offers",
+  },
+  {
+    id: 2,
+    title: "New Release",
+  },
+  {
+    id: 3,
+    title: "Movers & Shakers",
+  },
+];
+export const DigitalContentDevices = [
+  {
+    id: 1,
+    title: "Echo & Alex",
+  },
+  {
+    id: 2,
+    title: "Fire TV",
+  },
+  {
+    id: 3,
+    title: "Kindle E-Reader & e-Books",
+  },
+  {
+    id: 4,
+    title: "Audible Audiobooks",
+  },
+  {
+    id: 5,
+    title: "Amazon Prime video",
+  },
+  {
+    id: 6,
+    title: "Amazon Prime Music",
+  },
+];
+export const ShopByCategory = [
+  {
+    id: 1,
+    title: "Mobiles & Computer",
+  },
+  {
+    id: 2,
+    title: "TV,Appliances,Electronic",
+  },
+  {
+    id: 3,
+    title: "Men's Fashion",
+  },
+  {
+    id: 4,
+    title: "Women's Fashion",
+  },
+  {
+    id: 5,
+    title: "Show All",
+  },
+];
+export const ProgramFeatures = [
+  {
+    id: 1,
+    title: "Amazon Pay",
+  },
+  {
+    id: 2,
+    title: "Gift Card & Mobile Recharge",
+  },
+  {
+    id: 3,
+    title: "Amazon Launchpad",
+  },
+  {
+    id: 4,
+    title: "Women's Fashion",
+  },
+  {
+    id: 5,
+    title: "Handloom & Handicraft",
+  },
+  {
+    id: 6,
+    title: "See All",
+  },
+];
+
+export const helpSetting = [
+  {
+    id: 1,
+    title: "Your Account",
+  },
+  {
+    id: 2,
+    title: "Customer And Service",
+  },
+  {
+    id: 3,
+    title: "Sign in",
+  },
+];
