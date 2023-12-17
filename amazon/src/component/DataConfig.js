@@ -105,22 +105,70 @@ export const ShopByCategory = [
   {
     id: 1,
     title: "Mobiles & Computer",
+    btn: false,
   },
   {
     id: 2,
     title: "TV,Appliances,Electronic",
+    btn: false,
   },
   {
     id: 3,
     title: "Men's Fashion",
+    btn: false,
   },
   {
     id: 4,
     title: "Women's Fashion",
+    btn: false,
+  },
+  {
+    id: 1,
+    title: "Show All",
+    btn: true,
+  },
+];
+
+export const Otherdata = [
+  {
+    id: 2,
+    title: "Home,Kitchen,Pets",
+    btn: false,
+  },
+  {
+    id: 3,
+    title: "Beauty,Health,Grocery",
+    btn: false,
+  },
+  {
+    id: 4,
+    title: "Sports,Fitness,Bags,Luggage",
+    btn: false,
   },
   {
     id: 5,
+    title: "Toys,Baby Products,Kid's Fashion",
+    btn: false,
+  },
+  {
+    id: 6,
+    title: "Car,Moterbile,Industrial",
+    btn: false,
+  },
+  {
+    id: 7,
+    title: "Books",
+    btn: false,
+  },
+  {
+    id: 7,
+    title: "Movies,Music,& Video Games",
+    btn: false,
+  },
+  {
+    id: 1,
     title: "Show All",
+    btn: true,
   },
 ];
 export const ProgramFeatures = [

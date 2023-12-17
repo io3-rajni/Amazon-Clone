@@ -8,7 +8,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import {
   SideBarTrendingData,
@@ -18,6 +17,7 @@ import {
   helpSetting,
 } from "../DataConfig";
 import { Typography } from "@mui/material";
+import SideBarDopdown from "./SideBarDopdown";
 const SideBar = (props) => {
   const { openSideBar, setOpenSideBar } = props;
   // console.log("opensideBar", openSideBar);
@@ -44,7 +44,7 @@ const SideBar = (props) => {
     return (
       <Box
         onClick={handleClose}
-        sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 350 }}
+        sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 320 }}
         role="presentation"
 
         //   onKeyDown={toggleDrawer(anchor, false)}
@@ -72,7 +72,7 @@ const SideBar = (props) => {
           {DigitalContentDevices.map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon></ListItemIcon>
+                <ListItemIcon />
                 <ListItemText primary={text?.title} />
                 <MailIcon />
                 {console.log("Text", text)}
