@@ -122,79 +122,82 @@ export const ShopByCategory = [
     title: "Women's Fashion",
     btn: false,
   },
-  {
-    id: 1,
-    title: "Show All",
-    btn: true,
-  },
 ];
 
-export const Otherdata = [
+export const ShopCategoryMoreData = [
   {
     id: 2,
     title: "Home,Kitchen,Pets",
-    btn: false,
   },
   {
     id: 3,
     title: "Beauty,Health,Grocery",
-    btn: false,
   },
   {
     id: 4,
     title: "Sports,Fitness,Bags,Luggage",
-    btn: false,
   },
   {
     id: 5,
     title: "Toys,Baby Products,Kid's Fashion",
-    btn: false,
   },
   {
     id: 6,
     title: "Car,Moterbile,Industrial",
-    btn: false,
   },
   {
     id: 7,
     title: "Books",
-    btn: false,
   },
   {
     id: 7,
     title: "Movies,Music,& Video Games",
-    btn: false,
-  },
-  {
-    id: 1,
-    title: "Show All",
-    btn: true,
   },
 ];
 export const ProgramFeatures = [
   {
     id: 1,
     title: "Amazon Pay",
+    btn: false,
   },
   {
     id: 2,
     title: "Gift Card & Mobile Recharge",
+    btn: true,
   },
   {
     id: 3,
     title: "Amazon Launchpad",
+    btn: false,
   },
   {
     id: 4,
     title: "Women's Fashion",
+    btn: false,
   },
   {
     id: 5,
     title: "Handloom & Handicraft",
+    btn: false,
   },
   {
     id: 6,
     title: "See All",
+    btn: false,
+  },
+];
+export const ProgramFeaturesMoreData = [
+  {
+    id: 1,
+    title: "Flight Tickets",
+  },
+  {
+    id: 1,
+    title: "Buy more and Save more",
+  },
+  {
+    id: 1,
+    title: "Clearance store",
   },
 ];
 

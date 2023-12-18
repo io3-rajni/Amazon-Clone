@@ -15,17 +15,21 @@ import {
   ShopByCategory,
   ProgramFeatures,
   helpSetting,
+  ProgramFeaturesMoreData,
+  ShopCategoryMoreData,
 } from "../DataConfig";
 import { Typography } from "@mui/material";
-import SideBarDopdown from "./SideBarDopdown";
+import CollapseButton from "../CollapseButton";
 const SideBar = (props) => {
+  // const [showAll, setAllData] = useState(false);
+  // const [featureData, setFeatureData] = useState(false);
   const { openSideBar, setOpenSideBar } = props;
-  // console.log("opensideBar", openSideBar);
   const handleOpenSideDrawer = () => {
     setOpenSideBar(true);
   };
   console.log("setOpenSide", openSideBar);
 
+  // console.log("show", showAll);
   const handleClose = () => {
     setOpenSideBar(false);
   };
@@ -35,16 +39,17 @@ const SideBar = (props) => {
     justifyContent: "space-around",
     fontWeight: 800,
   };
-  const title = {
-    fontSize: "10px",
-  };
+
   console.log("map", SideBarTrendingData);
   const list = (anchor) => {
     console.log("anchor", anchor);
     return (
       <Box
-        onClick={handleClose}
-        sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 320 }}
+        // onClick={handleClose}
+        sx={{
+          width: anchor === "top" || anchor === "bottom" ? "auto" : 350,
+          padding: "0px",
+        }}
         role="presentation"
 
         //   onKeyDown={toggleDrawer(anchor, false)}
@@ -62,6 +67,7 @@ const SideBar = (props) => {
             </ListItem>
           ))}
         </List>
+        {/* ShowData */}
 
         <Divider />
         {/* 2nd */}
@@ -79,6 +85,11 @@ const SideBar = (props) => {
               </ListItemButton>
             </ListItem>
           ))}
+          <CollapseButton
+            // setAllData={setAllData}
+            // showAll={showAll}
+            collapseData={ShopCategoryMoreData}
+          />
         </List>
         <Divider />
 
@@ -90,7 +101,7 @@ const SideBar = (props) => {
           {ShopByCategory.map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon></ListItemIcon>
+                <ListItemIcon />
                 <ListItemText primary={text?.title} />
                 <MailIcon />
                 {console.log("Text", text)}
@@ -101,21 +112,7 @@ const SideBar = (props) => {
         <Divider />
 
         {/* 4th */}
-        <Typography variant="h6" sx={heading}>
-          Programs & Features
-        </Typography>
-        <List>
-          {DigitalContentDevices.map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon></ListItemIcon>
-                <ListItemText primary={text?.title} />
-                {/* <MailIcon /> */}
-                {console.log("Text", text)}
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+        {/* <Typography variant="h6" sx={heading}> */}
         <Divider />
 
         {/* 5th */}
@@ -126,14 +123,20 @@ const SideBar = (props) => {
           {ProgramFeatures.map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon></ListItemIcon>
-                <ListItemText primary={text?.title} sx={title} />
-                {/* <MailIcon /> */}
+                <ListItemIcon />
+                <ListItemText primary={text?.title} />
+                {text?.btn === true ? <MailIcon /> : ""}
                 {console.log("Text", text)}
               </ListItemButton>
             </ListItem>
           ))}
+          <CollapseButton
+            // setAllData={setAllData}
+            // showAll={showAll}
+            collapseData={ProgramFeaturesMoreData}
+          />
         </List>
+
         <Divider />
 
         {/* 6th */}
@@ -144,9 +147,9 @@ const SideBar = (props) => {
           {helpSetting.map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon></ListItemIcon>
+                <ListItemIcon />
                 <ListItemText primary={text?.title} />
-                <MailIcon />
+
                 {console.log("Text", text)}
               </ListItemButton>
             </ListItem>
