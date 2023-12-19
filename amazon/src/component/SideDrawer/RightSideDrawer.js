@@ -8,8 +8,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import "./mainnavbar.css";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import MailIcon from "@mui/icons-material/Mail";
 import {
   SideBarTrendingData,
   DigitalContentDevices,
@@ -21,12 +20,10 @@ import {
 } from "../DataConfig";
 import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
-import RightSideDrawer from "././RightSideDrawer";
-const SideBar = (props) => {
+const RightSideDrawer = (props) => {
   // const [showAll, setAllData] = useState(false);
   // const [featureData, setFeatureData] = useState(false);
   const { openSideBar, setOpenSideBar } = props;
-  const [rightDrawerData, setRightDrawerData] = useState(false);
   const handleOpenSideDrawer = () => {
     setOpenSideBar(true);
   };
@@ -40,26 +37,15 @@ const SideBar = (props) => {
   const heading = {
     display: "flex",
     justifyContent: "space-around",
-    fontWeight: 600,
-    fontSize: "17px",
-    letterSpacing: "0px",
+    fontWeight: 800,
   };
-  const Product = {
-    fontSize: "12px",
-  };
-  const handleRightData = () => {
-    setRightDrawerData(true);
-  };
+
   console.log("map", SideBarTrendingData);
-  // const handleChildren = (e) => {
-  //   console.log("ashu", e);
-  //   setRightDrawerData(true);
-  // };
   const list = (anchor) => {
     console.log("anchor", anchor);
     return (
       <Box
-        // onClick={handleChildren}
+        // onClick={handleClose}
         sx={{
           width: anchor === "top" || anchor === "bottom" ? "auto" : 350,
           padding: "0px",
@@ -68,14 +54,14 @@ const SideBar = (props) => {
 
         //   onKeyDown={toggleDrawer(anchor, false)}
       >
-        <Typography variant="h6" sx={heading} onClick={handleRightData}>
+        <Typography variant="h6" sx={heading}>
           Trending
         </Typography>
 
-        <List sx={Product}>
+        <List>
           {SideBarTrendingData?.map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton sx={{ padding: "0px" }}>
+              <ListItemButton>
                 <ListItemText primary={text?.title} />
               </ListItemButton>
             </ListItem>
@@ -88,13 +74,13 @@ const SideBar = (props) => {
         <Typography variant="h6" sx={heading}>
           Digital Content And Devices
         </Typography>
-        <List sx={Product}>
+        <List>
           {DigitalContentDevices.map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton sx={{ padding: "0px" }}>
+              <ListItemButton>
                 <ListItemIcon />
                 <ListItemText primary={text?.title} />
-                <KeyboardArrowRightIcon />
+                <MailIcon />
                 {console.log("Text", text)}
               </ListItemButton>
             </ListItem>
@@ -114,10 +100,10 @@ const SideBar = (props) => {
         <List>
           {ShopByCategory.map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton sx={{ padding: "0px" }}>
+              <ListItemButton>
                 <ListItemIcon />
                 <ListItemText primary={text?.title} />
-                <KeyboardArrowRightIcon />
+                <MailIcon />
                 {console.log("Text", text)}
               </ListItemButton>
             </ListItem>
@@ -135,11 +121,11 @@ const SideBar = (props) => {
         </Typography>
         <List>
           {ProgramFeatures.map((text, index) => (
-            <ListItem key={text} disablePadding onClick={handleRightData}>
-              <ListItemButton sx={{ padding: "0px" }}>
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
                 <ListItemIcon />
                 <ListItemText primary={text?.title} />
-                {text?.btn === true ? <KeyboardArrowRightIcon /> : ""}
+                {text?.btn === true ? <MailIcon /> : ""}
                 {console.log("Text", text)}
               </ListItemButton>
             </ListItem>
@@ -160,7 +146,7 @@ const SideBar = (props) => {
         <List>
           {helpSetting.map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton sx={{ padding: "0px" }}>
+              <ListItemButton>
                 <ListItemIcon />
                 <ListItemText primary={text?.title} />
 
@@ -175,23 +161,19 @@ const SideBar = (props) => {
 
   return (
     <>
-      {/* <Button onClick={printName}>Button</Button> */}
-      <Button onClick={handleOpenSideDrawer} />
-      <SwipeableDrawer
-        anchor="left"
-        open={openSideBar}
-        onClose={handleClose}
-        onOpen={handleOpenSideDrawer}
-        allowSwipeInChildren={true}
-        // swipeAreaWidth={20}
-      >
-        {list()}
-      </SwipeableDrawer>
-      <RightSideDrawer
-        openSideBar={rightDrawerData}
-        setOpenSideBar={setRightDrawerData}
-      />
+      <React.Fragment>
+        {/* <Button onClick={printName}>Button</Button> */}
+        <Button onClick={handleOpenSideDrawer} />
+        <SwipeableDrawer
+          anchor="right"
+          open={openSideBar}
+          onClose={handleClose}
+          onOpen={handleOpenSideDrawer}
+        >
+          {list()}
+        </SwipeableDrawer>
+      </React.Fragment>
     </>
   );
 };
-export default SideBar;
+export default RightSideDrawer;

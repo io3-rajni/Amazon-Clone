@@ -2,9 +2,11 @@ import React from "react";
 import Collapse from "@mui/material/Collapse";
 import Button from "@mui/material/Button";
 import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
-
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 // import { ShopCategoryMoreData } from "./DataConfig";
-import { Typography } from "@mui/material";
+// import { Typography } from "@mui/material";
 const CollapseButton = (props) => {
   const [rootExpanded, setRootExpanded] = React.useState(false);
   const [nestedExpanded, setNestedExpanded] = React.useState(false);
@@ -18,7 +20,13 @@ const CollapseButton = (props) => {
 
   return (
     <div style={{ display: "block", padding: 30 }}>
-      {!rootExpanded ? <Button onClick={handleShowData}>Show All</Button> : ""}
+      {!rootExpanded ? (
+        <Button onClick={handleShowData}>
+          See All <KeyboardArrowDownIcon />
+        </Button>
+      ) : (
+        ""
+      )}
 
       <div style={{ display: "flex" }}>
         <Collapse in={rootExpanded} collapsedSize={s}>
@@ -27,6 +35,7 @@ const CollapseButton = (props) => {
               <ListItem key={text} disablePadding>
                 <ListItemButton>
                   <ListItemText primary={text?.title} />
+                  <KeyboardArrowRightIcon />
                 </ListItemButton>
               </ListItem>
             ))}
@@ -38,7 +47,8 @@ const CollapseButton = (props) => {
               setNestedExpanded(!rootExpanded);
             }}
           >
-            Show Less
+            See Less
+            <KeyboardArrowUpIcon />
           </Button>
           {/* </Collapse> */}
         </Collapse>
