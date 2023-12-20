@@ -215,3 +215,44 @@ export const helpSetting = [
     title: "Sign in",
   },
 ];
+export const GiftCardData = [
+  {
+    id: 1,
+    title: "All Gift Cards",
+  },
+  {
+    id: 2,
+    title: "Popular Gift Cards",
+  },
+  {
+    id: 3,
+    title: "Gift Boxes,Gift Tags,Greeting Cards",
+  },
+  {
+    id: 4,
+    title: "Popular brand Gift Voucher",
+  },
+  {
+    id: 5,
+    title: "Birthday Gift Cards",
+  },
+  {
+    id: 6,
+    title: "Wedding ,Anniversary",
+  },
+  {
+    id: 7,
+    title: "Best Wishes and Thankyou",
+  },
+  {
+    id: 8,
+    title: "Corporate Gift Card ",
+  },
+];
+
+export const Recharge = [
+  {
+    id: 1,
+    title: "Recharge",
+  },
+];
