@@ -44,13 +44,14 @@ const RightSideDrawer = (props) => {
           Gift Card
         </Typography>
         <List>
-          {GiftCardData?.map((text, index) => (
-            <ListItem key={index} disablePadding>
-              <ListItemButton>
-                <ListItemText primary={text?.title} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          {DigitalContentData === "Gift Card and Mobile recharge" &&
+            GiftCardData?.map((text, index) => (
+              <ListItem key={index} disablePadding>
+                <ListItemButton>
+                  <ListItemText primary={text?.title} />
+                </ListItemButton>
+              </ListItem>
+            ))}
         </List>
         <Divider />
         <List>
