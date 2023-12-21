@@ -39,7 +39,7 @@ const CollapseButton = (props) => {
               <ListItem key={index} disablePadding>
                 <ListItemButton>
                   <ListItemText
-                    primary={index?.title}
+                    primary={text?.title}
                     sx={{ paddingTop: "12px", paddingBottom: "0px", margin: 0 }}
                   />
                   {/* <ListItemIcon> */}
