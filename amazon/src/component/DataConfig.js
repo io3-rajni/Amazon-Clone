@@ -50,12 +50,12 @@ export const NavlinkData = [
     title: "Prime",
   },
   {
-    id: "9",
+    id: "10",
     btn: false,
     title: "Home&Kitchen",
   },
   {
-    id: "10",
+    id: "11",
     btn: false,
 
     title: "Gift Ideas",
@@ -63,15 +63,15 @@ export const NavlinkData = [
 ];
 export const SideBarTrendingData = [
   {
-    id: 1,
+    id: "12",
     title: "Best Offers",
   },
   {
-    id: 2,
+    id: "13",
     title: "New Release",
   },
   {
-    id: 3,
+    id: "14",
     title: "Movers & Shakers",
   },
 ];
@@ -103,22 +103,22 @@ export const DigitalContentDevices = [
 ];
 export const ShopByCategory = [
   {
-    id: 1,
+    id: 7,
     title: "Mobiles & Computer",
     btn: false,
   },
   {
-    id: 2,
+    id: 8,
     title: "TV,Appliances,Electronic",
     btn: false,
   },
   {
-    id: 3,
+    id: 9,
     title: "Men's Fashion",
     btn: false,
   },
   {
-    id: 4,
+    id: 10,
     title: "Women's Fashion",
     btn: false,
   },
@@ -126,133 +126,128 @@ export const ShopByCategory = [
 
 export const ShopCategoryMoreData = [
   {
-    id: 2,
+    id: 11,
     title: "Home,Kitchen,Pets",
   },
   {
-    id: 3,
+    id: 12,
     title: "Beauty,Health,Grocery",
   },
   {
-    id: 4,
+    id: 13,
     title: "Sports,Fitness,Bags,Luggage",
   },
   {
-    id: 5,
+    id: 14,
     title: "Toys,Baby Products,Kid's Fashion",
   },
   {
-    id: 6,
+    id: 15,
     title: "Car,Moterbile,Industrial",
   },
   {
-    id: 7,
+    id: 16,
     title: "Books",
   },
   {
-    id: 7,
+    id: 17,
     title: "Movies,Music,& Video Games",
   },
 ];
 export const ProgramFeatures = [
   {
-    id: 1,
+    id: 18,
     title: "Amazon Pay",
     btn: false,
   },
   {
-    id: 2,
+    id: 19,
     title: "Gift Card & Mobile Recharge",
     btn: true,
   },
   {
-    id: 3,
+    id: 20,
     title: "Amazon Launchpad",
     btn: false,
   },
   {
-    id: 4,
+    id: 21,
     title: "Women's Fashion",
     btn: false,
   },
   {
-    id: 5,
+    id: 22,
     title: "Handloom & Handicraft",
-    btn: false,
-  },
-  {
-    id: 6,
-    title: "See All",
     btn: false,
   },
 ];
 export const ProgramFeaturesMoreData = [
   {
-    id: 1,
+    id: 23,
     title: "Flight Tickets",
   },
   {
-    id: 1,
+    id: 24,
     title: "Buy more and Save more",
   },
   {
-    id: 1,
+    id: 25,
     title: "Clearance store",
   },
 ];
 
 export const helpSetting = [
   {
-    id: 1,
+    id: 26,
     title: "Your Account",
   },
   {
-    id: 2,
+    id: 27,
     title: "Customer And Service",
   },
   {
-    id: 3,
+    id: 28,
     title: "Sign in",
   },
 ];
 export const GiftCardData = [
   {
-    id: 1,
+    id: 29,
     title: "All Gift Cards",
   },
   {
-    id: 2,
+    id: 30,
     title: "Popular Gift Cards",
   },
   {
-    id: 3,
+    id: 31,
     title: "Gift Boxes,Gift Tags,Greeting Cards",
   },
   {
-    id: 4,
+    id: 32,
     title: "Popular brand Gift Voucher",
   },
   {
-    id: 5,
+    id: 33,
     title: "Birthday Gift Cards",
   },
   {
-    id: 6,
+    id: 34,
     title: "Wedding ,Anniversary",
   },
   {
-    id: 7,
+    id: 35,
     title: "Best Wishes and Thankyou",
   },
   {
-    id: 8,
+    id: 36,
     title: "Corporate Gift Card ",
   },
 ];
 
 export const Recharge = [
   {
-    id: 1,
+    id: 37,
     title: "Recharge",
   },
 ];

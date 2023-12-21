@@ -1,12 +1,17 @@
 import React from "react";
 import Collapse from "@mui/material/Collapse";
 import Button from "@mui/material/Button";
-import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import {
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-// import { ShopCategoryMoreData } from "./DataConfig";
-// import { Typography } from "@mui/material";
+import "./Navbar/mainnavbar.css";
 const CollapseButton = (props) => {
   const [rootExpanded, setRootExpanded] = React.useState(false);
   const [nestedExpanded, setNestedExpanded] = React.useState(false);
@@ -15,11 +20,10 @@ const CollapseButton = (props) => {
   const handleShowData = () => {
     setRootExpanded(!rootExpanded);
     setNestedExpanded(!rootExpanded);
-    // setAllData(true);
   };
 
   return (
-    <div style={{ display: "block", padding: 30 }}>
+    <div style={{ display: "block" }}>
       {!rootExpanded ? (
         <Button onClick={handleShowData}>
           See All <KeyboardArrowDownIcon />
@@ -28,14 +32,19 @@ const CollapseButton = (props) => {
         ""
       )}
 
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
         <Collapse in={rootExpanded} collapsedSize={s}>
           <List>
             {collapseData?.map((text, index) => (
-              <ListItem key={text} disablePadding>
+              <ListItem key={index} disablePadding>
                 <ListItemButton>
-                  <ListItemText primary={text?.title} />
+                  <ListItemText
+                    primary={index?.title}
+                    sx={{ paddingTop: "12px", paddingBottom: "0px", margin: 0 }}
+                  />
+                  {/* <ListItemIcon> */}
                   <KeyboardArrowRightIcon />
+                  {/* </ListItemIcon> */}
                 </ListItemButton>
               </ListItem>
             ))}

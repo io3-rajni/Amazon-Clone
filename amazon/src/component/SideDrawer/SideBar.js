@@ -27,12 +27,11 @@ const SideBar = (props) => {
   const { openSideBar, setOpenSideBar } = props;
   const [openRightSideDrawer, setOpenRightSideDrawer] = useState(false);
   const { cardData, setCardData } = useState(false);
+  const [DigitalContentData, setDigitalContentData] = useState("");
   const handleOpenSideDrawer = () => {
     setOpenSideBar(true);
   };
   console.log("setOpenSide", openSideBar);
-
-  // console.log("show", showAll);
   const handleClose = () => {
     setOpenSideBar(false);
   };
@@ -44,6 +43,7 @@ const SideBar = (props) => {
     fontSize: "17px",
     letterSpacing: "0px",
   };
+
   const Product = {
     fontSize: "12px",
   };
@@ -53,17 +53,21 @@ const SideBar = (props) => {
   console.log("map", SideBarTrendingData);
 
   const list = (anchor) => {
-    console.log("anchor", anchor);
+    // console.log("anchor", anchor);
 
     const handleCardData = () => {
       setCardData(true);
     };
+    const handleIcon = (event, text) => {
+      // event.preventDefault();
+      setDigitalContentData(text.title);
+    };
+    console.log("icon", DigitalContentData);
     return (
       <Box
-        // onClick={handleChildren}
         sx={{
           width: anchor === "top" || anchor === "bottom" ? "auto" : 350,
-          padding: "0px",
+          fontSize: "10px",
         }}
         role="presentation"
       >
@@ -71,11 +75,12 @@ const SideBar = (props) => {
           Trending
         </Typography>
 
-        <List sx={Product}>
+        <List>
           {SideBarTrendingData?.map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton sx={{ padding: "0px" }}>
+            <ListItem key={index} disablePadding>
+              <ListItemButton>
                 <ListItemText primary={text?.title} />
+                {console.log("data rajni", text, "rajni2", index)}
               </ListItemButton>
             </ListItem>
           ))}
@@ -88,12 +93,12 @@ const SideBar = (props) => {
         </Typography>
         <List sx={Product}>
           {DigitalContentDevices.map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton sx={{ padding: "0px" }}>
+            <ListItem key={index} disablePadding>
+              <ListItemButton onClick={(event) => handleIcon(event, text)}>
                 {/* <ListItemIcon /> */}
                 <ListItemText primary={text?.title} />
                 <KeyboardArrowRightIcon />
-                {console.log("Text", text)}
+                {/* {console.log("Text", index)} */}
               </ListItemButton>
             </ListItem>
           ))}
@@ -107,9 +112,8 @@ const SideBar = (props) => {
         </Typography>
         <List>
           {ShopByCategory.map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton sx={{ padding: "0px" }}>
-                {/* <ListItemIcon /> */}
+            <ListItem key={index} disablePadding>
+              <ListItemButton>
                 <ListItemText primary={text?.title} />
                 <KeyboardArrowRightIcon />
                 {console.log("Text", text)}
@@ -129,12 +133,9 @@ const SideBar = (props) => {
         </Typography>
         <List>
           {ProgramFeatures.map((text, index) => (
-            <ListItem key={text} disablePadding>
+            <ListItem key={index} disablePadding>
               {text?.btn === true ? (
-                <ListItemButton
-                  sx={{ padding: "0px" }}
-                  onClick={handleRightSideDrawer}
-                >
+                <ListItemButton onClick={handleRightSideDrawer}>
                   <ListItemText primary={text?.title} />
                   <ListItemIcon>
                     <KeyboardArrowRightIcon onClick={handleCardData} />
@@ -142,7 +143,7 @@ const SideBar = (props) => {
                   {cardData}
                 </ListItemButton>
               ) : (
-                <ListItemButton sx={{ padding: "0px" }}>
+                <ListItemButton>
                   {/* <ListItemIcon /> */}
                   <ListItemText primary={text?.title} />
                 </ListItemButton>
@@ -160,8 +161,8 @@ const SideBar = (props) => {
         </Typography>
         <List>
           {helpSetting.map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton sx={{ padding: "0px" }}>
+            <ListItem key={index} disablePadding>
+              <ListItemButton>
                 {/* <Typography>
                   <ListItemIcon />
                 </Typography> */}
@@ -183,8 +184,8 @@ const SideBar = (props) => {
         anchor="left"
         open={openSideBar}
         onClose={handleClose}
-        onOpen={handleOpenSideDrawer}
-        allowSwipeInChildren={true}
+        // onOpen={handleOpenSideDrawer}
+        // allowSwipeInChildren={true}
         // swipeAreaWidth={20}
       >
         {list()}
@@ -192,6 +193,7 @@ const SideBar = (props) => {
       <RightSideDrawer
         setOpenRightSideDrawer={setOpenRightSideDrawer}
         openRightSideDrawer={openRightSideDrawer}
+        DigitalContentData={DigitalContentData}
       />
     </>
   );
