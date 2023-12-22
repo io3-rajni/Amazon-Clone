@@ -13,8 +13,12 @@ import { GiftCardData, Recharge } from "../DataConfig";
 import { Typography } from "@mui/material";
 // import CollapseButton from "../CollapseButton";
 const RightSideDrawer = (props) => {
-  const { DigitalContentData, openRightSideDrawer, setOpenRightSideDrawer } =
-    props;
+  const {
+    subSideBarData,
+    openRightSideDrawer,
+    setOpenRightSideDrawer,
+    subSideBarTitle,
+  } = props;
   const handleClose = () => {
     setOpenRightSideDrawer(false);
   };
@@ -23,8 +27,10 @@ const RightSideDrawer = (props) => {
     justifyContent: "space-around",
     fontWeight: 800,
   };
+  console.log("subSideBarData", subSideBarData);
   const list = (anchor) => {
-    console.log("anchor", anchor);
+    console.log("data", subSideBarTitle);
+    // console.log("anchor", anchor);
     return (
       <Box
         sx={{
@@ -41,19 +47,21 @@ const RightSideDrawer = (props) => {
         </Typography>
         <Divider />
         <Typography variant="h6" sx={heading}>
-          Gift Card
+          {subSideBarTitle}
         </Typography>
         <List>
-          {DigitalContentData === "Gift Card and Mobile recharge" &&
-            GiftCardData?.map((text, index) => (
-              <ListItem key={index} disablePadding>
-                <ListItemButton>
-                  <ListItemText primary={text?.title} />
-                </ListItemButton>
-              </ListItem>
-            ))}
+          {subSideBarData?.map((text, index) => (
+            <ListItem key={index} disablePadding>
+              <ListItemButton>
+                <ListItemText primary={text?.title} />
+              </ListItemButton>
+            </ListItem>
+          ))}
         </List>
         <Divider />
+        <Typography variant="h6" sx={heading}>
+          Recharge
+        </Typography>
         <List>
           {Recharge?.map((text, index) => (
             <ListItem key={index} disablePadding>

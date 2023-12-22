@@ -17,7 +17,7 @@ const Navbar = () => {
   const [openSideBar, setOpenSideBar] = React.useState(false);
   const handleAll = () => {
     setOpenSideBar(true);
-    console.log("rajni maurya");
+    // console.log("rajni maurya");
   };
   return (
     <>

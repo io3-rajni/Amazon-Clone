@@ -61,6 +61,8 @@ export const NavlinkData = [
     title: "Gift Ideas",
   },
 ];
+
+// Side bar start data----
 export const SideBarTrendingData = [
   {
     id: "12",
@@ -210,6 +212,38 @@ export const helpSetting = [
     title: "Sign in",
   },
 ];
+// Sidebar end
+
+//Sub Sidebar start -----
+export const echoAlexSubData = [
+  {
+    id: "29",
+    title: "See all Devices with Alex",
+  },
+];
+export const resources = [
+  {
+    id: "30",
+    title: "Meet Alex",
+  },
+  {
+    id: "31",
+    title: "Alex Skills",
+  },
+  {
+    id: "33",
+    title: "Alex App",
+  },
+  {
+    id: "34",
+    title: "Alex Smart Home",
+  },
+  {
+    id: "35",
+    title: "Amazon Prime Music",
+  },
+];
+
 export const GiftCardData = [
   {
     id: 29,
