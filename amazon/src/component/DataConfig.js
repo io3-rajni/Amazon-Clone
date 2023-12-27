@@ -243,7 +243,424 @@ export const resources = [
     title: "Amazon Prime Music",
   },
 ];
+export const FireTv = [
+  {
+    id: "36",
+    title: "Amazon Prime Videos",
+  },
+  {
+    id: "37",
+    title: "FireTv Apps & Games",
+  },
+  {
+    id: "38",
+    title: "See all Fire TV Devices",
+  },
+];
+export const KindleRenderBooks = [
+  {
+    id: "39",
+    title: "All-new-Kindle",
+  },
+  {
+    id: "40",
+    title: "All-new-Kindle PaperWhite",
+  },
+  {
+    id: "41",
+    title: "Kindle PaperWhite Starter Pack",
+  },
+  {
+    id: "42",
+    title: "All new Kindle Oasis",
+  },
+  {
+    id: "43",
+    title: "Refurbished & Open Box",
+  },
+  {
+    id: "44",
+    title: "Kindle E-Render Accessories",
+  },
+  {
+    id: "45",
+    title: "See all Kindle reanders",
+  },
+];
+export const AudibleAudioBooks = [
+  {
+    id: "46",
+    title: "Audible Membership",
+  },
+  {
+    id: "47",
+    title: "All Audiobooks",
+  },
+  {
+    id: "48",
+    title: "Best seller",
+  },
+  {
+    id: "50",
+    title: "New Releases",
+  },
+  {
+    id: "51",
+    title: "Hindi Audiobooks",
+  },
+];
+export const AmazonPrimeVideo = [
+  {
+    id: "52",
+    title: "All Videos",
+  },
+  {
+    id: "53",
+    title: "Store",
+  },
+  {
+    id: "54",
+    title: "Catagories",
+  },
+  {
+    id: "55",
+    title: "My Stuff",
+  },
+];
+export const AmazonPrimeMusic = [
+  {
+    id: "56",
+    title: "Amazon Prime Music",
+  },
+  {
+    id: "57",
+    title: "Open Web Player",
+  },
+  {
+    id: "58",
+    title: "Voice Controlled with Alex",
+  },
+  {
+    id: "59",
+    title: "Amazon Prime Music App",
+  },
+  {
+    id: "60",
+    title: "CDs & Vinyls",
+  },
+];
+export const MobilesComputer = [
+  {
+    id: 37,
+    title: "All Mobiles Phone",
+  },
+  {
+    id: 38,
+    title: "All Mobiles Accessories",
+  },
+  {
+    id: 39,
+    title: "Cases & covers",
+  },
+  {
+    id: 40,
+    title: "Screen Protector",
+  },
+  {
+    id: 41,
+    title: "Power Banks",
+  },
+  {
+    id: 42,
+    title: "Refurbished & Open box",
+  },
+  {
+    id: 43,
+    title: "Tablets",
+  },
+  {
+    id: 44,
+    title: "Wearable Devices",
+  },
+  {
+    id: 45,
+    title: "Smart home",
+  },
+  {
+    id: 46,
+    title: "Office Supplies & Stationary",
+  },
+  {
+    id: 47,
+    title: "Software",
+  },
+];
+export const TVElectronic = [
+  {
+    id: 48,
+    title: "Television",
+  },
+  {
+    id: 49,
+    title: "Home Entertainment Systems",
+  },
+  {
+    id: 50,
+    title: "Headphones",
+  },
+  {
+    id: 51,
+    title: "Speakers",
+  },
+  {
+    id: 52,
+    title: "Home Audio & theater",
+  },
+  {
+    id: 53,
+    title: "cameras",
+  },
+  {
+    id: 54,
+    title: "DSLR Cameras",
+  },
+  {
+    id: 55,
+    title: "Security Cameras",
+  },
+  {
+    id: 56,
+    title: "Cameras Accessories",
+  },
+  {
+    id: 57,
+    title: "Musical Instrumental & Professional Audio",
+  },
+  {
+    id: 58,
+    title: "Gaming Consoles",
+  },
+  {
+    id: 59,
+    title: "All Electronics",
+  },
+];
+export const MenFashion = [
+  {
+    id: 60,
+    title: "Clothing",
+  },
+  {
+    id: 61,
+    title: "T-Shirt Polos",
+  },
+  {
+    id: 62,
+    title: "Shirts",
+  },
+  {
+    id: 63,
+    title: "Jeans",
+  },
+  {
+    id: 64,
+    title: "InnerWear",
+  },
+];
+export const WomenFashion = [
+  {
+    id: 65,
+    title: "Clothing",
+  },
+  {
+    id: 66,
+    title: "Western Wear",
+  },
+  {
+    id: 67,
+    title: "Ethnic Wear",
+  },
+  {
+    id: 68,
+    title: "Lingerie & NightWear",
+  },
+  {
+    id: 69,
+    title: "TopBrands",
+  },
+];
+export const HomeKitchen = [
+  {
+    id: 70,
+    title: "Explore Showroom",
+  },
+  {
+    id: 71,
+    title: "Kitchen & Dining",
+  },
+  {
+    id: 72,
+    title: "Kitchen Storage & Container",
+  },
+  {
+    id: 73,
+    title: "Furniture",
+  },
+  {
+    id: 74,
+    title: "Fine Art",
+  },
+  {
+    id: 75,
+    title: "home Furnishing",
+  },
+  {
+    id: 76,
+    title: "Bathroom Liner",
+  },
+  {
+    id: 77,
+    title: "Home Decor",
+  },
+  {
+    id: 78,
+    title: "Garden & Outdoors",
+  },
+  {
+    id: 79,
+    title: "Home Storage",
+  },
+  {
+    id: 80,
+    title: "Indoor Lighting",
+  },
+  {
+    id: 81,
+    title: "Home Empowerment",
+  },
+  {
+    id: 82,
+    title: "Sewing & Craft Supply",
+  },
+  {
+    id: 83,
+    title: "All Home & Kitchen",
+  },
 
+  {
+    id: 84,
+    title: "Shop by Room",
+  },
+  {
+    id: 85,
+    title: "Home & Kitchen Deals",
+  },
+];
+export const BeautyHealth = [
+  {
+    id: 86,
+    title: "beauty & Grooming",
+  },
+  {
+    id: 87,
+    title: "Luxury Beauty",
+  },
+  {
+    id: 89,
+    title: "Make-up",
+  },
+  {
+    id: 90,
+    title: "Health & Personal care",
+  },
+  {
+    id: 91,
+    title: "Amazone Pharmacy",
+  },
+  {
+    id: 91,
+    title: "House hold Supplies",
+  },
+  {
+    id: 92,
+    title: "Personal care Appliances",
+  },
+  {
+    id: 93,
+    title: "Diet Nutrition",
+  },
+  {
+    id: 94,
+    title: "Garden & Outdoors",
+  },
+  {
+    id: 95,
+    title: "Subscribe & save",
+  },
+  {
+    id: 96,
+    title: "Value Bazaar",
+  },
+];
+export const SportsFitness = [
+  {
+    id: 97,
+    title: "Cricket",
+  },
+  {
+    id: 98,
+    title: "Badminton",
+  },
+  {
+    id: 99,
+    title: "Cycling",
+  },
+
+  {
+    id: 100,
+    title: "Football",
+  },
+  {
+    id: 101,
+    title: "Running",
+  },
+  {
+    id: 102,
+    title: "Camping & Hiking",
+  },
+  {
+    id: 103,
+    title: "Fitness Accessories",
+  },
+  {
+    id: 104,
+    title: "Yoga",
+  },
+  {
+    id: 105,
+    title: "Strength Training",
+  },
+  {
+    id: 106,
+    title: "Cardio Equipment",
+  },
+  {
+    id: 107,
+    title: "Sports Collectibles",
+  },
+  {
+    id: 108,
+    title: "Refurbished & Open Box",
+  },
+  {
+    id: 109,
+    title: "All Exercise & Fitness",
+  },
+  {
+    id: 110,
+    title: "All Sports Fitness & Outdoors",
+  },
+];
 export const GiftCardData = [
   {
     id: 29,

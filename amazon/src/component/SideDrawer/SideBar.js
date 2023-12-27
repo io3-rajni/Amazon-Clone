@@ -20,6 +20,18 @@ import {
   ShopCategoryMoreData,
   resources,
   echoAlexSubData,
+  FireTv,
+  KindleRenderBooks,
+  AudibleAudioBooks,
+  AmazonPrimeVideo,
+  AmazonPrimeMusic,
+  MobilesComputer,
+  TVElectronic,
+  MenFashion,
+  HomeKitchen,
+  WomenFashion,
+  BeautyHealth,
+  SportsFitness,
 } from "../DataConfig";
 import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
@@ -31,11 +43,13 @@ const SideBar = (props) => {
   const [openRightSideDrawer, setOpenRightSideDrawer] = useState(false);
   const [subSideBarTitle, setSubSideBarTitle] = useState("");
   const [subSideBarData, setSubSideBarData] = useState([]);
+
   const handleOpenSideDrawer = () => {
     setOpenSideBar(true);
   };
   // console.log("setOpenSide", openSideBar);
   const handleClose = () => {
+    // this flag state close the sidebar
     setOpenSideBar(false);
   };
 
@@ -51,37 +65,72 @@ const SideBar = (props) => {
     fontSize: "12px",
   };
   const handleRightSideDrawer = (text) => {
+    // this flag state open the sun sideDrawer
     setOpenRightSideDrawer(true);
     switch (text?.title) {
       case "Echo & Alex":
+        // this state set the value of title inside the sub sidebar
         setSubSideBarTitle(text.title);
-        // setTitle(text?.title);
+
+        // this state set the value of that particular item where we click
         setSubSideBarData(echoAlexSubData);
         break;
-      // case "Fire TV":
-      //   setSubSideBarData(resources);
-      //   break;
-      // case "Echo & Alex":
-      //   setSubSideBarData(text.title);
-      //   break;
-      // case "Echo & Alex":
-      //   setSubSideBarData(text.title);
-      //   break;
-      // case "Echo & Alex":
-      //   setSubSideBarData(text.title);
-      //   break;
-      // case "Echo & Alex":
-      //   setSubSideBarData(text.title);
-      //   break;
-      // case "Echo & Alex":
-      //   setSubSideBarData(text.title);
-      //   break;
-      // case "Echo & Alex":
-      //   setSubSideBarData(text.title);
-      //   break;
+      case "Fire TV":
+        // this state set the value of title inside the sub sidebar
+        setSubSideBarTitle(text.title);
+        setSubSideBarData(FireTv);
+        break;
+      case "Kindle E-Reader & e-Books":
+        // this state set the value of title inside the sub sidebar
+        setSubSideBarTitle(text.title);
+        setSubSideBarData(KindleRenderBooks);
+        break;
+      case "Audible Audiobooks":
+        setSubSideBarTitle(text.title);
+        // setSubSideBarData(text.title);
+        setSubSideBarData(AudibleAudioBooks);
+
+        break;
+      case "Amazon Prime video":
+        setSubSideBarTitle(text.title);
+        setSubSideBarData(AmazonPrimeVideo);
+        break;
+      case "Amazon Prime Music":
+        setSubSideBarTitle(text.title);
+        setSubSideBarData(AmazonPrimeMusic);
+        break;
+      case "Mobiles & Computer":
+        setSubSideBarTitle("Mobiles, Tablets & More");
+        setSubSideBarData(MobilesComputer);
+        break;
+      case "TV,Appliances,Electronic":
+        setSubSideBarTitle("Tv, Audio & Cameras");
+        setSubSideBarData(TVElectronic);
+        break;
+      //
+      case "Men's Fashion":
+        setSubSideBarTitle("Men's Clothing");
+        setSubSideBarData(MenFashion);
+        break;
+      case "Women's Fashion":
+        setSubSideBarTitle("Women's Clothing");
+        setSubSideBarData(WomenFashion);
+        break;
+      case "Home,Kitchen,Pets":
+        setSubSideBarTitle("Home & Kitchen");
+        setSubSideBarData(HomeKitchen);
+        break;
+      case "Beauty,Health,Grocery":
+        setSubSideBarTitle("Beauty & Health");
+        setSubSideBarData(BeautyHealth);
+        break;
+      case "Sports,Fitness,Bags,Luggage":
+        setSubSideBarTitle("Sports & Fitness");
+        setSubSideBarData(SportsFitness);
+        break;
 
       default:
-        setSubSideBarData(Recharge);
+        setSubSideBarData(resources);
         break;
     }
   };
@@ -128,7 +177,6 @@ const SideBar = (props) => {
               </ListItemButton>
             </ListItem>
           ))}
-          <CollapseButton collapseData={ShopCategoryMoreData} />
         </List>
         <Divider />
 
@@ -139,13 +187,17 @@ const SideBar = (props) => {
         <List>
           {ShopByCategory.map((text, index) => (
             <ListItem key={index} disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={() => handleRightSideDrawer(text)}>
                 <ListItemText primary={text?.title} />
                 <KeyboardArrowRightIcon />
                 {/* {console.log("Text", text)} */}
               </ListItemButton>
             </ListItem>
           ))}
+          <CollapseButton
+            collapseData={ShopCategoryMoreData}
+            handleRightSideDrawer={handleRightSideDrawer}
+          />
         </List>
         <Divider />
 
@@ -176,7 +228,10 @@ const SideBar = (props) => {
               )}
             </ListItem>
           ))}
-          <CollapseButton collapseData={ProgramFeaturesMoreData} />
+          <CollapseButton
+            collapseData={ProgramFeaturesMoreData}
+            handleRightSideDrawer={handleRightSideDrawer}
+          />
         </List>
 
         <Divider />
