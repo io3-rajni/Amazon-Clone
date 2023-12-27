@@ -15,11 +15,15 @@ import "./Navbar/mainnavbar.css";
 const CollapseButton = (props) => {
   const [rootExpanded, setRootExpanded] = React.useState(false);
   const [nestedExpanded, setNestedExpanded] = React.useState(false);
-  const { collapseData } = props;
+  const { collapseData, handleRightSideDrawer } = props;
   const s = "2rem";
   const handleShowData = () => {
     setRootExpanded(!rootExpanded);
     setNestedExpanded(!rootExpanded);
+  };
+
+  const handleSubSideBar = (text) => {
+    handleRightSideDrawer(text);
   };
 
   return (
@@ -37,7 +41,7 @@ const CollapseButton = (props) => {
           <List>
             {collapseData?.map((text, index) => (
               <ListItem key={index} disablePadding>
-                <ListItemButton>
+                <ListItemButton onClick={() => handleSubSideBar(text)}>
                   <ListItemText
                     primary={text?.title}
                     sx={{ paddingTop: "12px", paddingBottom: "0px", margin: 0 }}
