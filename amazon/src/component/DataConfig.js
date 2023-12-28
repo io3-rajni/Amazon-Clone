@@ -221,6 +221,28 @@ export const echoAlexSubData = [
     title: "See all Devices with Alex",
   },
 ];
+export const ContentResources = [
+  {
+    id: 142,
+    title: "Meet Alex",
+  },
+  {
+    id: 143,
+    title: "Alex Skill",
+  },
+  {
+    id: 144,
+    title: "Alex App",
+  },
+  {
+    id: 145,
+    title: "Alex Smart Home",
+  },
+  {
+    id: 146,
+    title: "Alex Prime Music",
+  },
+];
 export const resources = [
   {
     id: "30",

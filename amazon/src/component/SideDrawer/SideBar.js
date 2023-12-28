@@ -36,6 +36,7 @@ import {
   ToysBabyProducts,
   Books,
   MoviesTvShows,
+  ContentResources,
 } from "../DataConfig";
 import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
@@ -47,6 +48,8 @@ const SideBar = (props) => {
   const [openRightSideDrawer, setOpenRightSideDrawer] = useState(false);
   const [subSideBarTitle, setSubSideBarTitle] = useState("");
   const [subSideBarData, setSubSideBarData] = useState([]);
+  const [subSideBarSubData, setSubSideBarSubData] = useState([]);
+  const [subSideBarSubTitle, setSubSideBarSubTitle] = useState("");
 
   const handleOpenSideDrawer = () => {
     setOpenSideBar(true);
@@ -77,7 +80,10 @@ const SideBar = (props) => {
         setSubSideBarTitle(text.title);
 
         // this state set the value of that particular item where we click
-        setSubSideBarData(echoAlexSubData);
+        setSubSideBarData(echoAlexSubData, ContentResources);
+        setSubSideBarSubData(ContentResources);
+        setSubSideBarSubTitle("Content & Resources");
+
         break;
       case "Fire TV":
         // this state set the value of title inside the sub sidebar
@@ -300,6 +306,8 @@ const SideBar = (props) => {
         openRightSideDrawer={openRightSideDrawer}
         subSideBarTitle={subSideBarTitle}
         subSideBarData={subSideBarData}
+        subSideBarSubData={subSideBarSubData}
+        subSideBarSubTitle={subSideBarSubTitle}
       />
     </>
   );

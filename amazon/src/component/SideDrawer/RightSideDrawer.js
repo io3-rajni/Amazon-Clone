@@ -14,10 +14,12 @@ import { Typography } from "@mui/material";
 // import CollapseButton from "../CollapseButton";
 const RightSideDrawer = (props) => {
   const {
+    subSideBarSubTitle,
     subSideBarData,
     openRightSideDrawer,
     setOpenRightSideDrawer,
     subSideBarTitle,
+    subSideBarSubData,
   } = props;
   const handleClose = () => {
     setOpenRightSideDrawer(false);
@@ -59,11 +61,15 @@ const RightSideDrawer = (props) => {
           ))}
         </List>
         <Divider />
-        <Typography variant="h6" sx={heading}>
+        {/* <Typography variant="h6" sx={heading}>
           Recharge
+        </Typography> */}
+        <Divider />
+        <Typography variant="h6" sx={heading}>
+          {subSideBarSubTitle}
         </Typography>
         <List>
-          {Recharge?.map((text, index) => (
+          {subSideBarSubData?.map((text, index) => (
             <ListItem key={index} disablePadding>
               <ListItemButton>
                 <ListItemText primary={text?.title} />
