@@ -184,7 +184,6 @@ const SideBar = (props) => {
             <ListItem key={index} disablePadding>
               <ListItemButton>
                 <ListItemText primary={text?.title} />
-                {/* {console.log("data rajni", text, "rajni2", index)} */}
               </ListItemButton>
             </ListItem>
           ))}
@@ -220,7 +219,6 @@ const SideBar = (props) => {
               <ListItemButton onClick={() => handleRightSideDrawer(text)}>
                 <ListItemText primary={text?.title} />
                 <KeyboardArrowRightIcon />
-                {/* {console.log("Text", text)} */}
               </ListItemButton>
             </ListItem>
           ))}
@@ -248,11 +246,9 @@ const SideBar = (props) => {
                   <ListItemIcon>
                     <KeyboardArrowRightIcon />
                   </ListItemIcon>
-                  {/* {cardData} */}
                 </ListItemButton>
               ) : (
                 <ListItemButton>
-                  {/* <ListItemIcon /> */}
                   <ListItemText primary={text?.title} />
                 </ListItemButton>
               )}
@@ -263,9 +259,7 @@ const SideBar = (props) => {
             handleRightSideDrawer={handleRightSideDrawer}
           />
         </List>
-
         <Divider />
-
         {/* 6th */}
         <Typography variant="h6" sx={heading}>
           Helps & Setting
@@ -274,12 +268,7 @@ const SideBar = (props) => {
           {helpSetting.map((text, index) => (
             <ListItem key={index} disablePadding>
               <ListItemButton>
-                {/* <Typography>
-                  <ListItemIcon />
-                </Typography> */}
                 <ListItemText primary={text?.title} />
-
-                {/* {console.log("Text", text)} */}
               </ListItemButton>
             </ListItem>
           ))}
@@ -291,14 +280,7 @@ const SideBar = (props) => {
   return (
     <>
       <Button onClick={handleOpenSideDrawer} />
-      <SwipeableDrawer
-        anchor="left"
-        open={openSideBar}
-        onClose={handleClose}
-        // onOpen={handleOpenSideDrawer}
-        // allowSwipeInChildren={true}
-        // swipeAreaWidth={20}
-      >
+      <SwipeableDrawer anchor="left" open={openSideBar} onClose={handleClose}>
         {list()}
       </SwipeableDrawer>
       <RightSideDrawer
