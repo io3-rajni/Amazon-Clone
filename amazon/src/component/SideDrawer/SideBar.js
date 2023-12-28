@@ -32,6 +32,10 @@ import {
   WomenFashion,
   BeautyHealth,
   SportsFitness,
+  CarMotorbike,
+  ToysBabyProducts,
+  Books,
+  MoviesTvShows,
 } from "../DataConfig";
 import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
@@ -127,6 +131,26 @@ const SideBar = (props) => {
       case "Sports,Fitness,Bags,Luggage":
         setSubSideBarTitle("Sports & Fitness");
         setSubSideBarData(SportsFitness);
+        break;
+      case "Toys,Baby Products,Kid's Fashion":
+        setSubSideBarTitle("Toys & Baby Products");
+        setSubSideBarData(ToysBabyProducts);
+        break;
+      case "Car,Moterbile,Industrial":
+        setSubSideBarTitle("Car & Motorbike");
+        setSubSideBarData(CarMotorbike);
+        break;
+      case "Books":
+        setSubSideBarTitle("Books");
+        setSubSideBarData(Books);
+        break;
+      // case "Movies,Music,& Video Games":
+      //   setSubSideBarTitle("Car & Motorbike");
+      //   setSubSideBarData(CarMotorbike);
+      //   break;
+      case "Movies,Music,& Video Games":
+        setSubSideBarTitle(" Movies & Tv Shows");
+        setSubSideBarData(MoviesTvShows);
         break;
 
       default:

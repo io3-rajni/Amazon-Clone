@@ -661,6 +661,138 @@ export const SportsFitness = [
     title: "All Sports Fitness & Outdoors",
   },
 ];
+export const ToysBabyProducts = [
+  {
+    id: 111,
+    title: "Toys & Game ",
+  },
+  {
+    id: 112,
+    title: "Baby Products",
+  },
+  {
+    id: 113,
+    title: "Diapers",
+  },
+  {
+    id: 114,
+    title: "Toys Gifting Store",
+  },
+  {
+    id: 115,
+    title: "STEM Toy Store",
+  },
+  {
+    id: 116,
+    title: "International Toy Store",
+  },
+  {
+    id: 117,
+    title: "Baby Bath,Skin & Grooming",
+  },
+  {
+    id: 118,
+    title: "Strollers & Prams",
+  },
+  {
+    id: 119,
+    title: "Nursing & feeding",
+  },
+  {
+    id: 120,
+    title: "Subscribe & Save",
+  },
+  {
+    id: 121,
+    title: "Pantry",
+  },
+];
+export const CarMotorbike = [
+  {
+    id: 122,
+    title: "Motorbike Accessories & parts",
+  },
+  {
+    id: 123,
+    title: "Car Accessories",
+  },
+  {
+    id: 124,
+    title: "Car Electronic",
+  },
+  {
+    id: 125,
+    title: "Car Parts",
+  },
+  {
+    id: 126,
+    title: "Car & Bike Care",
+  },
+  {
+    id: 127,
+    title: "All Car Motorbike Products",
+  },
+];
+export const Books = [
+  {
+    id: 128,
+    title: "All Books",
+  },
+  {
+    id: 129,
+    title: "Fiction Books",
+  },
+  {
+    id: 130,
+    title: "Editor's Books",
+  },
+  {
+    id: 131,
+    title: "School Textbooks",
+  },
+  {
+    id: 132,
+    title: "Childern's Books",
+  },
+  {
+    id: 133,
+    title: "Exam Central",
+  },
+  {
+    id: 134,
+    title: "Textbooks",
+  },
+  {
+    id: 135,
+    title: "Indian Language Books",
+  },
+  {
+    id: 136,
+    title: "Kindle eBooks",
+  },
+];
+export const MoviesTvShows = [
+  {
+    id: 137,
+    title: " Movies & Tv & Shows ",
+  },
+  {
+    id: 138,
+    title: "Blu ray",
+  },
+  {
+    id: 139,
+    title: "All English",
+  },
+  {
+    id: 140,
+    title: "All hindi",
+  },
+  {
+    id: 141,
+    title: "Entertainment Collectibles",
+  },
+];
 export const GiftCardData = [
   {
     id: 29,
