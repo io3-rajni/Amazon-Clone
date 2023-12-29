@@ -20,23 +20,32 @@ import {
   ShopCategoryMoreData,
   resources,
   echoAlexSubData,
+  ContentResources,
   FireTv,
   KindleRenderBooks,
+  KindleEbooks,
   AudibleAudioBooks,
   AmazonPrimeVideo,
   AmazonPrimeMusic,
   MobilesComputer,
+  ComputersAccessories,
   TVElectronic,
+  Appliances,
   MenFashion,
+  Accessories,
   HomeKitchen,
   WomenFashion,
   BeautyHealth,
+  GroceryGourmetFoods,
   SportsFitness,
+  BagsLuggage,
   CarMotorbike,
+  IndustrialSupplies,
   ToysBabyProducts,
+  KidsFashion,
   Books,
+  AudibleAudiobooks,
   MoviesTvShows,
-  ContentResources,
 } from "../DataConfig";
 import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
@@ -80,7 +89,7 @@ const SideBar = (props) => {
         setSubSideBarTitle(text.title);
 
         // this state set the value of that particular item where we click
-        setSubSideBarData(echoAlexSubData, ContentResources);
+        setSubSideBarData(echoAlexSubData);
         setSubSideBarSubData(ContentResources);
         setSubSideBarSubTitle("Content & Resources");
 
@@ -94,6 +103,8 @@ const SideBar = (props) => {
         // this state set the value of title inside the sub sidebar
         setSubSideBarTitle(text.title);
         setSubSideBarData(KindleRenderBooks);
+        setSubSideBarSubData(KindleEbooks);
+        setSubSideBarSubTitle("Kindle Ebooks");
         break;
       case "Audible Audiobooks":
         setSubSideBarTitle(text.title);
@@ -112,15 +123,22 @@ const SideBar = (props) => {
       case "Mobiles & Computer":
         setSubSideBarTitle("Mobiles, Tablets & More");
         setSubSideBarData(MobilesComputer);
+        setSubSideBarSubData(ComputersAccessories);
+        setSubSideBarSubTitle("  Computers & Accessories");
+        // ComputersAccessories;
         break;
       case "TV,Appliances,Electronic":
         setSubSideBarTitle("Tv, Audio & Cameras");
         setSubSideBarData(TVElectronic);
+        setSubSideBarSubData(Appliances);
+        setSubSideBarSubTitle("  Appliances");
         break;
       //
       case "Men's Fashion":
         setSubSideBarTitle("Men's Clothing");
         setSubSideBarData(MenFashion);
+        setSubSideBarSubData(Accessories);
+        setSubSideBarSubTitle("Accessories");
         break;
       case "Women's Fashion":
         setSubSideBarTitle("Women's Clothing");
@@ -133,22 +151,32 @@ const SideBar = (props) => {
       case "Beauty,Health,Grocery":
         setSubSideBarTitle("Beauty & Health");
         setSubSideBarData(BeautyHealth);
+        setSubSideBarSubData(GroceryGourmetFoods);
+        setSubSideBarSubTitle("Grocery & Gourmet Foods");
         break;
       case "Sports,Fitness,Bags,Luggage":
         setSubSideBarTitle("Sports & Fitness");
         setSubSideBarData(SportsFitness);
+        setSubSideBarSubData(BagsLuggage);
+        setSubSideBarSubTitle("Bags & Luggage");
         break;
       case "Toys,Baby Products,Kid's Fashion":
         setSubSideBarTitle("Toys & Baby Products");
         setSubSideBarData(ToysBabyProducts);
+        setSubSideBarSubData(KidsFashion);
+        setSubSideBarSubTitle("Kid'sFashion");
         break;
       case "Car,Moterbile,Industrial":
         setSubSideBarTitle("Car & Motorbike");
         setSubSideBarData(CarMotorbike);
+        setSubSideBarSubData(IndustrialSupplies);
+        setSubSideBarSubTitle("IndustrialSupplies");
         break;
       case "Books":
         setSubSideBarTitle("Books");
         setSubSideBarData(Books);
+        setSubSideBarSubData(AudibleAudiobooks);
+        setSubSideBarSubTitle("  AudibleAudiobooks");
         break;
       // case "Movies,Music,& Video Games":
       //   setSubSideBarTitle("Car & Motorbike");

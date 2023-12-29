@@ -217,7 +217,7 @@ export const helpSetting = [
 //Sub Sidebar start -----
 export const echoAlexSubData = [
   {
-    id: "29",
+    id: "15",
     title: "See all Devices with Alex",
   },
 ];
@@ -279,6 +279,7 @@ export const FireTv = [
     title: "See all Fire TV Devices",
   },
 ];
+
 export const KindleRenderBooks = [
   {
     id: "39",
@@ -307,6 +308,48 @@ export const KindleRenderBooks = [
   {
     id: "45",
     title: "See all Kindle reanders",
+  },
+];
+export const KindleEbooks = [
+  {
+    id: 147,
+    title: "All Kindle eBooks",
+  },
+  {
+    id: 148,
+    title: "Prime Reading",
+  },
+  {
+    id: 149,
+    title: "Kindle Unlimited",
+  },
+  {
+    id: 150,
+    title: "Deal on Kindle eBooks",
+  },
+  {
+    id: 151,
+    title: "Kindle Exam Central",
+  },
+  {
+    id: 152,
+    title: "Kindle eTextbooks",
+  },
+  {
+    id: 153,
+    title: "eBooks Bestsellers",
+  },
+  {
+    id: 154,
+    title: "eBooks in English Language",
+  },
+  {
+    id: 155,
+    title: "Hindi",
+  },
+  {
+    id: 156,
+    title: "Tamil",
   },
 ];
 export const AudibleAudioBooks = [
@@ -417,6 +460,19 @@ export const MobilesComputer = [
     title: "Software",
   },
 ];
+export const ComputersAccessories = [
+  { id: 157, title: "All Computers Accessories" },
+  { id: 158, title: "Laptops" },
+  { id: 159, title: "Drives & Storage" },
+  { id: 160, title: "Printer & Ink" },
+  { id: 161, title: "Networking Devices" },
+  { id: 162, title: "Computer Accessories" },
+  { id: 163, title: "Game Zone" },
+  { id: 164, title: "Monitor" },
+  { id: 165, title: "Desktops" },
+  { id: 166, title: "Components" },
+  { id: 167, title: "All Electronics" },
+];
 export const TVElectronic = [
   {
     id: 48,
@@ -467,6 +523,14 @@ export const TVElectronic = [
     title: "All Electronics",
   },
 ];
+export const Appliances = [
+  { id: 168, title: "Air Conditioners" },
+  { id: 169, title: "Refrigerator" },
+  { id: 170, title: "Washing Machines" },
+  { id: 171, title: "Kitchen & Home Appliances" },
+  { id: 172, title: " Heating & Cooling Appliances" },
+  { id: 173, title: "All Appliances" },
+];
 export const MenFashion = [
   {
     id: 60,
@@ -488,6 +552,13 @@ export const MenFashion = [
     id: 64,
     title: "InnerWear",
   },
+];
+export const Accessories = [
+  { id: "37", title: "Watches", btn: true },
+  { id: "38", title: "Bags & Luggage" },
+  { id: "39", title: "Sunglasses" },
+  { id: "40", title: "Jewellery" },
+  { id: "41", title: "Wallets" },
 ];
 export const WomenFashion = [
   {
@@ -624,6 +695,11 @@ export const BeautyHealth = [
     title: "Value Bazaar",
   },
 ];
+export const GroceryGourmetFoods = [
+  { id: "34", title: "All Grocery & Gourmet Foods" },
+  { id: "35", title: "Coffee ,Tea, Beverages" },
+  { id: "36", title: "Snacks Foods" },
+];
 export const SportsFitness = [
   {
     id: 97,
@@ -683,6 +759,14 @@ export const SportsFitness = [
     title: "All Sports Fitness & Outdoors",
   },
 ];
+export const BagsLuggage = [
+  { id: "28", title: "Backpacks" },
+  { id: "29", title: "Rucksacks" },
+  { id: "30", title: "Suitcase & Trolley bags" },
+  { id: "31", title: "Travel Duffles" },
+  { id: "32", title: "Travel Accessories" },
+  { id: "33", title: "Wallets" },
+];
 export const ToysBabyProducts = [
   {
     id: 111,
@@ -729,6 +813,14 @@ export const ToysBabyProducts = [
     title: "Pantry",
   },
 ];
+export const KidsFashion = [
+  { id: "22", title: "Kid's Fashion" },
+  { id: "23", title: "Kid's Shoes" },
+  { id: "24", title: "School Bags" },
+  { id: "25", title: "Kid's Watches" },
+  { id: "26", title: "Kid's Fashion" },
+  { id: "27", title: "Radio Fashion" },
+];
 export const CarMotorbike = [
   {
     id: 122,
@@ -754,6 +846,12 @@ export const CarMotorbike = [
     id: 127,
     title: "All Car Motorbike Products",
   },
+];
+export const IndustrialSupplies = [
+  { id: "18", title: "Industrial & Scientific Supplies" },
+  { id: "19", title: "Test Measure & Inspect" },
+  { id: "20", title: "Lap & Scientific" },
+  { id: "21", title: "Janitorial & Sanitatoin Supplies" },
 ];
 export const Books = [
   {
@@ -792,6 +890,10 @@ export const Books = [
     id: 136,
     title: "Kindle eBooks",
   },
+];
+export const AudibleAudiobooks = [
+  { id: "16", title: "Audible Audiobooks More" },
+  { id: "17", title: "Audible Membership" },
 ];
 export const MoviesTvShows = [
   {
