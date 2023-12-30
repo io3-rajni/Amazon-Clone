@@ -33,8 +33,15 @@ import {
   Appliances,
   MenFashion,
   Accessories,
+  MenShoes,
+  menStores,
   HomeKitchen,
+  HomeKitchenPets,
+  PetSupplies,
   WomenFashion,
+  womenAccessories,
+  womenShoes,
+  womenStores,
   BeautyHealth,
   GroceryGourmetFoods,
   SportsFitness,
@@ -46,6 +53,7 @@ import {
   Books,
   AudibleAudiobooks,
   MoviesTvShows,
+  GiftCards,
 } from "../DataConfig";
 import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
@@ -59,7 +67,12 @@ const SideBar = (props) => {
   const [subSideBarData, setSubSideBarData] = useState([]);
   const [subSideBarSubData, setSubSideBarSubData] = useState([]);
   const [subSideBarSubTitle, setSubSideBarSubTitle] = useState("");
-
+  const [subSideBarSecondData, setSubSideBarSecondData] = useState([]);
+  const [subSideBarSecondTitle, setSubSideSecondTitle] = useState("");
+  const [subSideBarThirdTitle, setSubSideBarThirdTitle] = useState("");
+  const [subSideBarThirdData, setSubBarThirdData] = useState([]);
+  const [giftCardData, setGiftCardData] = useState([]);
+  const [giftCardTitle, setGiftCardTitle] = useState("");
   const handleOpenSideDrawer = () => {
     setOpenSideBar(true);
   };
@@ -87,17 +100,23 @@ const SideBar = (props) => {
       case "Echo & Alex":
         // this state set the value of title inside the sub sidebar
         setSubSideBarTitle(text.title);
-
         // this state set the value of that particular item where we click
         setSubSideBarData(echoAlexSubData);
         setSubSideBarSubData(ContentResources);
         setSubSideBarSubTitle("Content & Resources");
-
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Fire TV":
         // this state set the value of title inside the sub sidebar
         setSubSideBarTitle(text.title);
         setSubSideBarData(FireTv);
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Kindle E-Reader & e-Books":
         // this state set the value of title inside the sub sidebar
@@ -105,26 +124,45 @@ const SideBar = (props) => {
         setSubSideBarData(KindleRenderBooks);
         setSubSideBarSubData(KindleEbooks);
         setSubSideBarSubTitle("Kindle Ebooks");
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Audible Audiobooks":
         setSubSideBarTitle(text.title);
         // setSubSideBarData(text.title);
         setSubSideBarData(AudibleAudioBooks);
-
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Amazon Prime video":
         setSubSideBarTitle(text.title);
         setSubSideBarData(AmazonPrimeVideo);
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Amazon Prime Music":
         setSubSideBarTitle(text.title);
         setSubSideBarData(AmazonPrimeMusic);
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Mobiles & Computer":
         setSubSideBarTitle("Mobiles, Tablets & More");
         setSubSideBarData(MobilesComputer);
         setSubSideBarSubData(ComputersAccessories);
         setSubSideBarSubTitle("  Computers & Accessories");
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         // ComputersAccessories;
         break;
       case "TV,Appliances,Electronic":
@@ -132,6 +170,10 @@ const SideBar = (props) => {
         setSubSideBarData(TVElectronic);
         setSubSideBarSubData(Appliances);
         setSubSideBarSubTitle("  Appliances");
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       //
       case "Men's Fashion":
@@ -139,59 +181,100 @@ const SideBar = (props) => {
         setSubSideBarData(MenFashion);
         setSubSideBarSubData(Accessories);
         setSubSideBarSubTitle("Accessories");
+        setSubSideSecondTitle("Men's Shoes");
+        setSubSideBarSecondData(MenShoes);
+        setSubSideBarThirdTitle("Stores");
+        setSubBarThirdData(menStores);
         break;
       case "Women's Fashion":
         setSubSideBarTitle("Women's Clothing");
         setSubSideBarData(WomenFashion);
+        setSubSideBarSubData(womenAccessories);
+        setSubSideBarSubTitle("Accessories");
+        setSubSideSecondTitle("Women's Shoes,");
+        setSubSideBarSecondData(womenShoes);
+        setSubSideBarThirdTitle("Stores");
+        setSubBarThirdData(womenStores);
         break;
       case "Home,Kitchen,Pets":
         setSubSideBarTitle("Home & Kitchen");
         setSubSideBarData(HomeKitchen);
+        setSubSideBarSubData(PetSupplies);
+        setSubSideBarSubTitle("Pet Supplies");
+        setSubSideSecondTitle("Home, Kitchen, Pets");
+        setSubSideBarSecondData(HomeKitchenPets);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Beauty,Health,Grocery":
         setSubSideBarTitle("Beauty & Health");
         setSubSideBarData(BeautyHealth);
         setSubSideBarSubData(GroceryGourmetFoods);
         setSubSideBarSubTitle("Grocery & Gourmet Foods");
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Sports,Fitness,Bags,Luggage":
         setSubSideBarTitle("Sports & Fitness");
         setSubSideBarData(SportsFitness);
         setSubSideBarSubData(BagsLuggage);
         setSubSideBarSubTitle("Bags & Luggage");
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Toys,Baby Products,Kid's Fashion":
         setSubSideBarTitle("Toys & Baby Products");
         setSubSideBarData(ToysBabyProducts);
         setSubSideBarSubData(KidsFashion);
         setSubSideBarSubTitle("Kid'sFashion");
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Car,Moterbile,Industrial":
         setSubSideBarTitle("Car & Motorbike");
         setSubSideBarData(CarMotorbike);
         setSubSideBarSubData(IndustrialSupplies);
         setSubSideBarSubTitle("IndustrialSupplies");
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       case "Books":
         setSubSideBarTitle("Books");
         setSubSideBarData(Books);
         setSubSideBarSubData(AudibleAudiobooks);
-        setSubSideBarSubTitle("  AudibleAudiobooks");
+        setSubSideBarSubTitle("AudibleAudiobooks");
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
-      // case "Movies,Music,& Video Games":
-      //   setSubSideBarTitle("Car & Motorbike");
-      //   setSubSideBarData(CarMotorbike);
-      //   break;
+
       case "Movies,Music,& Video Games":
         setSubSideBarTitle(" Movies & Tv Shows");
         setSubSideBarData(MoviesTvShows);
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
-
+      case "Gift Card Mobile Recharge":
+        setGiftCardData(GiftCards);
+        setGiftCardTitle("Gift Cards");
+        break;
       default:
-        setSubSideBarData(resources);
+        setSubSideBarData([]);
         break;
     }
   };
+
   // console.log("map", SideBarTrendingData);
 
   const list = (anchor) => {
@@ -318,6 +401,12 @@ const SideBar = (props) => {
         subSideBarData={subSideBarData}
         subSideBarSubData={subSideBarSubData}
         subSideBarSubTitle={subSideBarSubTitle}
+        subSideBarSecondData={subSideBarSecondData}
+        subSideBarSecondTitle={subSideBarSecondTitle}
+        subSideBarThirdTitle={subSideBarThirdTitle}
+        subSideBarThirdData={subSideBarThirdData}
+        giftCardTitle={giftCardTitle}
+        giftCardData={giftCardData}
       />
     </>
   );

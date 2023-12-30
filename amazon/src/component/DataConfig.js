@@ -560,6 +560,20 @@ export const Accessories = [
   { id: "40", title: "Jewellery" },
   { id: "41", title: "Wallets" },
 ];
+export const MenShoes = [
+  { id: "42", title: "Shoes" },
+  { id: "43", title: "Sport Shoes" },
+  { id: "44", title: "Formal Shoes" },
+  { id: "45", title: "Casual Shoes" },
+];
+export const menStores = [
+  { id: "60", title: "Sportwear" },
+  { id: "61", title: "The Designer Boutique" },
+  { id: "62", title: "Men's Fashion" },
+  { id: "53", title: "Amazon Fashion" },
+  { id: "53", title: "Men's Handloom" },
+  { id: "53", title: "Fashion Sales & Deals" },
+];
 export const WomenFashion = [
   {
     id: 65,
@@ -581,6 +595,26 @@ export const WomenFashion = [
     id: 69,
     title: "TopBrands",
   },
+];
+export const womenAccessories = [
+  { id: "46", title: "Watches" },
+  { id: "47", title: "Handbags & Clutches" },
+  { id: "48", title: "Gold Diamond Jewellery" },
+  { id: "49", title: "Fashion & Silver Jewellery" },
+  { id: "50", title: "Sunglasses" },
+];
+export const womenShoes = [
+  { id: "51", title: "Shoes" },
+  { id: "52", title: "Fashion Sandals" },
+  { id: "53", title: "Ballerinas" },
+];
+export const womenStores = [
+  { id: "54", title: "The Designer Boutique" },
+  { id: "55", title: "Handloom & Handicraft Store" },
+  { id: "56", title: "Sportswear" },
+  { id: "57", title: "Women's Fashion" },
+  { id: "58", title: "Amazon Fashion" },
+  { id: "59", title: "Fashion Sales & Deals" },
 ];
 export const HomeKitchen = [
   {
@@ -649,6 +683,11 @@ export const HomeKitchen = [
     title: "Home & Kitchen Deals",
   },
 ];
+export const PetSupplies = [
+  { id: "54", title: "All Pet Supplies" },
+  { id: "55", title: "Pet Supplies" },
+];
+export const HomeKitchenPets = [{ id: "55", title: "Refurbished & Open Box" }];
 export const BeautyHealth = [
   {
     id: 86,
@@ -917,7 +956,7 @@ export const MoviesTvShows = [
     title: "Entertainment Collectibles",
   },
 ];
-export const GiftCardData = [
+export const GiftCards = [
   {
     id: 29,
     title: "All Gift Cards",
