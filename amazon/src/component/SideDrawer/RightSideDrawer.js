@@ -22,8 +22,8 @@ const RightSideDrawer = (props) => {
     subSideBarSubData,
     subSideBarSecondTitle,
     subSideBarSecondData,
-    subSideBarThirdTitle,
-    subSideBarThirdData,
+    // subSideBarThirdTitle,
+    // subSideBarThirdData,
     giftCardData,
     giftCardTitle,
   } = props;
@@ -112,7 +112,7 @@ Recharge
               </ListItem>
             ))}
           </List>
-          <Typography variant="h6" sx={heading}>
+          {/* <Typography variant="h6" sx={heading}>
             {subSideBarThirdTitle}
           </Typography>
           <List>
@@ -124,7 +124,7 @@ Recharge
                 <Divider />
               </ListItem>
             ))}
-          </List>
+          </List> */}
         </Box>
       </>
     );

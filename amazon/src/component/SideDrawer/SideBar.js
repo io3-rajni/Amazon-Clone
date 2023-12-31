@@ -54,11 +54,11 @@ import {
   AudibleAudiobooks,
   MoviesTvShows,
   GiftCards,
+  Recharge,
 } from "../DataConfig";
 import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
 import RightSideDrawer from "././RightSideDrawer";
-import { GiftCardData, Recharge } from "../DataConfig";
 
 const SideBar = (props) => {
   const { openSideBar, setOpenSideBar } = props;
@@ -71,8 +71,8 @@ const SideBar = (props) => {
   const [subSideBarSecondTitle, setSubSideSecondTitle] = useState("");
   const [subSideBarThirdTitle, setSubSideBarThirdTitle] = useState("");
   const [subSideBarThirdData, setSubBarThirdData] = useState([]);
-  const [giftCardData, setGiftCardData] = useState([]);
-  const [giftCardTitle, setGiftCardTitle] = useState("");
+  // const [giftCardData, setGiftCardData] = useState([]);
+  // const [giftCardTitle, setGiftCardTitle] = useState("");
   const handleOpenSideDrawer = () => {
     setOpenSideBar(true);
   };
@@ -266,8 +266,14 @@ const SideBar = (props) => {
         setSubBarThirdData([]);
         break;
       case "Gift Card Mobile Recharge":
-        setGiftCardData(GiftCards);
-        setGiftCardTitle("Gift Cards");
+      case "Gift Card & Mobile Recharge":
+        // this state set the value of title inside the sub sidebar
+        setSubSideBarTitle(text.title);
+        // this state set the value of that particular item where we click
+        setSubSideBarData(GiftCards);
+        // setSubSideBarSubData(ContentResources);
+        setSubSideBarSubData(Recharge);
+        setSubSideBarSubTitle("Recharge");
         break;
       default:
         setSubSideBarData([]);
@@ -405,8 +411,8 @@ const SideBar = (props) => {
         subSideBarSecondTitle={subSideBarSecondTitle}
         subSideBarThirdTitle={subSideBarThirdTitle}
         subSideBarThirdData={subSideBarThirdData}
-        giftCardTitle={giftCardTitle}
-        giftCardData={giftCardData}
+        // giftCardTitle={giftCardTitle}
+        // giftCardData={giftCardData}
       />
     </>
   );
