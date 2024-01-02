@@ -66,3 +66,12 @@
   /* padding-top: 17px; */
   /* padding-bottom: 2px; */
 }
+.image,
+.image-1,
+.image-2,
+.image-3,
+.image-4,
+.image-5 {
+  width: 100%;
+  height: 80vh;
+}

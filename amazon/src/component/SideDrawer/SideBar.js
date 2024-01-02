@@ -59,7 +59,8 @@ import {
 import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
 import RightSideDrawer from "././RightSideDrawer";
-
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import CloseIcon from "@mui/icons-material/Close";
 const SideBar = (props) => {
   const { openSideBar, setOpenSideBar } = props;
   const [openRightSideDrawer, setOpenRightSideDrawer] = useState(false);
@@ -292,6 +293,20 @@ const SideBar = (props) => {
         }}
         role="presentation"
       >
+        <Typography
+          variant="h5"
+          sx={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            fontSize: "29px",
+            fontWeight: " 800",
+            background: "brown",
+          }}
+        >
+          <AccountCircleIcon />
+          Hello Sign in
+        </Typography>
+        <CloseIcon />
         <Typography variant="h6" sx={heading}>
           Trending
         </Typography>

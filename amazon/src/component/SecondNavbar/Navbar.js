@@ -37,12 +37,12 @@ const Navbar = () => {
         >
         </Link> */}
 
-        <IconButton sx={{ ml: 1, color: "#fff", p: 0 }} className="menuIcon">
+        <IconButton sx={{ ml: 1, color: "#fff", p: 0.1 }} className="menuIcon">
           <MenuIcon />
           <Typography
             onClick={handleAll}
             component="span"
-            sx={{ p: 1, lineHeight: 1, fontSize: "13px" }}
+            sx={{ lineHeight: 1, fontSize: "13px" }}
           >
             All
           </Typography>
