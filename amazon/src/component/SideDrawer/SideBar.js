@@ -87,8 +87,12 @@ const SideBar = (props) => {
     display: "flex",
     justifyContent: "space-around",
     fontWeight: 600,
-    fontSize: "17px",
+    fontSize: "18px",
     letterSpacing: "0px",
+    cursor: "pointer",
+    justifyContent: "left",
+    margin: "2rem 0rem 0rem 1rem",
+    color: "#232F3E",
   };
 
   const Product = {
@@ -294,19 +298,40 @@ const SideBar = (props) => {
         role="presentation"
       >
         <Typography
-          variant="h5"
+          component="div"
           sx={{
             display: "flex",
-            justifyContent: "space-evenly",
-            fontSize: "29px",
-            fontWeight: " 800",
-            background: "brown",
+            justifyContent: "flex-start",
+            cursor: "pointer",
+            background: "#232F3E",
           }}
         >
-          <AccountCircleIcon />
-          Hello Sign in
+          <Typography component="div">
+            <AccountCircleIcon
+              className="UserIcon"
+              sx={{
+                width: "2.5rem",
+                height: "2.5rem",
+                color: "#fff",
+                paddingLeft: "19px",
+              }}
+            />
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              fontWeight: "800",
+              paddingTop: "6px",
+              color: "#fff",
+              paddingLeft: "10px",
+            }}
+          >
+            , Hello Sign in
+          </Typography>
         </Typography>
-        <CloseIcon />
+
+        <Divider />
+
         <Typography variant="h6" sx={heading}>
           Trending
         </Typography>
@@ -414,6 +439,7 @@ const SideBar = (props) => {
       <Button onClick={handleOpenSideDrawer} />
       <SwipeableDrawer anchor="left" open={openSideBar} onClose={handleClose}>
         {list()}
+        {/* {<CloseIcon />} */}
       </SwipeableDrawer>
       <RightSideDrawer
         setOpenRightSideDrawer={setOpenRightSideDrawer}

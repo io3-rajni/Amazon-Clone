@@ -72,6 +72,10 @@
 .image-3,
 .image-4,
 .image-5 {
-  width: 100%;
-  height: 80vh;
+  max-width: 100%;
+  max-width: 100%;
+}
+.UserIcon {
+  width: 2.5rem;
+  height: 1em;
 }

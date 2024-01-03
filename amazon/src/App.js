@@ -3,6 +3,7 @@ import MainNavbar from "./component/Navbar/MainNavbar";
 import Navbar from "./component/SecondNavbar/Navbar";
 import SideBar from "./component/SideDrawer/SideBar";
 import CarouselComp from "./component/Carousel";
+import Cards from "./component/Cards/Cards";
 function App() {
   return (
     <>
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <SideBar />
       <CarouselComp />
+      <Cards />
     </>
   );
 }
