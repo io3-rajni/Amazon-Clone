@@ -1,17 +1,12 @@
 import "./App.css";
-import MainNavbar from "./component/Navbar/MainNavbar";
-import Navbar from "./component/SecondNavbar/Navbar";
-import SideBar from "./component/SideDrawer/SideBar";
-import CarouselComp from "./component/Carousel";
-import Cards from "./component/Cards/Cards";
+import MainContentBody from "./component/Body/MainContentBody";
+import Header from "./component/Header";
 function App() {
   return (
     <>
-      <MainNavbar />
-      <Navbar />
-      <SideBar />
-      <CarouselComp />
-      <Cards />
+      <Header />
+      <MainContentBody />
+      {/* <Footer /> */}
     </>
   );
 }

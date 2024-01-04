@@ -9,7 +9,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { GiftCardData, Recharge } from "../DataConfig";
+import { GiftCardData, Recharge } from "../../DataConfig";
 import { Typography } from "@mui/material";
 // import CollapseButton from "../CollapseButton";
 const RightSideDrawer = (props) => {

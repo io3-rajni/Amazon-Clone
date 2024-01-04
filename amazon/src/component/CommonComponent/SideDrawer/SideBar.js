@@ -8,7 +8,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import "../Navbar/mainnavbar.css";
+import "../../Header/Navbar/mainnavbar.css";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import {
   SideBarTrendingData,
@@ -55,10 +55,10 @@ import {
   MoviesTvShows,
   GiftCards,
   Recharge,
-} from "../DataConfig";
+} from "../../DataConfig";
 import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
-import RightSideDrawer from "././RightSideDrawer";
+import RightSideDrawer from "./RightSideDrawer";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseIcon from "@mui/icons-material/Close";
 const SideBar = (props) => {
@@ -439,7 +439,6 @@ const SideBar = (props) => {
       <Button onClick={handleOpenSideDrawer} />
       <SwipeableDrawer anchor="left" open={openSideBar} onClose={handleClose}>
         {list()}
-        {/* {<CloseIcon />} */}
       </SwipeableDrawer>
       <RightSideDrawer
         setOpenRightSideDrawer={setOpenRightSideDrawer}

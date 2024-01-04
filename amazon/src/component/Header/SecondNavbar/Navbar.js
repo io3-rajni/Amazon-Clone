@@ -7,10 +7,10 @@ import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import "../Navbar/mainnavbar.css";
-import { NavlinkData } from "../DataConfig";
-import shoppingEsay from "../../assets/shopping esay.jpg";
-import SideBar from "../SideDrawer/SideBar";
+import "../../Header/Navbar/mainnavbar.css";
+import { NavlinkData } from "../../DataConfig";
+import shoppingEsay from "../../../assets/shopping esay.jpg";
+import SideBar from "../../CommonComponent/SideDrawer/SideBar";
 const preventDefault = (event) => event.preventDefault();
 
 const Navbar = () => {
@@ -28,15 +28,6 @@ const Navbar = () => {
         }}
         onClick={preventDefault}
       >
-        {/* <Link
-          href="#"
-          underline="none"
-          color="#fff"
-          backgroundColor="#203040"
-          fontSize="14px"
-        >
-        </Link> */}
-
         <IconButton sx={{ ml: 1, color: "#fff", p: 0.1 }} className="menuIcon">
           <MenuIcon />
           <Typography
@@ -72,15 +63,6 @@ const Navbar = () => {
                 >
                   {item?.title}
                 </Button>
-                // <Link
-                //   href="#"
-                //   underline="none"
-                //   color="#fff"
-                //   sx={{ p: 1.3, width: " 78%" }}
-                //   className="services"
-                // >
-                //   {item?.title}
-                // </Link>
               )}
             </>
           );
@@ -96,7 +78,9 @@ const Navbar = () => {
           className="shoppingEasyLine"
         />
       </Box>
-      <SideBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
+      {openSideBar && (
+        <SideBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
+      )}
     </>
   );
 };

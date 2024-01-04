@@ -15,7 +15,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import Navlogo from "../../assets/ama.png";
+import Navlogo from "../../../assets/ama.png";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import "./mainnavbar.css";
@@ -161,15 +161,6 @@ const MainNavbar = () => {
     <Box sx={{ flexGrow: 1 }} class="main-nav">
       <AppBar position="static" sx={{ background: "#000" }}>
         <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2, background: "#fff" }}
-          > */}
-          {/* <MenuIcon /> */}
-          {/* </IconButton> */}
           <Typography
             variant="h6"
             noWrap
@@ -178,39 +169,37 @@ const MainNavbar = () => {
           >
             <img src={Navlogo} alt="amazon logo" class="amazone-img" />
           </Typography>
-          <Typography>
-            <Typography className="deliveryAndupdate">
-              {/* <FmdGoodOutlinedIcon /> */}
-              <Typography
-                variant="h6"
-                component="span"
-                sx={{ display: { xs: "none", sm: "block", fontSize: "13px" } }}
-                className="delivery-add"
-              >
-                Delivering to Ludhiana 141016
+          <Typography className="deliveryAndupdate">
+            {/* <FmdGoodOutlinedIcon /> */}
+            <Typography
+              variant="h6"
+              component="span"
+              sx={{ display: { xs: "none", sm: "block", fontSize: "13px" } }}
+              className="delivery-add"
+            >
+              Delivering to Ludhiana 141016
+            </Typography>
+            <Typography
+              component="div"
+              sx={{ display: "flex", marginTop: "8px" }}
+            >
+              <Typography component="div">
+                <FmdGoodOutlinedIcon />
               </Typography>
               <Typography
+                variant="h6"
                 component="div"
-                sx={{ display: "flex", marginTop: "8px" }}
+                sx={{
+                  display: {
+                    xs: "none",
+                    sm: "block",
+                    fontSize: "13px",
+                    fontWeight: "900",
+                  },
+                }}
+                className="update-location"
               >
-                <Typography component="div">
-                  <FmdGoodOutlinedIcon />
-                </Typography>
-                <Typography
-                  variant="h6"
-                  component="div"
-                  sx={{
-                    display: {
-                      xs: "none",
-                      sm: "block",
-                      fontSize: "13px",
-                      fontWeight: "900",
-                    },
-                  }}
-                  className="update-location"
-                >
-                  Updated Location
-                </Typography>
+                Updated Location
               </Typography>
             </Typography>
           </Typography>
