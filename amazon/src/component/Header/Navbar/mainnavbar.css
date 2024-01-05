@@ -72,10 +72,16 @@
 .image-3,
 .image-4,
 .image-5 {
-  max-width: 100%;
-  max-width: 100%;
+  /* /* max-width: 100%; */
+  width: 100%;
+  position: relative;
 }
 .UserIcon {
   width: 2.5rem;
   height: 1em;
+}
+.Carousel {
+  /* margin-top: 10px; */
+  /* position: absolute; */
+  /* top: 10px; */
 }

@@ -4,7 +4,24 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../Header/Navbar/mainnavbar.css";
 import Cards from "./Cards/Cards";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
+// const customLeftArrow = () => {
+//   return (
+//     <div>
+//       <KeyboardArrowLeftIcon />
+//     </div>
+//   );
+// };
+
+// const customRightArrow = () => {
+//   return (
+//     <div>
+//       <KeyboardArrowRightIcon />
+//     </div>
+//   );
+// };
 const CarouselComp = () => {
   const responsive = {
     superLargeDesktop: {
@@ -26,7 +43,25 @@ const CarouselComp = () => {
   };
   return (
     // <div>
-    <Carousel autoPlay autoPlaySpeed={4000} responsive={responsive}>
+    <Carousel
+      additionalTransfrom={0}
+      arrows
+      autoPlaySpeed={3000}
+      centerMode={false}
+      containerClass="container"
+      className="Carousel"
+      responsive={responsive}
+      // customLeftArrow
+      // customRightArrow
+      // rewind={false}
+      // rewindWithAnimation={false}
+      // rtl={false}
+      // shouldResetAutoplay
+      // showDots={false}
+      // sliderClass=""
+      // slidesToSlide={1}
+      // swipeable
+    >
       <div>
         <img
           src="https://images-eu.ssl-images-amazon.com/images/W/MEDIAX_792452-T2/images/G/31/img24/Consumables/SVD/Jan24/GW/Unrec_PC_Hero_3000x1200_ICICI._CB585113227_.jpg"
