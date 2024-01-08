@@ -7,7 +7,7 @@ import Cards from "./Cards/Cards";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-// const customLeftArrow = () => {
+// export const customLeftArrow = () => {
 //   return (
 //     <div>
 //       <KeyboardArrowLeftIcon />
@@ -15,7 +15,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 //   );
 // };
 
-// const customRightArrow = () => {
+// export const customRightArrow = () => {
 //   return (
 //     <div>
 //       <KeyboardArrowRightIcon />
@@ -41,16 +41,50 @@ const CarouselComp = () => {
       items: 1,
     },
   };
+  const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+    const {
+      carouselState: { currentSlide },
+    } = rest;
+    return (
+      <div
+        className="carousel-button-group mb-4  gap-4 flex justify-end 
+        items-center w-full  btn"
+      >
+        <button className=" left-btn" onClick={() => previous()}>
+          <KeyboardArrowLeftIcon
+            className="Arrow"
+            sx={{ height: "18rem", fontSize: "6rem", color: "#7a7373" }}
+          />
+        </button>
+        <button onClick={() => next()} className="right-btn">
+          <span className="block p-3 bg-slate-300 ">
+            <KeyboardArrowRightIcon
+              className="Arrow"
+              sx={{
+                height: "18rem",
+                fontSize: "6rem",
+                color: "#7a7373",
+              }}
+            />
+          </span>
+        </button>
+      </div>
+    );
+  };
   return (
     // <div>
     <Carousel
       additionalTransfrom={0}
-      arrows
+      arrows={false}
       autoPlaySpeed={3000}
       centerMode={false}
       containerClass="container"
       className="Carousel"
       responsive={responsive}
+      // customLeftArrow={<customLeftArrow />}
+      // customRightArrow={<customRightArrow />}
+      renderButtonGroupOutside={true}
+      customButtonGroup={<ButtonGroup />}
       // customLeftArrow
       // customRightArrow
       // rewind={false}

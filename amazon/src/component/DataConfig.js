@@ -1,3 +1,8 @@
+import light from "../assets/light.jpg";
+import Cushion from "../assets/chushion.jpg";
+import table from "../assets/table.jpg";
+import vases from "../assets/veses.jpg";
+
 export const NavlinkData = [
   {
     id: "1",
@@ -999,43 +1004,63 @@ export const Recharge = [
 ];
 
 // Cards Section
-export const StartEarlyPrimeMembers = [
-  {
-    id: "60",
-    title: "Starts early for Prime members",
-    img: "",
-  },
-  {
-    id: "61",
-    title: "",
+// export const StartEarlyPrimeMembers = [
+//   {
+//     id: "60",
+//     title: "Starts early for Prime members",
+//     img: "",
+//   },
+//   {
+//     id: "61",
+//     title: "",
 
-    img: "https://images-eu.ssl-images-amazon.com/images/W/M…/JanART/GW/T1/PC_CC_1x_t1._SY304_CB585484972_.jpg",
-  },
-];
+//     img: amazomne,
+//   },
+// ];
 export const AllYourHomeImprovement = [
   {
-    id: "62",
+    id: "60",
     title: "Starting ₹99 | All your home improvement needs",
-    img: "",
+    // btn: "Explore all",
+    child: [
+      {
+        img: light,
+        imgDescription: "Lighting Solution",
+      },
+      {
+        img: Cushion,
+        imgDescription: "Cushion Cover,Bedsheets & more ",
+      },
+      {
+        img: table,
+        imgDescription: "Home Storage",
+      },
+      {
+        img: vases,
+        imgDescription: "Vases,decor & more",
+      },
+    ],
   },
-  {
-    id: "62",
-    title: "",
-    img: "https://images-eu.ssl-images-amazon.com/images/W/M…D/ATF/QC-adapts_186x116_4._SY116_CB600489960_.jpg",
-  },
-  {
-    id: "63",
-    title: "",
-    img: "https://images-eu.ssl-images-amazon.com/images/W/M…D/ATF/QC-adapts_186x116_3._SY116_CB600489960_.jpg",
-  },
-  {
-    id: "64",
-    title: "",
-    img: "https://images-eu.ssl-images-amazon.com/images/W/M…D/ATF/QC-adapts_186x116_7._SY116_CB600489960_.jpg",
-  },
-  {
-    id: "65",
-    title: "",
-    img: "https://images-eu.ssl-images-amazon.com/images/W/M…D/ATF/QC-adapts_186x116_5._SY116_CB600489960_.jpg",
-  },
+  // {
+  //   id: "61",
+  //   title: "Starting ₹99 | All your home improvement needs",
+  //   child1: [
+  //     {
+  //       img: "",
+  //       imgDescription: "",
+  //     },
+  //     {
+  //       img: "",
+  //       imgDescription: "",
+  //     },
+  //     {
+  //       img: "",
+  //       imgDescription: "",
+  //     },
+  //     {
+  //       img: "",
+  //       imgDescription: "",
+  //     },
+  //   ],
+  // },
 ];
