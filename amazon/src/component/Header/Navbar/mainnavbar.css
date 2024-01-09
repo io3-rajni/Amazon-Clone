@@ -102,3 +102,6 @@
   border: 1px solid rgb(10, 120, 222);
   color: #7a7373;
 }
+.secondCardSection {
+  background-image: linear-gradient(#feb451, #fff);
+}

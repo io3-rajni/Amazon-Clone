@@ -14,7 +14,14 @@ import bags from "../assets/bag.jpg";
 import cloths from "../assets/cloths.jpg";
 import watches from "../assets/watches.jpg";
 import Footwear from "../assets/footwear.jpg";
-
+import washingMachines from "../assets/washingmachine.jpg";
+import microwave from "../assets/oven.jpg";
+import airCondition from "../assets/air.jpg";
+import refrigerator from "../assets/refrigerator.jpg";
+import racks from "../assets/racks.jpg";
+import bottles from "../assets/bottles.jpg";
+import cookware from "../assets/cookware.jpg";
+import container from "../assets/container.jpg";
 // import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 export const NavlinkData = [
   {
@@ -1112,49 +1119,50 @@ export const secondCardSection = [
       },
     ],
   },
+
   {
-    id: "62",
-    title: "Baby essentials & toys | Amazon Brands & more",
-    btn: "see more",
+    id: "63",
+    title: "Appliances for your home | Up to 55% off",
+    btn: "See more",
     child: [
       {
-        img: diapers,
-        imgDescription: "Starting ₹179 | diapers & wipes",
+        img: airCondition,
+        imgDescription: "Air Condition",
       },
       {
-        img: cardels,
-        imgDescription: "up to 50% off | baby cardels more",
+        img: refrigerator,
+        imgDescription: "Refrigerator",
       },
       {
-        img: softToys,
-        imgDescription: "Starting ₹299 | Soft Toys & Indoor games",
+        img: microwave,
+        imgDescription: "Microwave",
       },
       {
-        img: outdoorGame,
-        imgDescription: "Minimum 40% off | Outdoor games",
+        img: washingMachines,
+        imgDescription: "Washing Machines",
       },
     ],
   },
   {
-    id: "62",
-    title: "Baby essentials & toys | Amazon Brands & more",
-    btn: "see more",
+    id: "64",
+    title: "Starting ₹199 | Amazon brands & more",
+    btn: "See more",
     child: [
       {
-        img: diapers,
-        imgDescription: "Starting ₹179 | diapers & wipes",
+        img: bottles,
+        imgDescription: "Starting ₹199 | Water Bottles",
       },
       {
-        img: cardels,
-        imgDescription: "up to 50% off | baby cardels more",
+        img: container,
+        imgDescription: "Starting ₹299 | Storage Container",
       },
       {
-        img: softToys,
-        imgDescription: "Starting ₹299 | Soft Toys & Indoor games",
+        img: container,
+        imgDescription: "Starting ₹399 | Cookware",
       },
       {
-        img: outdoorGame,
-        imgDescription: "Minimum 40% off | Outdoor games",
+        img: racks,
+        imgDescription: "Starting ₹499 | Racks & Holders",
       },
     ],
   },

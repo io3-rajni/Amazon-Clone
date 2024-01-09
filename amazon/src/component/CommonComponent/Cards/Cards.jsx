@@ -174,11 +174,10 @@ const Cards = () => {
       {/* Second Line */}
       <Typography
         component="div"
+        className="secondCardSection"
         sx={{
           display: "flex",
           justifyContent: "space-evenly",
-          // width: "51%",
-          background: "red",
         }}
       >
         {secondCardSection?.map((item, index) => {
@@ -228,7 +227,7 @@ const Cards = () => {
               </Box>
               <CardContent />
               <CardActions>
-                <Button size="small" color="primary">
+                <Button size="small" color="primary" sx={{ padding: "0" }}>
                   {item?.btn}
                 </Button>
               </CardActions>
