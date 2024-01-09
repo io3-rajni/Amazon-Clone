@@ -2,7 +2,20 @@ import light from "../assets/light.jpg";
 import Cushion from "../assets/chushion.jpg";
 import table from "../assets/table.jpg";
 import vases from "../assets/veses.jpg";
+import boat from "../assets/Boat.jpg";
+import boult from "../assets/Boult.jpg";
+import zebronics from "../assets/Noise.jpg";
+import noise from "../assets/Noise.jpg";
+import diapers from "../assets/dipares.jpg";
+import cardels from "../assets/cardels.jpg";
+import outdoorGame from "../assets/outdoor games.jpg";
+import softToys from "../assets/soft toys.jpg";
+import bags from "../assets/bag.jpg";
+import cloths from "../assets/cloths.jpg";
+import watches from "../assets/watches.jpg";
+import Footwear from "../assets/footwear.jpg";
 
+// import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 export const NavlinkData = [
   {
     id: "1",
@@ -1003,25 +1016,11 @@ export const Recharge = [
   },
 ];
 
-// Cards Section
-// export const StartEarlyPrimeMembers = [
-//   {
-//     id: "60",
-//     title: "Starts early for Prime members",
-//     img: "",
-//   },
-//   {
-//     id: "61",
-//     title: "",
-
-//     img: amazomne,
-//   },
-// ];
-export const AllYourHomeImprovement = [
+export const CardsSection = [
   {
     id: "60",
     title: "Starting ₹99 | All your home improvement needs",
-    // btn: "Explore all",
+    btn: "Explore all",
     child: [
       {
         img: light,
@@ -1029,7 +1028,7 @@ export const AllYourHomeImprovement = [
       },
       {
         img: Cushion,
-        imgDescription: "Cushion Cover,Bedsheets & more ",
+        imgDescription: "CushionCover,Bedsheets & more ",
       },
       {
         img: table,
@@ -1041,26 +1040,122 @@ export const AllYourHomeImprovement = [
       },
     ],
   },
-  // {
-  //   id: "61",
-  //   title: "Starting ₹99 | All your home improvement needs",
-  //   child1: [
-  //     {
-  //       img: "",
-  //       imgDescription: "",
-  //     },
-  //     {
-  //       img: "",
-  //       imgDescription: "",
-  //     },
-  //     {
-  //       img: "",
-  //       imgDescription: "",
-  //     },
-  //     {
-  //       img: "",
-  //       imgDescription: "",
-  //     },
-  //   ],
-  // },
+  {
+    id: "61",
+    title: "Up to 75% off | Headphones",
+    btn: "see all offers",
+    child: [
+      {
+        img: boat,
+        imgDescription: "Up to 50% off | Boat",
+      },
+      {
+        img: boult,
+        imgDescription: "up to 50% off | boult",
+      },
+      {
+        img: noise,
+        imgDescription: "up to 50% off | Noise",
+      },
+      {
+        img: zebronics,
+        imgDescription: "up to 50% off | Zebronics",
+      },
+    ],
+  },
+];
+
+export const secondCardSection = [
+  {
+    id: "62",
+    title: "Baby essentials & toys | Amazon Brands & more",
+    btn: "see more",
+    child: [
+      {
+        img: diapers,
+        imgDescription: "Starting ₹179 | diapers & wipes",
+      },
+      {
+        img: cardels,
+        imgDescription: "up to 50% off | baby cardels more",
+      },
+      {
+        img: softToys,
+        imgDescription: "Starting ₹299 | Soft Toys & Indoor games",
+      },
+      {
+        img: outdoorGame,
+        imgDescription: "Minimum 40% off | Outdoor games",
+      },
+    ],
+  },
+  {
+    id: "62",
+    title: "Up to 60% off | Styles for men",
+    btn: "end of season sale",
+    child: [
+      {
+        img: cloths,
+        imgDescription: "Clothing",
+      },
+      {
+        img: Footwear,
+        imgDescription: "Footwear",
+      },
+      {
+        img: watches,
+        imgDescription: "Watches",
+      },
+      {
+        img: bags,
+        imgDescription: "Bags & Wallets",
+      },
+    ],
+  },
+  {
+    id: "62",
+    title: "Baby essentials & toys | Amazon Brands & more",
+    btn: "see more",
+    child: [
+      {
+        img: diapers,
+        imgDescription: "Starting ₹179 | diapers & wipes",
+      },
+      {
+        img: cardels,
+        imgDescription: "up to 50% off | baby cardels more",
+      },
+      {
+        img: softToys,
+        imgDescription: "Starting ₹299 | Soft Toys & Indoor games",
+      },
+      {
+        img: outdoorGame,
+        imgDescription: "Minimum 40% off | Outdoor games",
+      },
+    ],
+  },
+  {
+    id: "62",
+    title: "Baby essentials & toys | Amazon Brands & more",
+    btn: "see more",
+    child: [
+      {
+        img: diapers,
+        imgDescription: "Starting ₹179 | diapers & wipes",
+      },
+      {
+        img: cardels,
+        imgDescription: "up to 50% off | baby cardels more",
+      },
+      {
+        img: softToys,
+        imgDescription: "Starting ₹299 | Soft Toys & Indoor games",
+      },
+      {
+        img: outdoorGame,
+        imgDescription: "Minimum 40% off | Outdoor games",
+      },
+    ],
+  },
 ];
