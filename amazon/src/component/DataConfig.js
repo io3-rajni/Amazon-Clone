@@ -22,7 +22,6 @@ import racks from "../assets/racks.jpg";
 import bottles from "../assets/bottles.jpg";
 import cookware from "../assets/cookware.jpg";
 import container from "../assets/container.jpg";
-// import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 export const NavlinkData = [
   {
     id: "1",
