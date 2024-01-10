@@ -61,7 +61,7 @@ const Cards = () => {
           {CardsSection?.map((item, index) => {
             console.log("i", item);
             return (
-              <Card sx={{ maxWidth: 348 }}>
+              <Card sx={{ maxWidth: 348 }} key={index}>
                 <CardContent
                   sx={{ fontWeight: "900 !important", fontSize: "1.2rem" }}
                   component="div"
@@ -78,27 +78,25 @@ const Cards = () => {
                   {item?.child?.map((childData, i) => {
                     console.log("image", childData);
                     return (
-                      <>
-                        <Box>
-                          <CardMedia
-                            component="img"
-                            sx={{
-                              height: "7rem",
-                              width: "9rem",
-                            }}
-                            image={childData?.img}
-                          />
-                          <Typography
-                            component="div"
-                            sx={{
-                              fontSize: "12px",
-                              width: "6rem",
-                            }}
-                          >
-                            {childData?.imgDescription}
-                          </Typography>
-                        </Box>
-                      </>
+                      <Box key={i}>
+                        <CardMedia
+                          component="img"
+                          sx={{
+                            height: "7rem",
+                            width: "9rem",
+                          }}
+                          image={childData?.img}
+                        />
+                        <Typography
+                          component="div"
+                          sx={{
+                            fontSize: "12px",
+                            width: "6rem",
+                          }}
+                        >
+                          {childData?.imgDescription}
+                        </Typography>
+                      </Box>
                     );
                   })}
                 </Box>
@@ -183,7 +181,7 @@ const Cards = () => {
         {secondCardSection?.map((item, index) => {
           console.log("i", item);
           return (
-            <Card sx={{ maxWidth: 348 }}>
+            <Card sx={{ maxWidth: 348 }} key={index}>
               <CardContent
                 sx={{ fontWeight: "900 !important", fontSize: "1.2rem" }}
                 component="div"
@@ -200,28 +198,26 @@ const Cards = () => {
                 {item?.child?.map((childData, i) => {
                   console.log("image", childData);
                   return (
-                    <>
-                      <Box>
-                        <CardMedia
-                          component="img"
-                          sx={{
-                            height: "7rem",
-                            width: "9rem",
-                          }}
-                          image={childData?.img}
-                        />
-                        <Typography
-                          component="div"
-                          sx={{
-                            fontSize: "12px",
-                            width: "6rem",
-                            height: "3.2rem",
-                          }}
-                        >
-                          {childData?.imgDescription}
-                        </Typography>
-                      </Box>
-                    </>
+                    <Box key={i}>
+                      <CardMedia
+                        component="img"
+                        sx={{
+                          height: "7rem",
+                          width: "9rem",
+                        }}
+                        image={childData?.img}
+                      />
+                      <Typography
+                        component="div"
+                        sx={{
+                          fontSize: "12px",
+                          width: "6rem",
+                          height: "3.2rem",
+                        }}
+                      >
+                        {childData?.imgDescription}
+                      </Typography>
+                    </Box>
                   );
                 })}
               </Box>

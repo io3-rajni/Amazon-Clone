@@ -1096,7 +1096,7 @@ export const secondCardSection = [
     ],
   },
   {
-    id: "62",
+    id: "63",
     title: "Up to 60% off | Styles for men",
     btn: "end of season sale",
     child: [
@@ -1120,7 +1120,7 @@ export const secondCardSection = [
   },
 
   {
-    id: "63",
+    id: "64",
     title: "Appliances for your home | Up to 55% off",
     btn: "See more",
     child: [
@@ -1163,6 +1163,67 @@ export const secondCardSection = [
         img: racks,
         imgDescription: "Starting ₹499 | Racks & Holders",
       },
+    ],
+  },
+];
+export const getToKnowUs = [
+  {
+    id: "65",
+    title: "Get to Know Us",
+    child: [
+      {
+        option: "About Us",
+      },
+      { option: " Careers" },
+      { option: " Press Releases" },
+      { option: "  Amazon Science" },
+    ],
+  },
+];
+export const connectWith = [
+  {
+    id: "65",
+    title: "Connect with Us",
+    child: [
+      {
+        option: "About Us",
+      },
+      { option: " Facebook" },
+      { option: "  Twitter" },
+      { option: "Instagram" },
+    ],
+  },
+];
+export const makeMoneyWithUs = [
+  {
+    id: "65",
+    title: "Make Money with Us",
+    child: [
+      {
+        option: "",
+      },
+      { option: "Sell on Amazon" },
+      { option: "Sell under Amazon Accelerator" },
+      { option: "Protect and Build Your Brand" },
+      { option: "Amazon Global Selling" },
+      { option: "Become an Affiliate" },
+      { option: "Fulfilment by Amazon" },
+      { option: "Advertise Your Products" },
+      { option: "Amazon Pay on Merchants" },
+    ],
+  },
+];
+export const letUsHelpYou = [
+  {
+    id: "65",
+    title: "Let Us Help You",
+    child: [
+      { option: "COVID-19 and Amazon" },
+      { option: "Your Account" },
+      { option: "Returns Centre" },
+      { option: "100% Purchase Protection" },
+      { option: "Amazon App Download" },
+      { option: " Help" },
     ],
   },
 ];
