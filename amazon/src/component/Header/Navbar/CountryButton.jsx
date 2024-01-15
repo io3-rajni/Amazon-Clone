@@ -36,11 +36,12 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-const AccountList = () => {
+const CountryButton = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    setAnchorEl("Rajni");
+    console.log("setAnchor", event, event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -69,14 +70,6 @@ const AccountList = () => {
           <Typography
             variant="h6"
             component="span"
-            sx={{ display: { xs: "none", sm: "block", fontSize: "13px" } }}
-            // className="delivery-add"
-          >
-            Hello,sign in
-          </Typography>
-          <Typography
-            variant="h6"
-            component="span"
             sx={{
               display: {
                 xs: "none",
@@ -87,7 +80,7 @@ const AccountList = () => {
             }}
             className="update-location"
           >
-            Account & List
+            Lang
           </Typography>
         </Typography>
       </Button>
@@ -122,4 +115,4 @@ const AccountList = () => {
   );
 };
 
-export default AccountList;
+export default CountryButton;

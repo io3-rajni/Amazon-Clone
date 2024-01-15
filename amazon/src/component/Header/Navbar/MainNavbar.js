@@ -22,6 +22,7 @@ import "./mainnavbar.css";
 import { TextField } from "@mui/material";
 import DropdownButton from "./DropdownButton";
 import AccountList from "./AccountList";
+import CountryButton from "./CountryButton";
 const Search = styled("div")(({ theme }) => ({
   // position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -203,6 +204,7 @@ const MainNavbar = () => {
               </Typography>
             </Typography>
           </Typography>
+          {/* Country */}
 
           <Typography
             component="div"
@@ -245,6 +247,7 @@ const MainNavbar = () => {
               width: " 31%",
             }}
           >
+            <CountryButton />
             <AccountList />
             <Box
               sx={{
