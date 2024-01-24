@@ -105,3 +105,6 @@
 .secondCardSection {
   background-image: linear-gradient(#feb451, #fff);
 }
+.countryDropdown:hover {
+  border: 1px solid white;
+}
