@@ -6,6 +6,10 @@ import {
   makeMoneyWithUs,
   connectWith,
   letUsHelpYou,
+  abeBooks,
+  amazonWebServices,
+  audible,
+  Imdb,
 } from "../../component/DataConfig";
 const Footer = () => {
   const scrollTo = () => {
@@ -183,8 +187,8 @@ const Footer = () => {
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
         sx={{
-          display: "flex",
-          justifyContent: "center",
+          // display: "flex",
+          // justifyContent: "center",
           margin: "82%",
           margin: "auto",
           fontSize: "14px",
@@ -193,7 +197,7 @@ const Footer = () => {
         }}
       >
         <Grid item sx={6} sm={4} md={2}>
-          {getToKnowUs.map((item, index) => {
+          {abeBooks.map((item, index) => {
             return (
               <>
                 <Typography
@@ -225,7 +229,7 @@ const Footer = () => {
           })}
         </Grid>
         <Grid item sx={6} sm={4} md={2}>
-          {connectWith.map((item, index) => {
+          {amazonWebServices.map((item, index) => {
             return (
               <>
                 <Typography
@@ -257,7 +261,7 @@ const Footer = () => {
           })}
         </Grid>
         <Grid item xs={2} sm={4} md={2}>
-          {makeMoneyWithUs.map((item, index) => {
+          {audible.map((item, index) => {
             return (
               <>
                 <Typography
@@ -290,7 +294,7 @@ const Footer = () => {
           })}
         </Grid>
         <Grid item xs={2} sm={4} md={2}>
-          {letUsHelpYou.map((item, index) => {
+          {Imdb.map((item, index) => {
             return (
               <>
                 <Typography
