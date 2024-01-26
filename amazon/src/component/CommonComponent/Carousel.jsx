@@ -1,27 +1,11 @@
 import React from "react";
-// import { Box } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../Header/Navbar/mainnavbar.css";
-import Cards from "./Cards/Cards";
+
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-// export const customLeftArrow = () => {
-//   return (
-//     <div>
-//       <KeyboardArrowLeftIcon />
-//     </div>
-//   );
-// };
-
-// export const customRightArrow = () => {
-//   return (
-//     <div>
-//       <KeyboardArrowRightIcon />
-//     </div>
-//   );
-// };
 const CarouselComp = () => {
   const responsive = {
     superLargeDesktop: {

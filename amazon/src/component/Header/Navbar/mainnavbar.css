@@ -108,3 +108,13 @@
 .countryDropdown:hover {
   border: 1px solid white;
 }
+.buttonStyle {
+  width: 20rem;
+  height: 1.7rem;
+  text-transform: capitalize;
+  background: #ffd814;
+  color: #000;
+}
+.buttonStyle:hover {
+  background: #ffd814 !important;
+}
