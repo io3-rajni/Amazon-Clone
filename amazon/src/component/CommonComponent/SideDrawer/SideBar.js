@@ -451,8 +451,6 @@ const SideBar = (props) => {
         subSideBarSecondTitle={subSideBarSecondTitle}
         subSideBarThirdTitle={subSideBarThirdTitle}
         subSideBarThirdData={subSideBarThirdData}
-        // giftCardTitle={giftCardTitle}
-        // giftCardData={giftCardData}
       />
     </>
   );

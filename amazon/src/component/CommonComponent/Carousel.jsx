@@ -65,20 +65,8 @@ const CarouselComp = () => {
       containerClass="container"
       className="Carousel"
       responsive={responsive}
-      // customLeftArrow={<customLeftArrow />}
-      // customRightArrow={<customRightArrow />}
       renderButtonGroupOutside={true}
       customButtonGroup={<ButtonGroup />}
-      // customLeftArrow
-      // customRightArrow
-      // rewind={false}
-      // rewindWithAnimation={false}
-      // rtl={false}
-      // shouldResetAutoplay
-      // showDots={false}
-      // sliderClass=""
-      // slidesToSlide={1}
-      // swipeable
     >
       <div>
         <img
@@ -123,8 +111,6 @@ const CarouselComp = () => {
         />
       </div>
     </Carousel>
-    // <Cards />
-    // </div>
   );
 };
 

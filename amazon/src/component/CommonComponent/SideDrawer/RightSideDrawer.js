@@ -22,8 +22,6 @@ const RightSideDrawer = (props) => {
     subSideBarSubData,
     subSideBarSecondTitle,
     subSideBarSecondData,
-    // subSideBarThirdTitle,
-    // subSideBarThirdData,
     giftCardData,
     giftCardTitle,
   } = props;
@@ -60,8 +58,6 @@ const RightSideDrawer = (props) => {
           </Typography>
           <List>
             {giftCardData?.map((text, index) => (
-              // return
-              // index .btn ? (
               <ListItem key={index} disablePadding>
                 <ListItemButton>
                   <ListItemText primary={text?.title} />
@@ -82,9 +78,6 @@ const RightSideDrawer = (props) => {
               </ListItem>
             ))}
           </List>
-          {/* <Typography variant="h6" sx={heading}>
-Recharge
-</Typography> */}
           <Divider />
           <Typography variant="h6" sx={heading}>
             {subSideBarSubTitle}
@@ -112,19 +105,6 @@ Recharge
               </ListItem>
             ))}
           </List>
-          {/* <Typography variant="h6" sx={heading}>
-            {subSideBarThirdTitle}
-          </Typography>
-          <List>
-            {subSideBarThirdData?.map((text, index) => (
-              <ListItem key={index} disablePadding>
-                <ListItemButton>
-                  <ListItemText primary={text?.title} />
-                </ListItemButton>
-                <Divider />
-              </ListItem>
-            ))}
-          </List> */}
         </Box>
       </>
     );

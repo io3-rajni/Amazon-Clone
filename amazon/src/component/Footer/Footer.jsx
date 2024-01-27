@@ -46,7 +46,7 @@ const Footer = () => {
           justifyContent: "center",
           margin: "82%",
           margin: "auto",
-          fontSize: "14px",
+          fontSize: "12px",
           background: "#232F3E",
           marginTop: "1px !important",
         }}
@@ -74,6 +74,7 @@ const Footer = () => {
                         color: "#fff",
                       }}
                       key={index}
+                      className="Footer"
                     >
                       {item.option}
                     </Typography>
@@ -182,17 +183,18 @@ const Footer = () => {
           })}
         </Grid>
       </Grid>
+
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
         sx={{
-          // display: "flex",
-          // justifyContent: "center",
+          display: "flex",
+          justifyContent: "center",
           margin: "82%",
           margin: "auto",
           fontSize: "14px",
-          background: "#232F3E",
+          background: "#131A22",
           marginTop: "1px !important",
         }}
       >
@@ -203,8 +205,8 @@ const Footer = () => {
                 <Typography
                   key={index}
                   sx={{
-                    fontSize: "14px",
-                    fontWeight: "900",
+                    fontSize: "12px",
+                    fontWeight: "600",
                     color: "#fff",
                   }}
                 >
@@ -235,8 +237,8 @@ const Footer = () => {
                 <Typography
                   key={index}
                   sx={{
-                    fontSize: "14px",
-                    fontWeight: "900",
+                    fontSize: "12px",
+                    fontWeight: "600",
                     color: "#fff",
                   }}
                 >
@@ -247,7 +249,7 @@ const Footer = () => {
                     <Typography
                       key={index}
                       sx={{
-                        fontSize: "14px",
+                        fontSize: "12px",
                         lineHeight: "2rem !important",
                         color: "#fff",
                       }}
@@ -267,8 +269,8 @@ const Footer = () => {
                 <Typography
                   key={index}
                   sx={{
-                    fontSize: "14px",
-                    fontWeight: "900",
+                    fontSize: "12px",
+                    fontWeight: "600",
                     color: "#fff",
                   }}
                 >
@@ -280,7 +282,7 @@ const Footer = () => {
                     <Typography
                       key={index}
                       sx={{
-                        fontSize: "14px",
+                        fontSize: "12px",
                         lineHeight: "2rem !important",
                         color: "#fff",
                       }}
@@ -300,12 +302,11 @@ const Footer = () => {
                 <Typography
                   key={index}
                   sx={{
-                    fontSize: "14px",
-                    fontWeight: "900",
+                    fontSize: "12px",
+                    fontWeight: "600",
                     color: "#fff",
                   }}
                 >
-                  {" "}
                   {item.title}
                 </Typography>
                 {item.child.map((item, index) => {
@@ -313,7 +314,7 @@ const Footer = () => {
                     <Typography
                       key={index}
                       sx={{
-                        fontSize: "14px",
+                        fontSize: "12px",
                         lineHeight: "2rem !important",
                         color: "#fff",
                       }}
@@ -325,6 +326,37 @@ const Footer = () => {
               </>
             );
           })}
+        </Grid>
+        <Grid item xs={12} md={12} sm={12} sx={{}}>
+          <Typography
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <a href="#" style={{ color: "white" }} className="footerLinkTag">
+              Conditions of Use & Sale
+            </a>
+            <a href="#" className="footerLinkTag">
+              {" "}
+              Privacy Notice
+            </a>
+            <a href="#" className="footerLinkTag">
+              Interest-Based Ads
+            </a>
+          </Typography>
+          <Typography
+            component="div"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              color: "#fff",
+              marginTop: "9px",
+              fontSize: "10px",
+            }}
+          >
+            © 1996-2024, Amazon.com, Inc. or its affiliates
+          </Typography>
         </Grid>
       </Grid>
     </>

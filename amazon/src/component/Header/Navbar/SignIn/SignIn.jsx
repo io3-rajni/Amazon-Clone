@@ -15,6 +15,8 @@ import {
   // Footer,
   // buttonBase,
 } from "@mui/material";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import amazone from "../../../../assets/amazone.png";
 import "../../Navbar/mainnavbar.css";
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
@@ -53,13 +55,17 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 //   width: "20rem",
 // }));
 const SignIn = () => {
+  const [needData, setNeedData] = React.useState(false);
+  const handleNeedHelp = () => {
+    setNeedData(() => !needData);
+  };
   return (
     <>
       <Box component="div" sx={{ display: "grid", justifyContent: "center" }}>
         <img src={amazone} style={{ height: "5rem" }} />
-        <Card sx={{ maxWidth: 350 }}>
+        <Card sx={{ maxWidth: 350, height: "23rem" }}>
           <CardContent>
-            <Typography gutterBottom variant="h4" component="div">
+            <Typography gutterBottom variant="h5" component="div">
               Sign in
             </Typography>
             <Typography
@@ -115,21 +121,57 @@ const SignIn = () => {
               }}
             >
               By continuing, you agree to Amazon's
-              <a href="#">Conditions of Use</a>
-              and Privacy Notice<a href="#"> Privacy Notice.</a>
+              <a href="#" className="linkTag">
+                Conditions of Use
+              </a>
+              and Privacy Notice
+              <a href="#" className="linkTag">
+                {" "}
+                Privacy Notice.
+              </a>
             </Typography>
+
             <Typography
-              sx={{
-                fontSize: " 13px",
-                marginTop: "12px",
-                width: "19rem",
-                // margin: "auto",
-                marginTop: "10px",
-                paddingLeft: "25px",
-              }}
+              sx={{ display: "flex", marginLeft: "18px", marginTop: "12px" }}
             >
-              <a href="#">Need Help</a>
+              {needData ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
+              <Typography
+                sx={{
+                  fontSize: " 13px",
+                  marginTop: "3px",
+                  width: "19rem",
+                }}
+                onClick={handleNeedHelp}
+              >
+                <a href="#" className="linkTag">
+                  Need Help
+                </a>
+              </Typography>
             </Typography>
+            {needData ? (
+              <Typography
+                sx={{
+                  // display: "inline",
+                  fontSize: " 13px",
+                  marginTop: "12px",
+                  width: "19rem",
+                  lineHeight: "1.7rem",
+                  // margin: "auto",
+                  marginTop: "2px",
+                  paddingLeft: "42px",
+                }}
+              >
+                {/* <a href="#">Need Help</a> */}
+                <a href="#">Forgot Password</a>
+                <br />
+                <a href="#" className="linkTag">
+                  Other issues with Sign-In
+                </a>
+              </Typography>
+            ) : (
+              ""
+            )}
+
             <hr style={{ width: "18rem" }} />
             <Typography
               variant="h6"
@@ -153,12 +195,14 @@ const SignIn = () => {
                 paddingLeft: "25px",
               }}
             >
-              <a href="#">Shop on Amazon Business</a>
+              <a href="#" className="linkTag">
+                Shop on Amazon Business
+              </a>
             </Typography>
           </Box>
         </Card>
         <Typography component="div" sx={{ display: "flex", marginTop: "7%" }}>
-          <hr style={{ width: "7rem" }} />
+          <hr style={{ width: "7rem", marginTop: "2%" }} />
           <Typography sx={{ fontSize: "12px" }}>New to Account ?</Typography>
           <hr style={{ width: "7rem" }} />
         </Typography>
@@ -180,19 +224,38 @@ const SignIn = () => {
         </Stack>
         {/* </CardActions> */}
       </Box>
-      <Divider />
-      <Box variant="h6" sx={{ width: "100%" }}>
+      <Divider sx={{ marginTop: "2%" }} />
+      <Box
+        variant="h6"
+        sx={{
+          width: "100%",
+          paddingTop: "2%",
+          background: "#FBFBFB",
+          height: "7.9rem",
+        }}
+      >
         <Typography
           component="div"
-          sx={{ display: "flex", justifyContent: "center" }}
+          sx={{ display: "flex", justifyContent: "center", fontSize: "11px" }}
         >
-          <a href="#">Conditions of Use </a>
-          <a href="#">Privacy Notice</a>
-          <a href="#">Help</a>
+          <a href="#" style={{ marginRight: "20px" }} className="linkTag">
+            Conditions of Use
+          </a>
+          <a href="#" className="linkTag">
+            Privacy Notice
+          </a>
+          <a href="#" style={{ marginLeft: "20px" }} className="linkTag">
+            Help
+          </a>
         </Typography>
         <Typography
           component="div"
-          sx={{ display: "flex", justifyContent: "center" }}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "1%",
+            fontSize: "11px",
+          }}
         >
           © 1996-2024, Amazon.com, Inc. or its affiliates
         </Typography>

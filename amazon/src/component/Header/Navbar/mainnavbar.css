@@ -58,14 +58,7 @@
   border: 2px solid white;
   border-radius: 0;
 }
-.ListTag {
-  /* list-style: none; */
-  /* margin: 0px, */
-  /* padding: 0; */
-  /* position: relative; */
-  /* padding-top: 17px; */
-  /* padding-bottom: 2px; */
-}
+
 .image,
 .image-1,
 .image-2,
@@ -118,11 +111,11 @@
 .buttonStyle:hover {
   background: #ffd814 !important;
 }
-a {
+.linkTag {
   text-decoration: none;
   color: #1b77d0;
 }
-a:hover {
+.linkTag:hover {
   text-decoration: underline;
   color: #1b77d0;
 }
@@ -131,4 +124,21 @@ a:hover {
 }
 hr {
   color: aliceblue !important;
+}
+
+/* Footer */
+.footerLinkTag {
+  color: #fff !important;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 0px 0px 0px 22px;
+}
+.footerLinkTag:hover,
+Footer:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+Footer:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
