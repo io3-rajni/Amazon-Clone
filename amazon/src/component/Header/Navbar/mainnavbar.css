@@ -118,3 +118,17 @@
 .buttonStyle:hover {
   background: #ffd814 !important;
 }
+a {
+  text-decoration: none;
+  color: #1b77d0;
+}
+a:hover {
+  text-decoration: underline;
+  color: #1b77d0;
+}
+.createAccountButton:hover {
+  background-color: aliceblue !important;
+}
+hr {
+  color: aliceblue !important;
+}
