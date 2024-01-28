@@ -1125,8 +1125,8 @@ export const secondCardSection = [
     btn: "See more",
     child: [
       {
-        img: airCondition,
-        imgDescription: "Air Condition",
+        img: cookware,
+        imgDescription: "Cookware",
       },
       {
         img: refrigerator,
@@ -1302,5 +1302,32 @@ export const Imdb = [
         option: "100 million songs ad-free,15million podcast episode",
       },
     ],
+  },
+];
+export const carouselImage = [
+  {
+    id: "70",
+    title: "",
+    img: Footwear,
+  },
+  {
+    id: "70",
+    title: "",
+    img: airCondition,
+  },
+  {
+    id: "70",
+    title: "",
+    img: cardels,
+  },
+  {
+    id: "70",
+    title: "",
+    img: light,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bottles,
   },
 ];

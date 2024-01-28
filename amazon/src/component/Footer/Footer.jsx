@@ -76,7 +76,9 @@ const Footer = () => {
                       key={index}
                       className="Footer"
                     >
-                      {item.option}
+                      <a href="#" className="footerLinkTag1">
+                        {item.option}
+                      </a>
                     </Typography>
                   );
                 })}
@@ -108,7 +110,10 @@ const Footer = () => {
                         color: "#fff",
                       }}
                     >
-                      {item.option}
+                      <a href="#" className="footerLinkTag1">
+                        {" "}
+                        {item.option}
+                      </a>
                     </Typography>
                   );
                 })}
@@ -128,7 +133,6 @@ const Footer = () => {
                     color: "#fff",
                   }}
                 >
-                  {" "}
                   {item.title}
                 </Typography>
                 {item.child.map((item, index) => {
@@ -141,7 +145,9 @@ const Footer = () => {
                         color: "#fff",
                       }}
                     >
-                      {item?.option}
+                      <a href="#" className="footerLinkTag1">
+                        {item?.option}
+                      </a>
                     </Typography>
                   );
                 })}
@@ -174,7 +180,9 @@ const Footer = () => {
                         color: "#fff",
                       }}
                     >
-                      {item?.option}
+                      <a href="#" className="footerLinkTag1">
+                        {item?.option}
+                      </a>
                     </Typography>
                   );
                 })}

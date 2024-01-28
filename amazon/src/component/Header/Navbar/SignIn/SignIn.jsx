@@ -51,9 +51,6 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-// const buttonStyle = styled()(({}) => ({
-//   width: "20rem",
-// }));
 const SignIn = () => {
   const [needData, setNeedData] = React.useState(false);
   const handleNeedHelp = () => {
@@ -93,7 +90,6 @@ const SignIn = () => {
             </Box>
           </CardContent>
           <Box>
-            {/* // marginTop: " 9%", */}
             <CardActions sx={{ display: "flex", justifyContent: "center" }}>
               <Stack direction="row">
                 <Button
@@ -114,10 +110,8 @@ const SignIn = () => {
             <Typography
               sx={{
                 fontSize: " 12px",
-                // marginTop: " 9%",
                 width: "18.5rem",
                 margin: "auto",
-                // marginTop: " 7%",
               }}
             >
               By continuing, you agree to Amazon's
@@ -126,7 +120,6 @@ const SignIn = () => {
               </a>
               and Privacy Notice
               <a href="#" className="linkTag">
-                {" "}
                 Privacy Notice.
               </a>
             </Typography>
@@ -155,14 +148,16 @@ const SignIn = () => {
                   fontSize: " 13px",
                   marginTop: "12px",
                   width: "19rem",
-                  lineHeight: "1.7rem",
+                  lineHeight: "1.4rem",
                   // margin: "auto",
                   marginTop: "2px",
                   paddingLeft: "42px",
                 }}
               >
                 {/* <a href="#">Need Help</a> */}
-                <a href="#">Forgot Password</a>
+                <a href="#" className="linkTag">
+                  Forgot Password
+                </a>
                 <br />
                 <a href="#" className="linkTag">
                   Other issues with Sign-In

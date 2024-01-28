@@ -138,6 +138,17 @@ Footer:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+.footerLinkTag1 {
+  color: #fff !important;
+  font-size: 14px;
+  text-decoration: none;
+  /* margin: 0px 0px 0px 22px; */
+}
+.footerLinkTag1:hover,
+Footer:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 Footer:hover {
   text-decoration: underline;
   cursor: pointer;

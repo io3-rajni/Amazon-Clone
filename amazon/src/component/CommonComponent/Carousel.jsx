@@ -5,6 +5,7 @@ import "../Header/Navbar/mainnavbar.css";
 
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+// import CarouselProduct from "../Carousel/CarouselProduct";
 
 const CarouselComp = () => {
   const responsive = {
@@ -62,6 +63,10 @@ const CarouselComp = () => {
       arrows={false}
       autoPlaySpeed={3000}
       centerMode={false}
+      // arrows
+      autoPlay
+      // autoPlaySpeed={1000}
+      infinite
       containerClass="container"
       className="Carousel"
       responsive={responsive}
@@ -112,6 +117,7 @@ const CarouselComp = () => {
       </div>
     </Carousel>
   );
+  // <CarouselProduct />;
 };
 
 export default CarouselComp;

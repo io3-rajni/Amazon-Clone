@@ -8,11 +8,12 @@ import {
   CardActionArea,
   CardActions,
   Box,
-  CardHeader,
+  // CardHeader,
 } from "@mui/material";
 import republicSale from "../../../assets/republic-sale.jpg";
 import laptop from "../../../assets/Laptops.jpg";
 import { CardsSection, secondCardSection } from "../../DataConfig";
+import CarouselProduct from "../../Carousel/CarouselProduct";
 const Cards = () => {
   return (
     <>
@@ -231,6 +232,7 @@ const Cards = () => {
           );
         })}
       </Typography>
+      <CarouselProduct />;
     </>
   );
 };
