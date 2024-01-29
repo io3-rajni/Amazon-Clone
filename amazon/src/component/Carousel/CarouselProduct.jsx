@@ -36,46 +36,17 @@ const CarouselProduct = () => {
       partialVisibilityGutter: 30,
     },
   };
-  // const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
-  //   const {
-  //     carouselState: { currentSlide },
-  //   } = rest;
-  //   return (
-  //     <div
-  //       className="carousel-button-group gap-4 flex justify-end
-  //       items-center w-full  btn"
-  //     >
-  //       <button className=" left-btn" onClick={() => previous()}>
-  //         <KeyboardArrowLeftIcon
-  //           className="Arrow"
-  //           sx={{ height: "18rem", fontSize: "6rem", color: "#7a7373" }}
-  //         />
-  //       </button>
-  //       <button onClick={() => next()} className="right-btn">
-  //         <span className="block p-3 bg-slate-300 ">
-  //           <KeyboardArrowRightIcon
-  //             className="Arrow"
-  //             sx={{
-  //               height: "18rem",
-  //               fontSize: "6rem",
-  //               color: "#7a7373",
-  //             }}
-  //           />
-  //         </span>
-  //       </button>
-  //     </div>
-  //   );
-  // };
+
   return (
     <Carousel
       additionalTransfrom={0}
       arrows
       // autoPlay
-      // autoPlaySpeed={1}
+      // autoPlaySpeed={5}
       centerMode={false}
       className="carouselBagSection"
       containerClass="container-with-dots"
-      customTransition="all 1s linear"
+      customTransition="all 0.5s linear"
       dotListClass=""
       draggable
       focusOnSelect={false}
@@ -95,7 +66,6 @@ const CarouselProduct = () => {
       sliderClass=""
       slidesToSlide={2}
       swipeable
-      transitionDuration={1000}
       responsive={responsive}
     >
       {carouselImage.map((item, index) => {

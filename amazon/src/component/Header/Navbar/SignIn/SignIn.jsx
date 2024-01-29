@@ -53,9 +53,27 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 }));
 const SignIn = () => {
   const [needData, setNeedData] = React.useState(false);
+  const [numberEmail, setNumberEmail] = React.useState("");
+  const [entreValidNumber, setEnterValidNumber] = React.useState(false);
+
   const handleNeedHelp = () => {
     setNeedData(() => !needData);
   };
+  const handleNumberEmail = (e) => {
+    const newVal = e?.target?.value;
+    if (
+      /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/.test(newVal) ||
+      newVal === ""
+    ) {
+      setNumberEmail(newVal);
+      if (newVal.length <= 10) {
+        setEnterValidNumber(false);
+      } else {
+        setEnterValidNumber(true);
+      }
+    }
+  };
+  console.log("number", numberEmail);
   return (
     <>
       <Box component="div" sx={{ display: "grid", justifyContent: "center" }}>
@@ -80,12 +98,22 @@ const SignIn = () => {
               <FormControl variant="standard">
                 <BootstrapInput
                   id="bootstrap-input"
+                  type="number"
+                  value={numberEmail}
+                  onChange={handleNumberEmail}
                   sx={{
                     width: "20rem",
                     display: "flex",
                     justifyContent: "center",
                   }}
                 />
+                {entreValidNumber ? (
+                  <Typography sx={{ color: "red", fontSize: "12px" }}>
+                    Entre Valid number
+                  </Typography>
+                ) : (
+                  ""
+                )}
               </FormControl>
             </Box>
           </CardContent>
