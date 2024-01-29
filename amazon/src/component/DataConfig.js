@@ -22,6 +22,17 @@ import racks from "../assets/racks.jpg";
 import bottles from "../assets/bottles.jpg";
 import cookware from "../assets/cookware.jpg";
 import container from "../assets/container.jpg";
+import bag1 from "../assets/bag1.jpg";
+import bag2 from "../assets/bag2.jpg";
+import bag3 from "../assets/bag3.jpg";
+import bag4 from "../assets/bag4.jpg";
+import bag5 from "../assets/bag5.jpg";
+import bag6 from "../assets/bag6.jpg";
+import bag7 from "../assets/bag7.jpg";
+import bag8 from "../assets/bag8.jpg";
+import bag9 from "../assets/bag9.jpg";
+import bag10 from "../assets/bag10.jpg";
+
 export const NavlinkData = [
   {
     id: "1",
@@ -1308,26 +1319,101 @@ export const carouselImage = [
   {
     id: "70",
     title: "",
-    img: Footwear,
+    img: bag1,
   },
   {
     id: "70",
     title: "",
-    img: airCondition,
+    img: bag2,
   },
   {
     id: "70",
     title: "",
-    img: cardels,
+    img: bag3,
   },
   {
     id: "70",
     title: "",
-    img: light,
+    img: bag4,
   },
   {
     id: "70",
     title: "",
-    img: bottles,
+    img: bag5,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag6,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag7,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag5,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag4,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag3,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag4,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag8,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag9,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag10,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag4,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag5,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag6,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag7,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag5,
+  },
+  {
+    id: "70",
+    title: "",
+    img: bag4,
   },
 ];

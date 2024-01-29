@@ -232,7 +232,8 @@ const Cards = () => {
           );
         })}
       </Typography>
-      <CarouselProduct />;
+
+      <CarouselProduct />
     </>
   );
 };
