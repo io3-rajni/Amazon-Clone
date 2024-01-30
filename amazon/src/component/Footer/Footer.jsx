@@ -266,7 +266,7 @@ const Footer = () => {
                     key={index}
                     component="div"
                     sx={{
-                      fontSize: "13px",
+                      fontSize: "12px",
                       lineHeight: "1rem",
                       marginLeft: "10px",
 
@@ -321,7 +321,9 @@ const Footer = () => {
                       }}
                       key={index}
                     >
-                      {item.option}
+                      <a href="#" className="footerLinkTag2">
+                        {item.option}
+                      </a>
                     </Typography>
                   );
                 })}
@@ -353,7 +355,9 @@ const Footer = () => {
                         color: "#fff",
                       }}
                     >
-                      {item.option}
+                      <a href="#" className="footerLinkTag2">
+                        {item.option}
+                      </a>
                     </Typography>
                   );
                 })}
@@ -386,7 +390,9 @@ const Footer = () => {
                         color: "#fff",
                       }}
                     >
-                      {item?.option}
+                      <a href="#" className="footerLinkTag2">
+                        {item.option}
+                      </a>
                     </Typography>
                   );
                 })}
@@ -418,7 +424,9 @@ const Footer = () => {
                         color: "#fff",
                       }}
                     >
-                      {item?.option}
+                      <a href="#" className="footerLinkTag2">
+                        {item.option}
+                      </a>
                     </Typography>
                   );
                 })}

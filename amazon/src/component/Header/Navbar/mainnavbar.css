@@ -75,7 +75,6 @@
   height: 1em;
 }
 .btn {
-  /* margin-top: 10px; */
   position: absolute;
   top: 17%;
 }
@@ -142,7 +141,10 @@ Footer:hover {
   color: #fff !important;
   font-size: 14px;
   text-decoration: none;
-  /* margin: 0px 0px 0px 22px; */
+}
+.footerLinkTag2 {
+  color: #fff !important;
+  text-decoration: none;
 }
 .footerLinkTag1:hover,
 .Footer:hover,

@@ -11,14 +11,11 @@ import "../../Header/Navbar/mainnavbar.css";
 import { NavlinkData } from "../../DataConfig";
 import shoppingEsay from "../../../assets/shopping esay.jpg";
 import SideBar from "../../CommonComponent/SideDrawer/SideBar";
-// import CountryButton from "../Navbar/CountryButton";
 const preventDefault = (event) => event.preventDefault();
-
 const Navbar = () => {
   const [openSideBar, setOpenSideBar] = React.useState(false);
   const handleAll = () => {
     setOpenSideBar(true);
-    // console.log("rajni maurya");
   };
   return (
     <>

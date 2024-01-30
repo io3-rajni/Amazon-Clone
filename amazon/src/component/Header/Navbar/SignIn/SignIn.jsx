@@ -19,6 +19,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import amazone from "../../../../assets/amazone.png";
 import "../../Navbar/mainnavbar.css";
+import { useNavigate } from "react-router-dom";
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   "label + &": {
     marginTop: theme.spacing(1),
@@ -55,23 +56,36 @@ const SignIn = () => {
   const [needData, setNeedData] = React.useState(false);
   const [numberEmail, setNumberEmail] = React.useState("");
   const [entreValidNumber, setEnterValidNumber] = React.useState(false);
-
+  const emailRegex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+  const numberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+  const navigate = useNavigate();
   const handleNeedHelp = () => {
     setNeedData(() => !needData);
   };
   const handleNumberEmail = (e) => {
     const newVal = e?.target?.value;
-    if (
-      /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/.test(newVal) ||
-      newVal === ""
-    ) {
+    if (emailRegex.test(newVal)) {
+      setNumberEmail(newVal);
+    } else if (numberRegex.test(newVal)) {
       setNumberEmail(newVal);
       if (newVal.length <= 10) {
         setEnterValidNumber(false);
       } else {
         setEnterValidNumber(true);
       }
+    } else {
+      console.log("sdfsdf");
+      setEnterValidNumber(true);
     }
+    // else if (emailRegex.test(newVal)) {
+    //   setNumberEmail(newVal);
+    // } else {
+    //   console.log("sdfsdf");
+    //   setEnterValidNumber(true);
+    // }
+  };
+  const handleButton = () => {
+    navigate("/passwordPage");
   };
   console.log("number", numberEmail);
   return (
@@ -98,7 +112,7 @@ const SignIn = () => {
               <FormControl variant="standard">
                 <BootstrapInput
                   id="bootstrap-input"
-                  type="number"
+                  type="text"
                   value={numberEmail}
                   onChange={handleNumberEmail}
                   sx={{
@@ -130,6 +144,7 @@ const SignIn = () => {
                     color: "#000",
                   }}
                   className="buttonStyle"
+                  onClick={handleButton}
                 >
                   Continue
                 </Button>
