@@ -1,14 +1,9 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import WithScrollbar from "react-multi-carousel";
 import Typography from "@mui/material/Typography";
-
-// import Typography from "@mui/material/Typography";
 import { carouselImage } from "../DataConfig";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import "../Header/Navbar/mainnavbar.css";
-// import { Typography } from "@mui/material";
+
 const CarouselProduct = () => {
   const responsive = {
     desktop: {

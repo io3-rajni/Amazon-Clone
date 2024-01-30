@@ -5,11 +5,11 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
-import { Typography } from "@mui/material";
 
-const CountryButton = () => {
+const CountryButton = (props) => {
   const [apiData, setApiData] = useState([]);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const { className } = props;
   // const [countryData, setCountryData] = useState(anchorEl);
   useEffect(() => {
     axios
@@ -29,10 +29,6 @@ const CountryButton = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  // const handleData = (e) => {
-  //   setCountryData(e?.target?.value);
-  // };
-
   return (
     <>
       <Button
@@ -42,7 +38,8 @@ const CountryButton = () => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
         sx={{ color: "white", textTransform: "capitalize" }}
-        className="countryDropdown"
+        // className="countryDropdown"
+        className={className}
       >
         Country
         {/* {countryData} */}

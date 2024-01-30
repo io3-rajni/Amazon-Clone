@@ -1322,98 +1322,192 @@ export const carouselImage = [
     img: bag1,
   },
   {
-    id: "70",
+    id: "71",
     title: "",
     img: bag2,
   },
   {
-    id: "70",
+    id: "72",
     title: "",
     img: bag3,
   },
   {
-    id: "70",
+    id: "73",
     title: "",
     img: bag4,
   },
   {
-    id: "70",
+    id: "74",
     title: "",
     img: bag5,
   },
   {
-    id: "70",
+    id: "75",
     title: "",
     img: bag6,
   },
   {
-    id: "70",
+    id: "76",
     title: "",
     img: bag7,
   },
   {
-    id: "70",
+    id: "77",
     title: "",
     img: bag5,
   },
   {
-    id: "70",
+    id: "78",
     title: "",
     img: bag4,
   },
   {
-    id: "70",
+    id: "79",
     title: "",
     img: bag3,
   },
   {
-    id: "70",
+    id: "80",
     title: "",
     img: bag4,
   },
   {
-    id: "70",
+    id: "81",
     title: "",
     img: bag8,
   },
   {
-    id: "70",
+    id: "82",
     title: "",
     img: bag9,
   },
   {
-    id: "70",
+    id: "83",
     title: "",
     img: bag10,
   },
   {
-    id: "70",
+    id: "84",
     title: "",
     img: bag4,
   },
   {
-    id: "70",
+    id: "85",
     title: "",
     img: bag5,
   },
   {
-    id: "70",
+    id: "86",
     title: "",
     img: bag6,
   },
   {
-    id: "70",
+    id: "87",
     title: "",
     img: bag7,
   },
   {
-    id: "70",
+    id: "88",
     title: "",
     img: bag5,
   },
   {
-    id: "70",
+    id: "89",
     title: "",
     img: bag4,
+  },
+];
+export const countryName = [
+  {
+    id: "90",
+    title: "",
+    option: "Australia",
+  },
+  {
+    id: "91",
+    title: "",
+    option: " Brazil",
+  },
+  {
+    id: "92",
+    title: "",
+    option: "",
+  },
+
+  {
+    id: "93",
+    title: "",
+    option: "Canada",
+  },
+  {
+    id: "94",
+    title: "",
+    option: "China",
+  },
+  {
+    id: "95",
+    title: "",
+    option: "France",
+  },
+  {
+    id: "96",
+    title: "",
+    option: "Germany",
+  },
+  {
+    id: "97",
+    title: "",
+    option: "Italy",
+  },
+  {
+    id: "98",
+    title: "",
+    option: "Mexico",
+  },
+  {
+    id: "99",
+    title: "",
+    option: "Japan",
+  },
+
+  {
+    id: "100",
+    title: "",
+    option: "Netherlands",
+  },
+  {
+    id: "101",
+    title: "",
+    option: "Poland",
+  },
+  {
+    id: "102",
+    title: "",
+    option: "Singapore",
+  },
+  {
+    id: "103",
+    title: "",
+    option: "Spain",
+  },
+  {
+    id: "104",
+    title: "",
+    option: "Turkey",
+  },
+  {
+    id: "105",
+    title: "",
+    option: "United Arab Emirates",
+  },
+  {
+    id: "106",
+    title: "",
+    option: "United Kingdom",
+  },
+  {
+    id: "107",
+    title: "",
+    option: "United States",
   },
 ];

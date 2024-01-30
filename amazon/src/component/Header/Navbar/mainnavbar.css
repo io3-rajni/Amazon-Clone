@@ -145,7 +145,8 @@ Footer:hover {
   /* margin: 0px 0px 0px 22px; */
 }
 .footerLinkTag1:hover,
-Footer:hover {
+.Footer:hover,
+.footerLinkTag2:hover {
   text-decoration: underline;
   cursor: pointer;
 }

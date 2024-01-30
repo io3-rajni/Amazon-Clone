@@ -10,7 +10,11 @@ import {
   amazonWebServices,
   audible,
   Imdb,
+  countryName,
 } from "../../component/DataConfig";
+import CountryButton from "../Header/Navbar/CountryButton";
+import ama from "../../assets/ama.png";
+import "../Header/Navbar/mainnavbar.css";
 const Footer = () => {
   const scrollTo = () => {
     window.scrollTo({
@@ -19,6 +23,7 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+  console.log("item", countryName);
   return (
     <>
       <Typography
@@ -49,6 +54,7 @@ const Footer = () => {
           fontSize: "12px",
           background: "#232F3E",
           marginTop: "1px !important",
+          height: "21rem",
         }}
       >
         <Grid item sx={6} sm={4} md={2}>
@@ -191,7 +197,92 @@ const Footer = () => {
           })}
         </Grid>
       </Grid>
+      <Typography
+        component="div"
+        sx={{
+          borderTop: "1px solid white",
+          background: "#232F3E",
+          width: "100%",
+          paddingBottom: "2%",
+        }}
+      >
+        <Typography
+          component="div"
+          sx={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            width: "56%",
+            margin: "auto",
+            // height: "10rem",
+          }}
+        >
+          <img
+            src={ama}
+            alt="image"
+            style={{
+              width: "29%",
+              height: "6rem",
+            }}
+          />
+          <Typography
+            sx={{
+              height: "2rem",
+              border: "1px solid white",
+              marginTop: " 4%",
+              width: "12%",
+              display: "flex",
+              justifyContent: "center",
+              borderRadius: "7px",
+            }}
+          >
+            <CountryButton className="footerCountryButton" />
+          </Typography>
+        </Typography>
 
+        <Grid
+          container
+          sx={{
+            width: "56%",
+            margin: "auto",
+          }}
+        >
+          <Grid
+            item
+            xs={3}
+            md={12}
+            sm={12}
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              width: "50%",
+            }}
+          >
+            {countryName.map((item, index) => {
+              console.log("inneritem", item);
+              return (
+                <>
+                  <Typography
+                    key={index}
+                    component="div"
+                    sx={{
+                      fontSize: "13px",
+                      lineHeight: "1rem",
+                      marginLeft: "10px",
+
+                      color: "#fff",
+                    }}
+                  >
+                    <a href="#" className="footerLinkTag2">
+                      {item.option}
+                    </a>
+                  </Typography>
+                </>
+              );
+            })}
+          </Grid>
+        </Grid>
+      </Typography>
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
@@ -224,7 +315,7 @@ const Footer = () => {
                   return (
                     <Typography
                       sx={{
-                        fontSize: "14px",
+                        fontSize: "12px",
                         lineHeight: "2rem !important",
                         color: "#fff",
                       }}
