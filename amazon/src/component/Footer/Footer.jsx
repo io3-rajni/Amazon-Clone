@@ -14,8 +14,10 @@ import {
 } from "../../component/DataConfig";
 import CountryButton from "../Header/Navbar/CountryButton";
 import ama from "../../assets/ama.png";
+import Cards from "../CommonComponent/Cards/Cards";
 import "../Header/Navbar/mainnavbar.css";
 const Footer = () => {
+  // const { secondCardSection, CardsSection } = props;
   const scrollTo = () => {
     window.scrollTo({
       top: 0,
