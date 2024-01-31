@@ -54,38 +54,41 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 }));
 const SignIn = () => {
   const [needData, setNeedData] = React.useState(false);
-  const [numberEmail, setNumberEmail] = React.useState("");
+  const [numberEmail, setNumberEmail] = React.useState();
   const [entreValidNumber, setEnterValidNumber] = React.useState(false);
   const emailRegex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
-  const numberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+  const numberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
   const navigate = useNavigate();
   const handleNeedHelp = () => {
     setNeedData(() => !needData);
   };
   const handleNumberEmail = (e) => {
     const newVal = e?.target?.value;
-    if (emailRegex.test(newVal)) {
+    if (numberRegex.test(newVal)) {
       setNumberEmail(newVal);
-    } else if (numberRegex.test(newVal)) {
-      setNumberEmail(newVal);
-      if (newVal.length <= 10) {
+      if (newVal.length == 10) {
         setEnterValidNumber(false);
       } else {
         setEnterValidNumber(true);
       }
+    } else if (emailRegex.test(newVal)) {
+      setNumberEmail(newVal);
+      setEnterValidNumber(false);
     } else {
       console.log("sdfsdf");
       setEnterValidNumber(true);
     }
-    // else if (emailRegex.test(newVal)) {
-    //   setNumberEmail(newVal);
-    // } else {
-    //   console.log("sdfsdf");
-    //   setEnterValidNumber(true);
-    // }
   };
   const handleButton = () => {
-    navigate("/passwordPage");
+    !entreValidNumber && navigate("/passwordPage");
+    // localStorage.setItem(!entreValidNumber);
+    localStorage.setItem(
+      "RegexData",
+      JSON.stringify({
+        numberEmail: numberEmail,
+        entreValidNumber: entreValidNumber,
+      })
+    );
   };
   console.log("number", numberEmail);
   return (
@@ -113,8 +116,8 @@ const SignIn = () => {
                 <BootstrapInput
                   id="bootstrap-input"
                   type="text"
-                  value={numberEmail}
-                  onChange={handleNumberEmail}
+                  // value={numberEmail}
+                  onChange={(e) => handleNumberEmail(e)}
                   sx={{
                     width: "20rem",
                     display: "flex",
@@ -123,7 +126,7 @@ const SignIn = () => {
                 />
                 {entreValidNumber ? (
                   <Typography sx={{ color: "red", fontSize: "12px" }}>
-                    Entre Valid number
+                    Error show
                   </Typography>
                 ) : (
                   ""
