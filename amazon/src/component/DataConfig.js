@@ -32,7 +32,13 @@ import bag7 from "../assets/bag7.jpg";
 import bag8 from "../assets/bag8.jpg";
 import bag9 from "../assets/bag9.jpg";
 import bag10 from "../assets/bag10.jpg";
-
+import peacock from "../assets/peacock.jpg";
+import ganesha from "../assets/ganesha.jpg";
+import statue from "../assets/statue.jpg";
+import temple from "../assets/temple.jpg";
+import tree from "../assets/tree.jpg";
+import clock from "../assets/clock.jpg";
+import wallDecor from "../assets/wall decor.jpg";
 export const NavlinkData = [
   {
     id: "1",
@@ -1509,5 +1515,62 @@ export const countryName = [
     id: "107",
     title: "",
     option: "United States",
+  },
+];
+export const homeDecor = [
+  {
+    id: "108",
+    title: "",
+    image: peacock,
+  },
+  {
+    id: "109",
+    title: "",
+    image: wallDecor,
+  },
+  {
+    id: "110",
+    title: "",
+    image: tree,
+  },
+  {
+    id: "111",
+    title: "",
+    image: statue,
+  },
+  {
+    id: "112",
+    title: "",
+    image: temple,
+  },
+  {
+    id: "113",
+    title: "",
+    image: tree,
+  },
+  {
+    id: "114",
+    title: "",
+    image: ganesha,
+  },
+  {
+    id: "115",
+    title: "",
+    image: wallDecor,
+  },
+  {
+    id: "116",
+    title: "",
+    image: clock,
+  },
+  {
+    id: "117",
+    title: "",
+    image: ganesha,
+  },
+  {
+    id: "111",
+    title: "",
+    image: statue,
   },
 ];
