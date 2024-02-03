@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import Typography from "@mui/material/Typography";
 import { carouselImage, homeDecor } from "../DataConfig";
 import "../Header/Navbar/mainnavbar.css";
+import { Button } from "@mui/material";
 // import { Button } from "@mui/material";
 const CarouselProduct = () => {
   const responsive = {
@@ -97,8 +98,6 @@ const CarouselProduct = () => {
         <Carousel
           additionalTransfrom={0}
           arrows
-          // autoPlay
-          // autoPlaySpeed={5}
           centerMode={false}
           className="carouselBagSection"
           containerClass="container-with-dots"
@@ -139,6 +138,7 @@ const CarouselProduct = () => {
           })}
         </Carousel>
       </Typography>
+      {/* Third Line Card */}
     </>
   );
 };
