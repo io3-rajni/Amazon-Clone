@@ -12,8 +12,6 @@ import {
   Stack,
   CardContent,
   Divider,
-  // Footer,
-  // buttonBase,
 } from "@mui/material";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -190,17 +188,14 @@ const SignIn = () => {
             {needData ? (
               <Typography
                 sx={{
-                  // display: "inline",
                   fontSize: " 13px",
                   marginTop: "12px",
                   width: "19rem",
                   lineHeight: "1.4rem",
-                  // margin: "auto",
                   marginTop: "2px",
                   paddingLeft: "42px",
                 }}
               >
-                {/* <a href="#">Need Help</a> */}
                 <a href="#" className="linkTag">
                   Forgot Password
                 </a>
@@ -247,7 +242,6 @@ const SignIn = () => {
           <Typography sx={{ fontSize: "12px" }}>New to Account ?</Typography>
           <hr style={{ width: "7rem" }} />
         </Typography>
-        {/* <CardActions sx={{ display: "flex", justifyContent: "center" }}> */}
         <Stack direction="row" sx={{ marginTop: "20px" }}>
           <Button
             variant="contained"
@@ -263,7 +257,6 @@ const SignIn = () => {
             Continue
           </Button>
         </Stack>
-        {/* </CardActions> */}
       </Box>
       <Divider sx={{ marginTop: "2%" }} />
       <Box

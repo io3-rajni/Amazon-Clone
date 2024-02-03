@@ -39,6 +39,25 @@ import temple from "../assets/temple.jpg";
 import tree from "../assets/tree.jpg";
 import clock from "../assets/clock.jpg";
 import wallDecor from "../assets/wall decor.jpg";
+import jewellery from "../assets/jewellery.jpg";
+import fancyFootwear from "../assets/fancy footwear.jpg";
+import watch from "../assets/fancy watches.jpg";
+import girlGift from "../assets/gift for girls.jpg";
+import menGift from "../assets/men gift.jpg";
+import womenGift from "../assets/womne gift.jpg";
+import boyGift from "../assets/boys birthday gift.jpg";
+import tv1 from "../assets/budget tv.jpg";
+import tv2 from "../assets/tv2.jpg";
+import tv3 from "../assets/tv3.jpg";
+import tv4 from "../assets/tv4.jpg";
+import skinCare from "../assets/skin care.jpg";
+import trolly from "../assets/trolley bags.jpg";
+import sllipers from "../assets/sllipers.jpg";
+import pillows from "../assets/pillows.jpg";
+import Supplement from "../assets/supplements.jpg";
+import Loungwear from "../assets/loungwear.jpg";
+import clothing from "../assets/clothing.jpg";
+// import statue from "../assets/statue.jpg";
 export const NavlinkData = [
   {
     id: "1",
@@ -1572,5 +1591,148 @@ export const homeDecor = [
     id: "111",
     title: "",
     image: statue,
+  },
+];
+
+export const picksShoesJewellery = [
+  {
+    id: "112",
+    title: "Top picks | Shoes, jewellery & more",
+    btn: "see all",
+    child: [
+      {
+        img: jewellery,
+        imgDescription: "Jewellery & Accessories",
+      },
+      {
+        img: fancyFootwear,
+        imgDescription: "Sport Shoes",
+      },
+      {
+        img: watch,
+        imgDescription: "Watches & Smartwatch",
+      },
+      {
+        img: bag2,
+        imgDescription: "Bags,Wallets",
+      },
+    ],
+  },
+  {
+    id: "113",
+    title: "Special for Birthday Gift Limited Offer",
+    btn: "See more",
+    child: [
+      {
+        img: boyGift,
+        imgDescription: "Boys Gift",
+      },
+      {
+        img: girlGift,
+        imgDescription: "Girl's gift",
+      },
+      {
+        img: menGift,
+        imgDescription: "Men's Gift",
+      },
+      {
+        img: womenGift,
+        imgDescription: "Women's Gift",
+      },
+    ],
+  },
+];
+export const cardSectionFourth = [
+  {
+    id: "114",
+    title: "Get the perfect screen size | TVs Starting ₹6,999",
+    btn: "See All",
+    child: [
+      {
+        img: tv1,
+        imgDescription: "Budget Tvs | upto 60% off",
+      },
+      {
+        img: tv2,
+        imgDescription: "4K TVx | upto 24 months No Cost EMI ",
+      },
+      {
+        img: tv3,
+        imgDescription: "Big Screen | upto 60% off",
+      },
+      {
+        img: tv4,
+        imgDescription: "Ultra Premium TVs | up 50% off",
+      },
+    ],
+  },
+  {
+    id: "114",
+    title: "Under ₹499 | Pocket-friendly fashion",
+    btn: "See All",
+    child: [
+      {
+        img: trolly,
+        imgDescription: "BagPack",
+      },
+      {
+        img: sllipers,
+        imgDescription: "Footwear",
+      },
+      {
+        img: clothing,
+        imgDescription: "Clothing",
+      },
+      {
+        img: statue,
+        imgDescription: "Statue",
+      },
+    ],
+  },
+  {
+    id: "114",
+    title: "Get the perfect screen size | TVs Starting ₹6,999",
+    btn: "See All",
+    child: [
+      {
+        img: tv1,
+        imgDescription: "Budget Tvs | upto 60% off",
+      },
+      {
+        img: tv2,
+        imgDescription: "4K TVx | upto 24 months No Cost EMI ",
+      },
+      {
+        img: tv3,
+        imgDescription: "Big Screen | upto 60% off",
+      },
+      {
+        img: tv4,
+        imgDescription: "Ultra Premium TVs | up 50% off",
+      },
+    ],
+  },
+  {
+    id: "114",
+    title: "Supplement & SkinCare | upto 50% off Limited time",
+    btn: "See All",
+    child: [
+      {
+        img: Supplement,
+        imgDescription: "Supplement",
+      },
+      {
+        img: Loungwear,
+        imgDescription: "Loungwear",
+      },
+      {
+        img: skinCare,
+        imgDescription: "Skin care",
+      },
+      {
+        img: pillows,
+        imgDescription: "Pillows",
+      },
+    ],
   },
 ];

@@ -2,10 +2,8 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../Header/Navbar/mainnavbar.css";
-
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-// import CarouselProduct from "../Carousel/CarouselProduct";
 
 const CarouselComp = () => {
   const responsive = {
@@ -117,7 +115,6 @@ const CarouselComp = () => {
       </div>
     </Carousel>
   );
-  // <CarouselProduct />;
 };
 
 export default CarouselComp;

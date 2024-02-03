@@ -3,8 +3,7 @@ import Carousel from "react-multi-carousel";
 import Typography from "@mui/material/Typography";
 import { carouselImage, homeDecor } from "../DataConfig";
 import "../Header/Navbar/mainnavbar.css";
-import { Button } from "@mui/material";
-
+// import { Button } from "@mui/material";
 const CarouselProduct = () => {
   const responsive = {
     desktop: {
@@ -88,6 +87,13 @@ const CarouselProduct = () => {
         </Carousel>
       </Typography>
       <Typography component="div">
+        <Typography variant="h6" sx={{ marginLeft: "3rem", fontWeight: "700" }}>
+          Up to 70% off | Exclusive collections of home decor from stores nearby
+          <a href="#" style={{ fontSize: "12px" }}>
+            See All Deals
+          </a>
+        </Typography>
+
         <Carousel
           additionalTransfrom={0}
           arrows
