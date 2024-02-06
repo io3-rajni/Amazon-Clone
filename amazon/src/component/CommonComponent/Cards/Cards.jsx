@@ -7,8 +7,14 @@ import { Button, CardActionArea, CardActions, Box } from "@mui/material";
 import republicSale from "../../../assets/republic-sale.jpg";
 import bag1 from "../../../assets/bag1.jpg";
 import laptop from "../../../assets/Laptops.jpg";
-import CarouselProduct from "../../Carousel/CarouselProduct";
+import CarouselProduct1 from "../../Carousel/CarouselProduct1";
+import CarouselProduct2 from "../../Carousel/CarouselProduct2";
 import temple from "../../../assets/temple.jpg";
+import {
+  carouselImage,
+  homeDecor,
+  ExclusiveCollections,
+} from "../../../component/DataConfig";
 const Cards = (props) => {
   const {
     CardsSection,
@@ -233,8 +239,9 @@ const Cards = (props) => {
           );
         })}
       </Typography>
+      <CarouselProduct1 CarouselProduct1={carouselImage} />
+      <CarouselProduct2 CarouselProduct2={homeDecor} />
 
-      <CarouselProduct />
       {/* Third Line */}
       <Typography
         sx={{
@@ -372,8 +379,7 @@ const Cards = (props) => {
           </Typography>
         </Card>
       </Typography>
-      <CarouselProduct />
-
+      <CarouselProduct2 CarouselProduct2={ExclusiveCollections} />
       {/* Fourth Line */}
       <Typography
         component="div"
@@ -436,6 +442,7 @@ const Cards = (props) => {
           );
         })}
       </Typography>
+      {/* <CarouselProduct1 CarouselProduct2={carouselImage} /> */}
     </>
   );
 };

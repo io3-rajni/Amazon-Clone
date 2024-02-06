@@ -1,11 +1,10 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import Typography from "@mui/material/Typography";
-import { carouselImage, homeDecor } from "../DataConfig";
+import { carouselImage } from "../DataConfig";
 import "../Header/Navbar/mainnavbar.css";
-import { Button } from "@mui/material";
-// import { Button } from "@mui/material";
-const CarouselProduct = () => {
+const CarouselProduct1 = (props) => {
+  const { CarouselProduct1 } = props;
   const responsive = {
     desktop: {
       breakpoint: {
@@ -72,7 +71,7 @@ const CarouselProduct = () => {
           swipeable
           responsive={responsive}
         >
-          {carouselImage.map((item, index) => {
+          {CarouselProduct1.map((item, index) => {
             return (
               <Typography>
                 <img
@@ -87,60 +86,10 @@ const CarouselProduct = () => {
           })}
         </Carousel>
       </Typography>
-      <Typography component="div">
-        <Typography variant="h6" sx={{ marginLeft: "3rem", fontWeight: "700" }}>
-          Up to 70% off | Exclusive collections of home decor from stores nearby
-          <a href="#" style={{ fontSize: "12px" }}>
-            See All Deals
-          </a>
-        </Typography>
 
-        <Carousel
-          additionalTransfrom={0}
-          arrows
-          centerMode={false}
-          className="carouselBagSection"
-          containerClass="container-with-dots"
-          customTransition="all 0.5s linear"
-          dotListClass=""
-          draggable
-          focusOnSelect={false}
-          infinite
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          pauseOnHover
-          renderArrowsWhenDisabled={false}
-          renderButtonGroupOutside={true}
-          renderDotsOutside={false}
-          rewind={false}
-          rewindWithAnimation={false}
-          rtl={false}
-          shouldResetAutoplay
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={2}
-          swipeable
-          responsive={responsive}
-        >
-          {homeDecor.map((item, index) => {
-            return (
-              <Typography>
-                <img
-                  src={item.image}
-                  style={{
-                    width: "12rem",
-                    height: "12rem",
-                  }}
-                />
-              </Typography>
-            );
-          })}
-        </Carousel>
-      </Typography>
       {/* Third Line Card */}
     </>
   );
 };
 
-export default CarouselProduct;
+export default CarouselProduct1;

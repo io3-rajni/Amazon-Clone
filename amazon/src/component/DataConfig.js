@@ -57,6 +57,15 @@ import pillows from "../assets/pillows.jpg";
 import Supplement from "../assets/supplements.jpg";
 import Loungwear from "../assets/loungwear.jpg";
 import clothing from "../assets/clothing.jpg";
+import hawaMehal from "../assets/hawamehal.jpg";
+import mumbai from "../assets/mumbai.jpg";
+import trollyBag from "../assets/trollyBag.jpg";
+import indiaGate from "../assets/indiagate.jpg";
+import phone from "../assets/phone.jpg";
+import pan from "../assets/pan.jpg";
+import handBag from "../assets/handbag.jpg";
+import cup from "../assets/cup.jpg";
+import box from "../assets/box.jpg";
 // import statue from "../assets/statue.jpg";
 export const NavlinkData = [
   {
@@ -1691,24 +1700,24 @@ export const cardSectionFourth = [
   },
   {
     id: "114",
-    title: "Get the perfect screen size | TVs Starting ₹6,999",
+    title: "Fly to your destination | Deals on flight tickets",
     btn: "See All",
     child: [
       {
-        img: tv1,
-        imgDescription: "Budget Tvs | upto 60% off",
+        img: indiaGate,
+        imgDescription: "Fly to Delhi starting ₹2,499",
       },
       {
-        img: tv2,
-        imgDescription: "4K TVx | upto 24 months No Cost EMI ",
+        img: mumbai,
+        imgDescription: "Fly to Delhi starting ₹3,499",
       },
       {
-        img: tv3,
-        imgDescription: "Big Screen | upto 60% off",
+        img: trollyBag,
+        imgDescription: "Travel needs",
       },
       {
-        img: tv4,
-        imgDescription: "Ultra Premium TVs | up 50% off",
+        img: hawaMehal,
+        imgDescription: "Fly to Jaipur starting ₹2,999",
       },
     ],
   },
@@ -1734,5 +1743,55 @@ export const cardSectionFourth = [
         imgDescription: "Pillows",
       },
     ],
+  },
+];
+export const ExclusiveCollections = [
+  {
+    image: phone,
+    Description: "Lava Agnli 2 Available Rs. 19,999",
+    btn: "Upto 50% off",
+    offer: "Deal of the Day",
+  },
+  {
+    image: pan,
+    Description: "Best Offer for Top Brands",
+    btn: "Upto 40% off",
+    offer: "Deal of the Day",
+  },
+  {
+    image: handBag,
+    Description: "Best Offer for Storite",
+    btn: "Upto 70% off",
+    offer: "Deal of the Day",
+  },
+  {
+    image: box,
+    Description: "Luxary Box for Gift ",
+    btn: "Upto 80% off",
+    offer: "Deal of the Day",
+  },
+  {
+    image: cup,
+    Description: "fancy Cup set",
+    btn: "Upto 65% off",
+    offer: "Deal of the Day",
+  },
+  {
+    image: phone,
+    Description: "Lava Agnli 2 Available Rs. 19,999",
+    btn: "Upto 60% off",
+    offer: "Deal of the Day",
+  },
+  {
+    image: phone,
+    Description: "Lava Agnli 2 Available Rs. 19,999",
+    btn: "Upto 70% off",
+    offer: "Deal of the Day",
+  },
+  {
+    image: phone,
+    Description: "Lava Agnli 2 Available Rs. 19,999",
+    btn: "Upto 45% off",
+    offer: "Deal of the Day",
   },
 ];
