@@ -7,7 +7,6 @@ import {
   Typography,
   InputBase,
   Box,
-  InputLabel,
   FormControl,
   Stack,
   CardContent,
@@ -76,6 +75,7 @@ const SignIn = () => {
       console.log("sdfsdf");
       setEnterValidNumber(true);
     }
+    console.log("CGFXGFDCF", e);
   };
   const handleButton = () => {
     !entreValidNumber && navigate("/passwordPage");
@@ -89,6 +89,7 @@ const SignIn = () => {
     );
   };
   console.log("number", numberEmail);
+
   return (
     <>
       <Box component="div" sx={{ display: "grid", justifyContent: "center" }}>

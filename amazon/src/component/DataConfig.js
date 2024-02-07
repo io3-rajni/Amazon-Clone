@@ -66,6 +66,21 @@ import pan from "../assets/pan.jpg";
 import handBag from "../assets/handbag.jpg";
 import cup from "../assets/cup.jpg";
 import box from "../assets/box.jpg";
+import bagPack from "../assets/bakpacks.jpg";
+import handwash from "../assets/handwash.jpg";
+import Purse from "../assets/purse.jpg";
+import product1 from "../assets/product1.jpg";
+import product2 from "../assets/product2.jpg";
+import product3 from "../assets/product3.jpg";
+import product4 from "../assets/product4.jpg";
+import product5 from "../assets/product5.jpg";
+import product6 from "../assets/product6.jpg";
+import product7 from "../assets/product7.jpg";
+import product8 from "../assets/product8.jpg";
+import product9 from "../assets/product9.jpg";
+import product10 from "../assets/product10.jpg";
+import product11 from "../assets/product11.jpg";
+
 // import statue from "../assets/statue.jpg";
 export const NavlinkData = [
   {
@@ -1549,57 +1564,57 @@ export const homeDecor = [
   {
     id: "108",
     title: "",
-    image: peacock,
+    img: peacock,
   },
   {
     id: "109",
     title: "",
-    image: wallDecor,
+    img: wallDecor,
   },
   {
     id: "110",
     title: "",
-    image: tree,
+    img: tree,
   },
   {
     id: "111",
     title: "",
-    image: statue,
+    img: statue,
   },
   {
     id: "112",
     title: "",
-    image: temple,
+    img: temple,
   },
   {
     id: "113",
     title: "",
-    image: tree,
+    img: tree,
   },
   {
     id: "114",
     title: "",
-    image: ganesha,
+    img: ganesha,
   },
   {
     id: "115",
     title: "",
-    image: wallDecor,
+    img: wallDecor,
   },
   {
     id: "116",
     title: "",
-    image: clock,
+    img: clock,
   },
   {
     id: "117",
     title: "",
-    image: ganesha,
+    img: ganesha,
   },
   {
-    id: "111",
+    id: "118",
     title: "",
-    image: statue,
+    img: statue,
   },
 ];
 
@@ -1676,7 +1691,7 @@ export const cardSectionFourth = [
     ],
   },
   {
-    id: "114",
+    id: "115",
     title: "Under ₹499 | Pocket-friendly fashion",
     btn: "See All",
     child: [
@@ -1699,7 +1714,7 @@ export const cardSectionFourth = [
     ],
   },
   {
-    id: "114",
+    id: "116",
     title: "Fly to your destination | Deals on flight tickets",
     btn: "See All",
     child: [
@@ -1722,7 +1737,7 @@ export const cardSectionFourth = [
     ],
   },
   {
-    id: "114",
+    id: "117",
     title: "Supplement & SkinCare | upto 50% off Limited time",
     btn: "See All",
     child: [
@@ -1747,51 +1762,116 @@ export const cardSectionFourth = [
 ];
 export const ExclusiveCollections = [
   {
-    image: phone,
+    id: "118",
+    img: phone,
     Description: "Lava Agnli 2 Available Rs. 19,999",
     btn: "Upto 50% off",
     offer: "Deal of the Day",
   },
   {
-    image: pan,
+    id: "119",
+    img: pan,
     Description: "Best Offer for Top Brands",
     btn: "Upto 40% off",
     offer: "Deal of the Day",
   },
   {
-    image: handBag,
+    id: "120",
+    img: handBag,
     Description: "Best Offer for Storite",
     btn: "Upto 70% off",
     offer: "Deal of the Day",
   },
   {
-    image: box,
+    id: "121",
+    img: box,
     Description: "Luxary Box for Gift ",
     btn: "Upto 80% off",
     offer: "Deal of the Day",
   },
   {
-    image: cup,
+    id: "122",
+    img: cup,
     Description: "fancy Cup set",
     btn: "Upto 65% off",
     offer: "Deal of the Day",
   },
   {
-    image: phone,
-    Description: "Lava Agnli 2 Available Rs. 19,999",
+    id: "123",
+    img: bagPack,
+    Description: "Best offer for Office Bag ,Collage Students ",
     btn: "Upto 60% off",
     offer: "Deal of the Day",
   },
   {
-    image: phone,
-    Description: "Lava Agnli 2 Available Rs. 19,999",
+    id: "124",
+    img: handwash,
+    Description: "Special Offer for handwash & sanitizer",
     btn: "Upto 70% off",
     offer: "Deal of the Day",
   },
   {
-    image: phone,
+    id: "125",
+    img: Purse,
     Description: "Lava Agnli 2 Available Rs. 19,999",
     btn: "Upto 45% off",
     offer: "Deal of the Day",
+  },
+];
+export const bestSellersBeauty = [
+  {
+    id: "126",
+    img: product1,
+    title: "",
+  },
+  {
+    id: "127",
+    img: product2,
+    title: "",
+  },
+  {
+    id: "128",
+    img: product3,
+    title: "",
+  },
+  {
+    id: "129",
+    img: product4,
+    title: "",
+  },
+  {
+    id: "130",
+    img: product5,
+    title: "",
+  },
+  {
+    id: "131",
+    img: product6,
+    title: "",
+  },
+  {
+    id: "132",
+    img: product7,
+    title: "",
+  },
+  {
+    id: "133",
+    img: product8,
+    title: "",
+  },
+  {
+    id: "134",
+    img: product9,
+    title: "",
+  },
+  {
+    id: "135",
+    img: product10,
+    title: "",
+  },
+  {
+    id: "136",
+    img: product11,
+    title: "",
   },
 ];

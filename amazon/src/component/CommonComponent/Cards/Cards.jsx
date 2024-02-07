@@ -8,12 +8,13 @@ import republicSale from "../../../assets/republic-sale.jpg";
 import bag1 from "../../../assets/bag1.jpg";
 import laptop from "../../../assets/Laptops.jpg";
 import CarouselProduct1 from "../../Carousel/CarouselProduct1";
-import CarouselProduct2 from "../../Carousel/CarouselProduct2";
+// import CarouselProduct2 from "../../Carousel/CarouselProduct2";
 import temple from "../../../assets/temple.jpg";
 import {
   carouselImage,
   homeDecor,
   ExclusiveCollections,
+  bestSellersBeauty,
 } from "../../../component/DataConfig";
 const Cards = (props) => {
   const {
@@ -239,9 +240,18 @@ const Cards = (props) => {
           );
         })}
       </Typography>
-      <CarouselProduct1 CarouselProduct1={carouselImage} />
-      <CarouselProduct2 CarouselProduct2={homeDecor} />
-
+      <CarouselProduct1
+        CarouselProduct1={carouselImage}
+        heading={"Today’s Deals"}
+        link={"See All"}
+        // CarouselProduct2={homeDecor}
+      />
+      <CarouselProduct1
+        // CarouselProduct1={carouselImage}
+        CarouselProduct1={homeDecor}
+        heading={"Exclusive collections for Home Decor"}
+        link={"See All Deals"}
+      />
       {/* Third Line */}
       <Typography
         sx={{
@@ -379,7 +389,11 @@ const Cards = (props) => {
           </Typography>
         </Card>
       </Typography>
-      <CarouselProduct2 CarouselProduct2={ExclusiveCollections} />
+      <CarouselProduct1
+        CarouselProduct1={ExclusiveCollections}
+        heading={"Exclusive collections for Home Decor"}
+        link={"See All Deals"}
+      />
       {/* Fourth Line */}
       <Typography
         component="div"
@@ -442,6 +456,11 @@ const Cards = (props) => {
           );
         })}
       </Typography>
+      <CarouselProduct1
+        CarouselProduct1={bestSellersBeauty}
+        heading={"Best Sellers in Beauty"}
+        link={""}
+      />
       {/* <CarouselProduct1 CarouselProduct2={carouselImage} /> */}
     </>
   );
