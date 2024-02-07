@@ -118,6 +118,24 @@
   text-decoration: underline;
   color: #1b77d0;
 }
+.linkTag1 {
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-left: 16px;
+  color: #1b77d0;
+}
+.linkTag1:hover {
+  text-decoration: underline;
+  color: #e73636;
+}
+.linkTag2 {
+  font-size: 14px;
+  margin-top: 20px !important;
+}
+.linkTag3 {
+  margin-top: 15px !important;
+}
 .createAccountButton:hover {
   background-color: aliceblue !important;
 }
