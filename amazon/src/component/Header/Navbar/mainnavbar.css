@@ -131,10 +131,10 @@
 }
 .linkTag2 {
   font-size: 14px;
-  margin-top: 20px !important;
+  padding-top: 19px !important;
 }
 .linkTag3 {
-  margin-top: 15px !important;
+  margin-top: 19px !important;
 }
 .createAccountButton:hover {
   background-color: aliceblue !important;

@@ -53,6 +53,7 @@ const SignIn = () => {
   const [needData, setNeedData] = React.useState(false);
   const [numberEmail, setNumberEmail] = React.useState();
   const [entreValidNumber, setEnterValidNumber] = React.useState(false);
+  const [checkNumberOrEmail, setCheckNumberOrEmail] = React.useState("Number");
   const emailRegex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
   const numberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
   const navigate = useNavigate();
@@ -65,21 +66,29 @@ const SignIn = () => {
       setNumberEmail(newVal);
       if (newVal.length == 10) {
         setEnterValidNumber(false);
+        setCheckNumberOrEmail("Number");
       } else {
         setEnterValidNumber(true);
       }
     } else if (emailRegex.test(newVal)) {
       setNumberEmail(newVal);
       setEnterValidNumber(false);
+      setCheckNumberOrEmail("Email");
     } else {
-      console.log("sdfsdf");
+      // console.log("sdfsdf");
       setEnterValidNumber(true);
     }
-    console.log("CGFXGFDCF", e);
   };
+  // console.log("enter valid Number", numberEmail);
   const handleButton = () => {
-    !entreValidNumber && navigate("/passwordPage");
-    // localStorage.setItem(!entreValidNumber);
+    const newObj = {
+      value: numberEmail,
+      flag: checkNumberOrEmail,
+    };
+    // console.log("OPbject", newObj);
+    if (numberEmail && !entreValidNumber)
+      navigate("/passwordPage", { state: { fromPassword: { newObj } } });
+
     localStorage.setItem(
       "RegexData",
       JSON.stringify({
@@ -88,7 +97,7 @@ const SignIn = () => {
       })
     );
   };
-  console.log("number", numberEmail);
+  // console.log("number", numberEmail);
 
   return (
     <>
@@ -125,7 +134,7 @@ const SignIn = () => {
                 />
                 {entreValidNumber ? (
                   <Typography sx={{ color: "red", fontSize: "12px" }}>
-                    Error show
+                    Enter Valid Number Email
                   </Typography>
                 ) : (
                   ""
