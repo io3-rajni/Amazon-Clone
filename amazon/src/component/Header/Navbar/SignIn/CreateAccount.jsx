@@ -13,10 +13,7 @@ import {
   Divider,
   Tooltip,
 } from "@mui/material";
-// import Box from "@mui/material/Box";
-// import Tooltip from "@mui/material/Tooltip";
 import Checkbox from "@mui/material/Checkbox";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import amazone from "../../../../assets/amazone.png";
 import "../../Navbar/mainnavbar.css";
@@ -59,11 +56,11 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 }));
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-const PasswordPage = () => {
+const CreateAccount = () => {
   const [tooltipOpen, setTooltiopOpen] = React.useState(false);
-  const location = useLocation();
-  const { fromPassword } = location.state;
-  let data = fromPassword?.newObj;
+  //   const location = useLocation();
+  //   const { fromPassword } = location.state;
+  //   let data = fromPassword?.newObj;
   // console.log("formpassward", data);
   const positionRef = React.useRef({
     x: 0,
@@ -73,68 +70,93 @@ const PasswordPage = () => {
   const areaRef = React.useRef(null);
 
   const handleTooltip = () => {
-    // positionRef.current = { x: event.clientX, y: event.clientY };
     setTooltiopOpen(true);
-    // if (popperRef.current != null) {
-    //   popperRef.current.update();
-    // }
   };
   return (
     <>
       <Box component="div" sx={{ display: "grid", justifyContent: "center" }}>
         <img src={amazone} style={{ height: "5rem" }} />
-        <Card sx={{ maxWidth: 350, height: "21rem" }}>
+        <Card sx={{ maxWidth: 350, height: "30rem" }}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Sign in
+              Create Account
             </Typography>
             <Typography
               variant="h6"
               sx={{
-                fontSize: "14px",
-                color: "black",
-                paddingLeft: "10px",
-              }}
-            >
-              {data.flag === "Number" ? (
-                <Typography>
-                  <b>+91</b> {data.value}
-                </Typography>
-              ) : (
-                <Typography sx={{ fontWeight: "bold" }}> Email</Typography>
-              )}
-            </Typography>
-            <Typography
-              variant="h6"
-              sx={{
-                fontSize: "14px",
+                fontSize: "13px",
                 fontWeight: "bold",
                 color: "black",
-                padding: "13px 0px 10px 15px",
+                padding: "10px 2px 2px 15px",
               }}
             >
-              Password
+              Your Name
             </Typography>
+
             <Box component="form" noValidate>
               <FormControl variant="standard">
                 <BootstrapInput
                   id="bootstrap-input"
                   type="text"
-                  // value={numberEmail}
-                  // onChange={(e) => handleNumberEmail(e)}
+                  placeholder="First Name & Last Name"
                   sx={{
                     width: "20rem",
                     display: "flex",
                     justifyContent: "center",
                   }}
                 />
-                {/* {entreValidNumber ? (
-                  <Typography sx={{ color: "red", fontSize: "12px" }}>
-                    Enter Valid Number Email
-                  </Typography>
-                ) : (
-                  ""
-                )} */}
+              </FormControl>
+            </Box>
+            <Typography
+              variant="h6"
+              sx={{
+                fontSize: "13px",
+                fontWeight: "bold",
+                color: "black",
+                padding: "10px 2px 2px 15px",
+              }}
+            >
+              Mobile Number
+            </Typography>
+
+            <Box component="form" noValidate>
+              <FormControl variant="standard">
+                <BootstrapInput
+                  id="bootstrap-input"
+                  type="text"
+                  placeholder="Mobile Number"
+                  sx={{
+                    width: "20rem",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                />
+              </FormControl>
+            </Box>
+            <Typography
+              variant="h6"
+              sx={{
+                fontSize: "13px",
+                fontWeight: "bold",
+                color: "black",
+                padding: "10px 2px 2px 15px",
+              }}
+            >
+              Password
+            </Typography>
+
+            <Box component="form" noValidate>
+              <FormControl variant="standard">
+                <BootstrapInput
+                  id="bootstrap-input"
+                  type="text"
+                  placeholder="At least 6 character"
+                  sx={{
+                    width: "20rem",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                />
               </FormControl>
             </Box>
           </CardContent>
@@ -144,6 +166,7 @@ const PasswordPage = () => {
                 <Button
                   variant="contained"
                   sx={{
+                    fontSize: "13px",
                     width: "18.6rem",
                     height: "1.7rem",
                     textTransform: "capitalize",
@@ -151,12 +174,22 @@ const PasswordPage = () => {
                     color: "#000",
                   }}
                   className="buttonStyle"
-                  // onClick={handleButton}
                 >
-                  Continue
+                  Verify Mobile number
                 </Button>
               </Stack>
             </CardActions>
+            <p
+              style={{
+                fontSize: " 13px",
+                width: "90%",
+                display: "flex",
+                margin: "auto",
+              }}
+            >
+              To verify your number, we will send you a text message with a
+              temporary code. Message and data rates may apply.
+            </p>
             <Typography variant="h6" component="div" sx={{ display: "flex" }}>
               <Checkbox {...label} className="linkTag2" />
 
@@ -179,11 +212,7 @@ const PasswordPage = () => {
                   },
                 }}
               >
-                <Box
-                  ref={areaRef}
-                  onMouseMove={handleMouseMove}
-                  sx={{ display: "flex" }}
-                >
+                <Box ref={areaRef} sx={{ display: "flex" }}>
                   <a href="#" className="linkTag1">
                     Need Help
                   </a>
@@ -200,14 +229,24 @@ const PasswordPage = () => {
 
             <Typography
               component="div"
-              sx={{ display: "flex", marginTop: "7%" }}
+              // sx={{ display: "flex", marginTop: "7%" }}
             >
-              <hr style={{ width: "7rem", marginTop: "2%" }} />
-              <Typography sx={{ fontSize: "12px" }}>
-                New to Account ?
-              </Typography>
-              <hr style={{ width: "7rem" }} />
+              <hr style={{ width: "20rem", marginTop: "2%" }} />
             </Typography>
+            <Typography
+              component="span"
+              sx={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                fontSize: " 13px",
+              }}
+            >
+              Already have an account?
+              <a href="/Sign-in" className="linkTag4">
+                SignIn
+              </a>
+            </Typography>
+
             <Stack direction="row" sx={{ marginTop: "20px" }}>
               <Button
                 variant="contained"
@@ -234,7 +273,7 @@ const PasswordPage = () => {
           width: "100%",
           paddingTop: "2%",
           background: "#FBFBFB",
-          height: "13.9rem",
+          height: "8rem",
         }}
       >
         <Typography
@@ -267,4 +306,4 @@ const PasswordPage = () => {
   );
 };
 
-export default PasswordPage;
+export default CreateAccount;
