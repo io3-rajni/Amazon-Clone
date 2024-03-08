@@ -73,11 +73,7 @@ const PasswordPage = () => {
   const areaRef = React.useRef(null);
 
   const handleTooltip = () => {
-    // positionRef.current = { x: event.clientX, y: event.clientY };
     setTooltiopOpen(true);
-    // if (popperRef.current != null) {
-    //   popperRef.current.update();
-    // }
   };
   return (
     <>
@@ -181,7 +177,7 @@ const PasswordPage = () => {
               >
                 <Box
                   ref={areaRef}
-                  onMouseMove={handleMouseMove}
+                  // onMouseMove={handleMouseMove}
                   sx={{ display: "flex" }}
                 >
                   <a href="#" className="linkTag1">

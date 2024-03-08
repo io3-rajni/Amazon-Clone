@@ -16,7 +16,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import amazone from "../../../../assets/amazone.png";
 import "../../Navbar/mainnavbar.css";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   "label + &": {
     marginTop: theme.spacing(1),
@@ -60,6 +60,9 @@ const SignIn = () => {
   const handleNeedHelp = () => {
     setNeedData(() => !needData);
   };
+  const handleCreateAccount = () => {
+    navigate("/CreateAccount");
+  };
   const handleNumberEmail = (e) => {
     const newVal = e?.target?.value;
     if (numberRegex.test(newVal)) {
@@ -75,17 +78,15 @@ const SignIn = () => {
       setEnterValidNumber(false);
       setCheckNumberOrEmail("Email");
     } else {
-      // console.log("sdfsdf");
       setEnterValidNumber(true);
     }
   };
-  // console.log("enter valid Number", numberEmail);
   const handleButton = () => {
     const newObj = {
       value: numberEmail,
       flag: checkNumberOrEmail,
     };
-    // console.log("OPbject", newObj);
+
     if (numberEmail && !entreValidNumber)
       navigate("/passwordPage", { state: { fromPassword: { newObj } } });
 
@@ -97,7 +98,6 @@ const SignIn = () => {
       })
     );
   };
-  // console.log("number", numberEmail);
 
   return (
     <>
@@ -124,7 +124,6 @@ const SignIn = () => {
                 <BootstrapInput
                   id="bootstrap-input"
                   type="text"
-                  // value={numberEmail}
                   onChange={(e) => handleNumberEmail(e)}
                   sx={{
                     width: "20rem",
@@ -263,8 +262,9 @@ const SignIn = () => {
               color: "#000",
             }}
             className="createAccountButton"
+            onClick={handleCreateAccount}
           >
-            Continue
+            Create Amazone Account
           </Button>
         </Stack>
       </Box>

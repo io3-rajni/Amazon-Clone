@@ -17,7 +17,7 @@ import Checkbox from "@mui/material/Checkbox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import amazone from "../../../../assets/amazone.png";
 import "../../Navbar/mainnavbar.css";
-import { useLocation } from "react-router-dom";
+import { json, useLocation } from "react-router-dom";
 // import "../../Navbar/mainnavbar.css";
 import { useNavigate } from "react-router-dom";
 
@@ -58,10 +58,38 @@ const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const CreateAccount = () => {
   const [tooltipOpen, setTooltiopOpen] = React.useState(false);
+  const [nameLastName, setNameLastName] = React.useState("");
+  const [error, setError] = React.useState(false);
+  const numberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
   //   const location = useLocation();
   //   const { fromPassword } = location.state;
   //   let data = fromPassword?.newObj;
   // console.log("formpassward", data);
+  const handleNameLastName = (e) => {
+    const nameData = e?.target?.value;
+    setNameLastName(nameData);
+    localStorage.setItem(
+      "Name",
+      JSON.stringify({
+        nameLastName: nameLastName,
+      })
+    );
+  };
+  console.log(nameLastName, " bgvh");
+  const handleNumber = (e) => {
+    const newVal = e.target.value;
+    console.log("new cal", newVal.length === 10);
+    if (numberRegex.test(newVal)) {
+      if (newVal.length === 10) {
+        setError(false);
+        localStorage.setItem("number", JSON.stringify(newVal));
+      } else {
+        setError(true);
+      }
+    }
+  };
+
+  const handlePassword = (e) => {};
   const positionRef = React.useRef({
     x: 0,
     y: 0,
@@ -76,7 +104,7 @@ const CreateAccount = () => {
     <>
       <Box component="div" sx={{ display: "grid", justifyContent: "center" }}>
         <img src={amazone} style={{ height: "5rem" }} />
-        <Card sx={{ maxWidth: 350, height: "30rem" }}>
+        <Card sx={{ maxWidth: 350, height: "32rem" }}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               Create Account
@@ -99,6 +127,8 @@ const CreateAccount = () => {
                   id="bootstrap-input"
                   type="text"
                   placeholder="First Name & Last Name"
+                  onChange={(e) => handleNameLastName(e)}
+                  value={nameLastName}
                   sx={{
                     width: "20rem",
                     display: "flex",
@@ -123,7 +153,8 @@ const CreateAccount = () => {
               <FormControl variant="standard">
                 <BootstrapInput
                   id="bootstrap-input"
-                  type="text"
+                  type="number"
+                  onChange={(e) => handleNumber(e)}
                   placeholder="Mobile Number"
                   sx={{
                     width: "20rem",
@@ -133,6 +164,7 @@ const CreateAccount = () => {
                 />
               </FormControl>
             </Box>
+            <p style={{ color: "red" }}>{error ? "Enter Valid Number" : ""}</p>
             <Typography
               variant="h6"
               sx={{
@@ -151,6 +183,7 @@ const CreateAccount = () => {
                   id="bootstrap-input"
                   type="text"
                   placeholder="At least 6 character"
+                  onChange={handlePassword}
                   sx={{
                     width: "20rem",
                     display: "flex",
@@ -160,6 +193,17 @@ const CreateAccount = () => {
               </FormControl>
             </Box>
           </CardContent>
+          <p
+            style={{
+              fontSize: " 13px",
+              width: "90%",
+              display: "flex",
+              margin: "auto",
+            }}
+          >
+            To verify your number, we will send you a text message with a
+            temporary code. Message and data rates may apply.
+          </p>
           <Box>
             <CardActions sx={{ display: "flex", justifyContent: "center" }}>
               <Stack direction="row">
@@ -179,17 +223,7 @@ const CreateAccount = () => {
                 </Button>
               </Stack>
             </CardActions>
-            <p
-              style={{
-                fontSize: " 13px",
-                width: "90%",
-                display: "flex",
-                margin: "auto",
-              }}
-            >
-              To verify your number, we will send you a text message with a
-              temporary code. Message and data rates may apply.
-            </p>
+
             <Typography variant="h6" component="div" sx={{ display: "flex" }}>
               <Checkbox {...label} className="linkTag2" />
 
@@ -246,23 +280,6 @@ const CreateAccount = () => {
                 SignIn
               </a>
             </Typography>
-
-            <Stack direction="row" sx={{ marginTop: "20px" }}>
-              <Button
-                variant="contained"
-                sx={{
-                  width: "17rem",
-                  height: "1.7rem",
-                  margin: "auto",
-                  textTransform: "capitalize",
-                  background: "#fff",
-                  color: "#000",
-                }}
-                className="createAccountButton"
-              >
-                Get OTP on your Number
-              </Button>
-            </Stack>
           </Box>
         </Card>
       </Box>
