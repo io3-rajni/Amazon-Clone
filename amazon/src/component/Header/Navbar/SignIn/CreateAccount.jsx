@@ -59,12 +59,10 @@ const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const CreateAccount = () => {
   const [tooltipOpen, setTooltiopOpen] = React.useState(false);
   const [nameLastName, setNameLastName] = React.useState("");
+  const [password, setPassword] = React.useState(false);
   const [error, setError] = React.useState(false);
   const numberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
-  //   const location = useLocation();
-  //   const { fromPassword } = location.state;
-  //   let data = fromPassword?.newObj;
-  // console.log("formpassward", data);
+
   const handleNameLastName = (e) => {
     const nameData = e?.target?.value;
     setNameLastName(nameData);
@@ -89,7 +87,23 @@ const CreateAccount = () => {
     }
   };
 
-  const handlePassword = (e) => {};
+  const handlePassword = (e) => {
+    const newVal2 = e.target.value;
+    console.log("password", newVal2);
+    var re = {
+      full: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*])(?=.{8,20})(?=.*[0-9])/,
+    };
+    if (re.full.test(newVal2)) {
+      console.log("true");
+      setPassword(true);
+      localStorage.setItem("password", JSON.stringify(newVal2));
+    } else {
+      console.log("false");
+
+      setPassword(false);
+    }
+    console.log("password,", password);
+  };
   const positionRef = React.useRef({
     x: 0,
     y: 0,
@@ -99,6 +113,15 @@ const CreateAccount = () => {
 
   const handleTooltip = () => {
     setTooltiopOpen(true);
+  };
+  const navigate = useNavigate();
+  const handleButton = () => {
+    if (password && error) {
+      navigate("/");
+    } else {
+      setPassword(true);
+      setError(true);
+    }
   };
   return (
     <>
@@ -164,7 +187,9 @@ const CreateAccount = () => {
                 />
               </FormControl>
             </Box>
-            <p style={{ color: "red" }}>{error ? "Enter Valid Number" : ""}</p>
+            <p style={{ color: "red", fontSize: "11px", marginLeft: "12px" }}>
+              {error ? "Enter Valid Number" : ""}
+            </p>
             <Typography
               variant="h6"
               sx={{
@@ -192,6 +217,9 @@ const CreateAccount = () => {
                 />
               </FormControl>
             </Box>
+            <p style={{ color: "red", fontSize: "11px", marginLeft: "12px" }}>
+              {password ? "Enter Valid Format" : ""}
+            </p>
           </CardContent>
           <p
             style={{
@@ -217,6 +245,7 @@ const CreateAccount = () => {
                     background: "#FFD814",
                     color: "#000",
                   }}
+                  onClick={handleButton}
                   className="buttonStyle"
                 >
                   Verify Mobile number
@@ -261,10 +290,7 @@ const CreateAccount = () => {
               </Tooltip>
             </Typography>
 
-            <Typography
-              component="div"
-              // sx={{ display: "flex", marginTop: "7%" }}
-            >
+            <Typography component="div">
               <hr style={{ width: "20rem", marginTop: "2%" }} />
             </Typography>
             <Typography
