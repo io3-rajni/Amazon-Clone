@@ -67,4 +67,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### formik to add validation in the form
+
+To install formik
+npm install formik --save
+npm install yup --save
+
+Step to use-
+
+1.  import useFormik from formik
+    import \* as yup from 'yup';
+    ex-
+    import { useFormik } from 'formik';
+
+Create Schema for validition
+ex --- this schema is for email and password
+const validationSchema = yup.object({
+email: yup
+.string('Enter your email')
+.email('Enter a valid email')
+.required('Email is required'),
+password: yup
+.string('Enter your password')
+.min(8, 'Password should be of minimum 8 characters length')
+.required('Password is required'),
+});
