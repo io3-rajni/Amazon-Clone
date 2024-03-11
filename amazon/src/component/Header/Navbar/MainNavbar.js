@@ -247,7 +247,6 @@ const MainNavbar = () => {
               sx={{
                 marginTop: "6px",
                 width: "5rem",
-                // border: "1px solid white",
               }}
               className="returnOrder"
             >

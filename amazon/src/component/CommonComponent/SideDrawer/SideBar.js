@@ -285,9 +285,7 @@ const SideBar = (props) => {
         break;
     }
   };
-
-  // console.log("map", SideBarTrendingData);
-
+  const signInData = JSON.parse(localStorage.getItem("Data set"));
   const list = (anchor) => {
     return (
       <Box
@@ -326,7 +324,7 @@ const SideBar = (props) => {
               paddingLeft: "10px",
             }}
           >
-            , Hello Sign in
+            Hello,{signInData.name ? signInData.name : " Sign in"}
           </Typography>
         </Typography>
 

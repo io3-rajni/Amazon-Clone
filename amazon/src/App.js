@@ -6,10 +6,12 @@ import PasswordPage from "./component/Header/Navbar/SignIn/PasswordPage";
 import CreateAccount from "./component/Header/Navbar/SignIn/CreateAccount";
 import SignIn from "./component/Header/Navbar/SignIn/SignIn";
 import { Routes, Route } from "react-router-dom";
+import ProductComponent from "./HomePage/ApiComponent/Api/ProductComponent";
 // import CreateAccount from "./component/Header/Navbar/SignIn/CreateAccount";
 function App() {
   return (
     <>
+      <ProductComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Sign-in" element={<SignIn />} />

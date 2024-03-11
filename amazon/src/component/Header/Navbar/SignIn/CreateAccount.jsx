@@ -58,32 +58,39 @@ const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const CreateAccount = () => {
   const [tooltipOpen, setTooltiopOpen] = React.useState(false);
-  const [nameLastName, setNameLastName] = React.useState("");
-  const [password, setPassword] = React.useState(false);
-  const [error, setError] = React.useState(false);
+  const [name, setName] = React.useState("");
+  const [password, setPassword] = React.useState();
+  const [number, setNumber] = React.useState();
+  const [nameError, setNameError] = React.useState(false);
+  const [numberError, setNumberError] = React.useState(false);
+  const [passwordError, setPasswordError] = React.useState(false);
   const numberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
 
-  const handleNameLastName = (e) => {
+  const handleName = (e) => {
     const nameData = e?.target?.value;
-    setNameLastName(nameData);
+    setNameError(nameData);
+    setName(nameData);
     localStorage.setItem(
       "Name",
       JSON.stringify({
-        nameLastName: nameLastName,
+        name: name,
       })
     );
   };
-  console.log(nameLastName, " bgvh");
   const handleNumber = (e) => {
     const newVal = e.target.value;
-    console.log("new cal", newVal.length === 10);
-    if (numberRegex.test(newVal)) {
-      if (newVal.length === 10) {
-        setError(false);
-        localStorage.setItem("number", JSON.stringify(newVal));
-      } else {
-        setError(true);
+    console.log("new cal e2 length", e.target.value.length);
+
+    if (e.target.value.length === 10) {
+      if (numberRegex.test(e.target.value)) {
+        console.log("phone number", e.target.value);
+        setNumber(e.target.value);
+        setNumberError(false);
+        localStorage.setItem("number", JSON.stringify(e.target.value));
       }
+    } else {
+      setNumberError(true);
+      console.log("new cal e2", e.target.value);
     }
   };
 
@@ -94,13 +101,13 @@ const CreateAccount = () => {
       full: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*])(?=.{8,20})(?=.*[0-9])/,
     };
     if (re.full.test(newVal2)) {
-      console.log("true");
-      setPassword(true);
+      setPassword(newVal2);
+      setPasswordError(false);
       localStorage.setItem("password", JSON.stringify(newVal2));
     } else {
       console.log("false");
 
-      setPassword(false);
+      setPasswordError(true);
     }
     console.log("password,", password);
   };
@@ -115,19 +122,44 @@ const CreateAccount = () => {
     setTooltiopOpen(true);
   };
   const navigate = useNavigate();
-  const handleButton = () => {
-    if (password && error) {
-      navigate("/");
+  const handleSubmit = () => {
+    console.log(password, "numS", number);
+    if (password || number) {
+      console.log("navigate ho raha");
+      if (password && number && name) {
+        setPasswordError(false);
+        setNumberError(false);
+        setNameError(false);
+
+        navigate("/");
+        localStorage.setItem(
+          "Data set",
+          JSON.stringify({ name: name, password: password, number: number })
+        );
+      } else if (name && !password && !number) {
+        setPasswordError(true);
+        setNameError(false);
+        setNumberError(true);
+      } else if (!password && number && !name) {
+        setPasswordError(true);
+        setNameError(true);
+        setNumberError(false);
+      } else if (password && !number && !name) {
+        setPasswordError(false);
+        setNameError(true);
+        setNumberError(true);
+      }
     } else {
-      setPassword(true);
-      setError(true);
+      setPasswordError(true);
+      setNumberError(true);
+      setNameError(true);
     }
   };
   return (
     <>
       <Box component="div" sx={{ display: "grid", justifyContent: "center" }}>
         <img src={amazone} style={{ height: "5rem" }} />
-        <Card sx={{ maxWidth: 350, height: "32rem" }}>
+        <Card sx={{ maxWidth: 350, height: "33rem" }}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               Create Account
@@ -150,8 +182,8 @@ const CreateAccount = () => {
                   id="bootstrap-input"
                   type="text"
                   placeholder="First Name & Last Name"
-                  onChange={(e) => handleNameLastName(e)}
-                  value={nameLastName}
+                  onChange={(e) => handleName(e)}
+                  value={name}
                   sx={{
                     width: "20rem",
                     display: "flex",
@@ -176,7 +208,7 @@ const CreateAccount = () => {
               <FormControl variant="standard">
                 <BootstrapInput
                   id="bootstrap-input"
-                  type="number"
+                  type="text"
                   onChange={(e) => handleNumber(e)}
                   placeholder="Mobile Number"
                   sx={{
@@ -188,7 +220,7 @@ const CreateAccount = () => {
               </FormControl>
             </Box>
             <p style={{ color: "red", fontSize: "11px", marginLeft: "12px" }}>
-              {error ? "Enter Valid Number" : ""}
+              {numberError ? "Enter Valid Number" : ""}
             </p>
             <Typography
               variant="h6"
@@ -206,9 +238,10 @@ const CreateAccount = () => {
               <FormControl variant="standard">
                 <BootstrapInput
                   id="bootstrap-input"
-                  type="text"
+                  type="password"
                   placeholder="At least 6 character"
-                  onChange={handlePassword}
+                  value={password}
+                  onChange={(e) => handlePassword(e)}
                   sx={{
                     width: "20rem",
                     display: "flex",
@@ -218,7 +251,7 @@ const CreateAccount = () => {
               </FormControl>
             </Box>
             <p style={{ color: "red", fontSize: "11px", marginLeft: "12px" }}>
-              {password ? "Enter Valid Format" : ""}
+              {passwordError ? "Enter Valid Format" : ""}
             </p>
           </CardContent>
           <p
@@ -245,7 +278,7 @@ const CreateAccount = () => {
                     background: "#FFD814",
                     color: "#000",
                   }}
-                  onClick={handleButton}
+                  onClick={handleSubmit}
                   className="buttonStyle"
                 >
                   Verify Mobile number

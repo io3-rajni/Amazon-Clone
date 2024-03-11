@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const AccountList = () => {
   const [open, setOpen] = React.useState(false);
+
   const Navigate = useNavigate();
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -18,11 +19,8 @@ const AccountList = () => {
     setOpen(true);
   };
   console.log("open", open);
-
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
-
+  const signInData = JSON.parse(localStorage.getItem("Data set"));
+  console.log("set data", signInData);
   return (
     <>
       <React.Fragment>
@@ -50,7 +48,7 @@ const AccountList = () => {
               sx={{ display: { xs: "none", sm: "block", fontSize: "13px" } }}
               // className="delivery-add"
             >
-              Hello,sign in
+              Hello, {signInData.name ? signInData.name : "sign in"}
             </Typography>
             <Typography
               variant="h6"

@@ -76,19 +76,45 @@ npm install yup --save
 Step to use-
 
 1.  import useFormik from formik
-    import \* as yup from 'yup';
+    import as yup from 'yup';
     ex-
     import { useFormik } from 'formik';
+2.  Create Schema for validition
+    ex --- this schema is for email and password
+    const validationSchema = yup.object({
+    email: yup
+    .string('Enter your email')
+    .email('Enter a valid email')
+    .required('Email is required'),
+    password: yup
+    .string('Enter your password')
+    .min(8, 'Password should be of minimum 8 characters length')
+    .required('Password is required'),
+    });
 
-Create Schema for validition
-ex --- this schema is for email and password
-const validationSchema = yup.object({
-email: yup
-.string('Enter your email')
-.email('Enter a valid email')
-.required('Email is required'),
-password: yup
-.string('Enter your password')
-.min(8, 'Password should be of minimum 8 characters length')
-.required('Password is required'),
+3.  add useFormik hook to assign initial value
+
+const formik = useFormik({
+initialValues: {
+email: 'foobar@example.com',
+password: 'foobar',
+},
+validationSchema: validationSchema,
+onSubmit: (values) => {
+alert(JSON.stringify(values, null, 2));
+},
 });
+
+### USES
+
+`<TextField
+fullWidth
+id="email"
+name="email"
+label="Email"
+value={formik.values.email}
+onChange={formik.handleChange} this is a function
+onBlur={formik.handleBlur}
+error={formik.touched.email && Boolean(formik.errors.email)} this is used to show error
+helperText={formik.touched.email && formik.errors.email} this is used to show error messsage
+/>`

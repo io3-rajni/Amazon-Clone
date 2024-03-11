@@ -8,7 +8,6 @@ import republicSale from "../../../assets/republic-sale.jpg";
 import bag1 from "../../../assets/bag1.jpg";
 import laptop from "../../../assets/Laptops.jpg";
 import CarouselProduct1 from "../../Carousel/CarouselProduct1";
-// import CarouselProduct2 from "../../Carousel/CarouselProduct2";
 import temple from "../../../assets/temple.jpg";
 import {
   carouselImage,
@@ -244,10 +243,8 @@ const Cards = (props) => {
         CarouselProduct1={carouselImage}
         heading={"Today’s Deals"}
         link={"See All"}
-        // CarouselProduct2={homeDecor}
       />
       <CarouselProduct1
-        // CarouselProduct1={carouselImage}
         CarouselProduct1={homeDecor}
         heading={"Exclusive collections for Home Decor"}
         link={"See All Deals"}
@@ -461,7 +458,6 @@ const Cards = (props) => {
         heading={"Best Sellers in Beauty"}
         link={""}
       />
-      {/* <CarouselProduct1 CarouselProduct2={carouselImage} /> */}
     </>
   );
 };
