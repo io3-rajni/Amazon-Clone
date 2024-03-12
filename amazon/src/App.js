@@ -19,6 +19,7 @@ function App() {
         <Route path="/passwordPage" element={<PasswordPage />} />
         <Route path="/CreateAccount" element={<CreateAccount />} />
       </Routes>
+      <ProductComponent />
     </>
   );
 }

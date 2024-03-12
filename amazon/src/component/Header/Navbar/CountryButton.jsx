@@ -55,7 +55,7 @@ const CountryButton = (props) => {
         TransitionComponent={Fade}
       >
         {apiData.map((item, index) => {
-          console.log("item in menu", item);
+          // console.log("item in menu", item);
           return (
             <MenuItem onClick={handleClose} sx={{ width: "9.8rem" }}>
               {/* <Typography onChange={handleData}> */}
