@@ -11,9 +11,20 @@ import "../../Header/Navbar/mainnavbar.css";
 import { NavlinkData } from "../../DataConfig";
 import shoppingEsay from "../../../assets/shopping esay.jpg";
 import SideBar from "../../CommonComponent/SideDrawer/SideBar";
+import { useNavigate } from "react-router-dom";
 const preventDefault = (event) => event.preventDefault();
 const Navbar = () => {
   const [openSideBar, setOpenSideBar] = React.useState(false);
+  const navigate = useNavigate();
+  const handleProductApi = (index) => {
+    console.log("index", index);
+    if (index === 1) {
+      navigate("/ProductComponent");
+    } else {
+      console.log("error");
+    }
+    console.log("rajni");
+  };
   const handleAll = () => {
     setOpenSideBar(true);
   };
@@ -58,6 +69,7 @@ const Navbar = () => {
                     color: "#fff",
                     fontSize: "13px",
                   }}
+                  onClick={() => handleProductApi(i)}
                 >
                   {item?.title}
                 </Button>
