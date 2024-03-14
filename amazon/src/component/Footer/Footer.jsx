@@ -1,6 +1,6 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import {
   getToKnowUs,
   makeMoneyWithUs,
@@ -27,7 +27,7 @@ const Footer = () => {
   };
   console.log("item", countryName);
   return (
-    <>
+    <Box sx={{ marginTop: "20px" }}>
       <Typography
         varient="h5"
         className="backToTop"
@@ -468,7 +468,7 @@ const Footer = () => {
           </Typography>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };
 export default Footer;

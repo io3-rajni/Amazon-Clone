@@ -39,7 +39,7 @@ const ProductComponent = () => {
   return (
     <>
       {productData ? (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, marginTop: "10px" }}>
           <Grid
             container
             spacing={{ xs: 2, md: 4 }}
@@ -135,10 +135,28 @@ const ProductComponent = () => {
           </Grid>
         </Box>
       ) : (
-        <Box display="flex" justifyContent="center" alignItems="center">
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          sx={{
+            // background: "red",
+            margin: "20px",
+            width: "100%",
+            height: "100%",
+          }}
+        >
           <CircularProgress />
         </Box>
       )}
+      {/* <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        sx={{ background: "red", marginTop: "250px" }}
+      >
+        <CircularProgress />
+      </Box> */}
     </>
   );
 };
