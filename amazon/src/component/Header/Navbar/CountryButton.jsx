@@ -57,7 +57,11 @@ const CountryButton = (props) => {
         {apiData.map((item, index) => {
           // console.log("item in menu", item);
           return (
-            <MenuItem onClick={handleClose} sx={{ width: "9.8rem" }}>
+            <MenuItem
+              onClick={handleClose}
+              sx={{ width: "9.8rem" }}
+              key={index}
+            >
               {/* <Typography onChange={handleData}> */}
               <img
                 src={item?.flags?.svg}

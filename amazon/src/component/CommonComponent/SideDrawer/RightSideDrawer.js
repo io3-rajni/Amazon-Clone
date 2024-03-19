@@ -57,13 +57,17 @@ const RightSideDrawer = (props) => {
             {giftCardTitle}
           </Typography>
           <List>
-            {giftCardData?.map((text, index) => (
-              <ListItem key={index} disablePadding>
-                <ListItemButton>
-                  <ListItemText primary={text?.title} />
-                </ListItemButton>
-              </ListItem>
-            ))}
+            {giftCardData?.map((text, index) => {
+              console.log("Textbfbg", text?.title);
+
+              return (
+                <ListItem key={index} disablePadding>
+                  <ListItemButton>
+                    <ListItemText primary={text?.title} />
+                  </ListItemButton>
+                </ListItem>
+              );
+            })}
           </List>
 
           <Typography variant="h6" sx={heading}>

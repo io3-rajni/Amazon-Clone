@@ -60,7 +60,7 @@ import { Typography } from "@mui/material";
 import CollapseButton from "../CollapseButton";
 import RightSideDrawer from "./RightSideDrawer";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
 const SideBar = (props) => {
   const { openSideBar, setOpenSideBar } = props;
   const [openRightSideDrawer, setOpenRightSideDrawer] = useState(false);
@@ -72,12 +72,12 @@ const SideBar = (props) => {
   const [subSideBarSecondTitle, setSubSideSecondTitle] = useState("");
   const [subSideBarThirdTitle, setSubSideBarThirdTitle] = useState("");
   const [subSideBarThirdData, setSubBarThirdData] = useState([]);
-  // const [giftCardData, setGiftCardData] = useState([]);
-  // const [giftCardTitle, setGiftCardTitle] = useState("");
+  const navigate = useNavigate();
+
   const handleOpenSideDrawer = () => {
     setOpenSideBar(true);
   };
-  // console.log("setOpenSide", openSideBar);
+
   const handleClose = () => {
     // this flag state close the sidebar
     setOpenSideBar(false);
@@ -285,6 +285,16 @@ const SideBar = (props) => {
         break;
     }
   };
+  const handleNavigate = (index) => {
+    console.log("side bar", index);
+    if (index === 0) {
+      navigate("/CausalWearApi");
+      setOpenSideBar(false);
+    } else {
+      navigate("/ProductComponent");
+      setOpenSideBar(false);
+    }
+  };
   const signInData = JSON.parse(localStorage.getItem("Data set"));
   const list = (anchor) => {
     return (
@@ -338,7 +348,10 @@ const SideBar = (props) => {
           {SideBarTrendingData?.map((text, index) => (
             <ListItem key={index} disablePadding>
               <ListItemButton>
-                <ListItemText primary={text?.title} />
+                <ListItemText
+                  primary={text?.title}
+                  onClick={() => handleNavigate(index)}
+                />
               </ListItemButton>
             </ListItem>
           ))}
@@ -357,7 +370,7 @@ const SideBar = (props) => {
                 <ListItemIcon>
                   <KeyboardArrowRightIcon />
                 </ListItemIcon>
-                {/* {console.log("Text", index)} */}
+                {console.log("Text", text)}
               </ListItemButton>
             </ListItem>
           ))}

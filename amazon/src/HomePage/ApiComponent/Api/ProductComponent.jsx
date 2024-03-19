@@ -31,27 +31,26 @@ const ProductComponent = () => {
       .get(productApi)
       .then((response) => {
         setProductData(response.data);
-        console.log("res", response);
+        // console.log("res", response);
       })
       .catch((error) => console.error(error));
   }, []);
-  console.log("hhgf", productData.products);
+  // console.log("hhgf", productData.products);
   return (
     <>
       {productData ? (
-        <Box sx={{ flexGrow: 1, marginTop: "10px" }}>
+        <Box>
           <Grid
             container
             spacing={{ xs: 2, md: 4 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            {/* {Array.from(Array(6)).map((_, index) => ( */}
             {productData?.products?.map((item, index) => {
-              console.log("item", item);
+              // console.log("item", item);
               return (
                 <>
                   <Grid item xs={2} sm={3} md={3} key={index}>
-                    <Card sx={{ maxWidth: 300 }}>
+                    <Card sx={{ maxWidth: 300, paddingLeft: "25px" }}>
                       <CardActionArea>
                         <CardMedia
                           component="img"
@@ -60,9 +59,6 @@ const ProductComponent = () => {
                           alt=""
                         />
                         <CardContent>
-                          {/* <Typography gutterBottom variant="h5" component="div">
-                        Lizard
-                      </Typography> */}
                           <Typography variant="body2" color="text.secondary">
                             {item?.description}
                           </Typography>
@@ -70,12 +66,12 @@ const ProductComponent = () => {
                       </CardActionArea>
                       <CardActions sx={{ display: "block" }}>
                         <Typography
-                          variant="h6"
+                          variant="h4"
                           color="text.secondary"
                           sx={{ display: "flex" }}
                         >
                           <Typography>₹</Typography>
-                          <Typography variant="h4" sx={{ color: "#353434" }}>
+                          <Typography sx={{ color: "#353434" }}>
                             {item?.price}
                           </Typography>
                           <Typography sx={{ marginLeft: "10px" }}>
@@ -125,8 +121,6 @@ const ProductComponent = () => {
                         </Typography>
                       </CardActions>
                     </Card>
-
-                    {/* <Item>xs=2</Item> */}
                   </Grid>
                 </>
               );
@@ -140,7 +134,6 @@ const ProductComponent = () => {
           justifyContent="center"
           alignItems="center"
           sx={{
-            // background: "red",
             margin: "20px",
             width: "100%",
             height: "100%",
@@ -149,14 +142,6 @@ const ProductComponent = () => {
           <CircularProgress />
         </Box>
       )}
-      {/* <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        sx={{ background: "red", marginTop: "250px" }}
-      >
-        <CircularProgress />
-      </Box> */}
     </>
   );
 };

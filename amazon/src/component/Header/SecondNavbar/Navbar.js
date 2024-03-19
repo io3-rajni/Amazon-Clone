@@ -12,18 +12,20 @@ import { NavlinkData } from "../../DataConfig";
 import shoppingEsay from "../../../assets/shopping esay.jpg";
 import SideBar from "../../CommonComponent/SideDrawer/SideBar";
 import { useNavigate } from "react-router-dom";
+
 const preventDefault = (event) => event.preventDefault();
 const Navbar = () => {
   const [openSideBar, setOpenSideBar] = React.useState(false);
   const navigate = useNavigate();
   const handleProductApi = (index) => {
-    console.log("index", index);
-    if (index === 1) {
-      navigate("/ProductComponent");
+    if (index === 1 || index === 2 || index === 10) {
+      console.log("Carousel", index);
+      navigate("/CausalWearApi");
     } else {
+      navigate("/ProductComponent");
       console.log("error");
     }
-    console.log("rajni");
+    // console.log("rajni");
   };
   const handleAll = () => {
     setOpenSideBar(true);
@@ -48,10 +50,11 @@ const Navbar = () => {
           </Typography>
         </IconButton>
         {NavlinkData?.map((item, i) => {
+          console.log("config index", i);
           return (
             <>
               {item?.btn ? (
-                <Tooltip title="Add" arrow>
+                <Tooltip title="Add" arrow key={i}>
                   <Button
                     className="tooltips"
                     sx={{ textTransform: "capitalize", color: "#fff" }}
@@ -62,6 +65,7 @@ const Navbar = () => {
               ) : (
                 <Button
                   className="services"
+                  key={i}
                   sx={{
                     textTransform: "none",
                     fontSize: "15px",
@@ -88,6 +92,7 @@ const Navbar = () => {
           className="shoppingEasyLine"
         />
       </Box>
+
       {openSideBar && (
         <SideBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
       )}
