@@ -48,7 +48,7 @@ const AccountList = () => {
               sx={{ display: { xs: "none", sm: "block", fontSize: "13px" } }}
               // className="delivery-add"
             >
-              Hello, {signInData.name ? signInData.name : "sign in"}
+              Hello, {signInData?.name ? signInData?.name : "sign in"}
             </Typography>
             <Typography
               variant="h6"

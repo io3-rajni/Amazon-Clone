@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import ProductComponent from "./HomePage/ApiComponent/Api/ProductComponent";
 import Header from "./component/Header";
 import CausalWearApi from "./HomePage/ApiComponent/Api/CausalWearApi";
+import DetailPage from "./component/DetailPage";
 function App() {
   return (
     <>
@@ -20,9 +21,11 @@ function App() {
         <Route path="/CreateAccount" element={<CreateAccount />} />
         <Route path="/ProductComponent" element={<ProductComponent />} />
         <Route path="/CausalWearApi" element={<CausalWearApi />} />
+        <Route path="/details" element={<DetailPage />} />
       </Routes>
 
       <Footer />
+      {/* <DetailPage /> */}
     </>
   );
 }

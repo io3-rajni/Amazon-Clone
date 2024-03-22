@@ -9,9 +9,8 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { GiftCardData, Recharge } from "../../DataConfig";
 import { Typography } from "@mui/material";
-// import CollapseButton from "../CollapseButton";
+import { useNavigate } from "react-router-dom";
 const RightSideDrawer = (props) => {
   const {
     subSideBarSubTitle,
@@ -25,17 +24,120 @@ const RightSideDrawer = (props) => {
     giftCardData,
     giftCardTitle,
   } = props;
+  const navigate = useNavigate();
   const handleClose = () => {
     setOpenRightSideDrawer(false);
+  };
+  const handleNavigate = (data) => {
+    switch (data) {
+      case "Watches":
+        navigate("/CausalWearApi");
+        break;
+      case "Bags & Luggage":
+        navigate("/CausalWearApi");
+        break;
+      case "Jewellery":
+        navigate("/CausalWearApi");
+        break;
+      case "Sunglasses":
+        navigate("/CausalWearApi");
+        break;
+      case "Wallets":
+        navigate("/CausalWearApi");
+        break;
+      case "Watches":
+        navigate("/CausalWearApi");
+        break;
+      case "Handbags & Clutches":
+        navigate("/CausalWearApi");
+        break;
+      case "Gold Diamond Jewellery":
+        navigate("/CausalWearApi");
+        break;
+      case "Fashion & Silver Jewellery":
+        navigate("/CausalWearApi");
+        break;
+      case "Sunglasses":
+        navigate("/CausalWearApi");
+        break;
+      default:
+        navigate("./ProductComponent");
+        break;
+    }
+    console.log("second ", data);
+  };
+  const handleNavigate1 = (data) => {
+    switch (data) {
+      case "Clothing":
+        navigate("/CausalWearApi");
+        break;
+      case "T-Shirt Polos":
+        navigate("/CausalWearApi");
+        break;
+      case "Shirt":
+        navigate("/CausalWearApi");
+        break;
+      case "Jeans":
+        navigate("/CausalWearApi");
+        break;
+      case "innerWear":
+        navigate("/CausalWearApi");
+        break;
+      case "Clothing":
+        navigate("/CausalWearApi");
+        break;
+      case "Western Wear":
+        navigate("/CausalWearApi");
+        break;
+      case "Lingerie & NightWear":
+        navigate("/CausalWearApi");
+        break;
+      case "TopBrands":
+        navigate("/CausalWearApi");
+        break;
+      default:
+        navigate("./ProductComponent");
+        break;
+    }
+    console.log("first", data);
+  };
+  const handleNavigate2 = (data) => {
+    switch (data) {
+      case "Shoes":
+        navigate("/CausalWearApi");
+        break;
+      case "Sport Shoes":
+        navigate("/CausalWearApi");
+
+        break;
+      case "Formal Shoes":
+        navigate("/CausalWearApi");
+
+        break;
+      case "Casual Shoes":
+        navigate("/CausalWearApi");
+        break;
+      case "Fashion Sandals":
+        navigate("/CausalWearApi");
+        break;
+      case "Ballerinas":
+        navigate("/CausalWearApi");
+        break;
+      default:
+        navigate("./ProductComponent");
+        break;
+    }
+
+    console.log("third", data);
   };
   const heading = {
     display: "flex",
     justifyContent: "space-around",
     fontWeight: 800,
   };
-  console.log("subSideBarData", subSideBarData);
+  // console.log("subSideBarData", subSideBarData);
   const list = (anchor) => {
-    console.log("data", subSideBarTitle);
+    // console.log("data", subSideBarTitle);
     // console.log("anchor", anchor);
     return (
       <>
@@ -58,7 +160,7 @@ const RightSideDrawer = (props) => {
           </Typography>
           <List>
             {giftCardData?.map((text, index) => {
-              console.log("Textbfbg", text?.title);
+              // console.log("Textbfbg", text?.title);
 
               return (
                 <ListItem key={index} disablePadding>
@@ -69,7 +171,7 @@ const RightSideDrawer = (props) => {
               );
             })}
           </List>
-
+          {/* Program & features */}
           <Typography variant="h6" sx={heading}>
             {subSideBarTitle}
           </Typography>
@@ -77,12 +179,16 @@ const RightSideDrawer = (props) => {
             {subSideBarData?.map((text, index) => (
               <ListItem key={index} disablePadding>
                 <ListItemButton>
-                  <ListItemText primary={text?.title} />
+                  <ListItemText
+                    primary={text?.title}
+                    onClick={() => handleNavigate1(text?.title)}
+                  />
                 </ListItemButton>
               </ListItem>
             ))}
           </List>
           <Divider />
+          {/* Echo Alex Components */}
           <Typography variant="h6" sx={heading}>
             {subSideBarSubTitle}
           </Typography>
@@ -90,12 +196,17 @@ const RightSideDrawer = (props) => {
             {subSideBarSubData?.map((text, index) => (
               <ListItem key={index} disablePadding>
                 <ListItemButton>
-                  <ListItemText primary={text?.title} />
+                  <ListItemText
+                    primary={text?.title}
+                    onClick={() => handleNavigate(text?.title)}
+                  />
                 </ListItemButton>
                 <Divider />
               </ListItem>
             ))}
           </List>
+          {/* Shop By Catagory
+           */}
           <Typography variant="h6" sx={heading}>
             {subSideBarSecondTitle}
           </Typography>
@@ -103,7 +214,10 @@ const RightSideDrawer = (props) => {
             {subSideBarSecondData?.map((text, index) => (
               <ListItem key={index} disablePadding>
                 <ListItemButton>
-                  <ListItemText primary={text?.title} />
+                  <ListItemText
+                    primary={text?.title}
+                    onClick={() => handleNavigate2(text?.title)}
+                  />
                 </ListItemButton>
                 <Divider />
               </ListItem>

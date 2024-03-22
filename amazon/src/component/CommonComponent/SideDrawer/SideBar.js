@@ -270,7 +270,7 @@ const SideBar = (props) => {
         setSubSideBarThirdTitle("");
         setSubBarThirdData([]);
         break;
-      case "Gift Card Mobile Recharge":
+
       case "Gift Card & Mobile Recharge":
         // this state set the value of title inside the sub sidebar
         setSubSideBarTitle(text.title);
@@ -279,6 +279,10 @@ const SideBar = (props) => {
         // setSubSideBarSubData(ContentResources);
         setSubSideBarSubData(Recharge);
         setSubSideBarSubTitle("Recharge");
+        setSubSideSecondTitle("");
+        setSubSideBarSecondData([]);
+        setSubSideBarThirdTitle("");
+        setSubBarThirdData([]);
         break;
       default:
         setSubSideBarData([]);
@@ -294,6 +298,21 @@ const SideBar = (props) => {
       navigate("/ProductComponent");
       setOpenSideBar(false);
     }
+  };
+  const openSignInPage = (index) => {
+    switch (index) {
+      case "Your Account":
+        navigate("/CreateAccount");
+        setOpenSideBar(false);
+        break;
+      case "Sign in":
+        navigate("/Sign-in");
+        setOpenSideBar(false);
+        break;
+      default:
+        break;
+    }
+    console.log("You Account", index);
   };
   const signInData = JSON.parse(localStorage.getItem("Data set"));
   const list = (anchor) => {
@@ -436,7 +455,10 @@ const SideBar = (props) => {
           {helpSetting.map((text, index) => (
             <ListItem key={index} disablePadding>
               <ListItemButton>
-                <ListItemText primary={text?.title} />
+                <ListItemText
+                  primary={text?.title}
+                  onClick={() => openSignInPage(text?.title)}
+                />
               </ListItemButton>
             </ListItem>
           ))}

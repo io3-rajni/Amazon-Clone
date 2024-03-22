@@ -19,11 +19,11 @@ const Navbar = () => {
   const navigate = useNavigate();
   const handleProductApi = (index) => {
     if (index === 1 || index === 2 || index === 10) {
-      console.log("Carousel", index);
+      // console.log("Carousel", index);
       navigate("/CausalWearApi");
     } else {
       navigate("/ProductComponent");
-      console.log("error");
+      // console.log("error");
     }
     // console.log("rajni");
   };
@@ -50,7 +50,7 @@ const Navbar = () => {
           </Typography>
         </IconButton>
         {NavlinkData?.map((item, i) => {
-          console.log("config index", i);
+          // console.log("config index", i);
           return (
             <>
               {item?.btn ? (
