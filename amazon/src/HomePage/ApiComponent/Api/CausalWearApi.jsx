@@ -12,6 +12,7 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import DoneIcon from "@mui/icons-material/Done";
 import Rating from "@mui/material/Rating";
+import { useNavigate } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -23,16 +24,25 @@ const Item = styled(Paper)(({ theme }) => ({
 const CausalWearApi = () => {
   const [dress, setDress] = useState([]);
   const [value, setValue] = React.useState(2);
-
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get(productApi2)
       .then((res) => {
         setDress(res.data);
-        console.log("productApi2", res.data);
+        // console.log("productApi2", res.data);
       })
       .catch(() => console.log("error"));
   }, []);
+  const handleCausalWearApi = (item) => {
+    navigate("/DetailPageSecond", {
+      state: {
+        item,
+      },
+    });
+
+    // console.log("bfhvcndsjdf", item);
+  };
   return (
     <>
       <Box sx={{ width: "100%", display: "flex", flexWrap: "wrap" }}>
@@ -40,7 +50,11 @@ const CausalWearApi = () => {
           {dress.map((item, index) => {
             return (
               <Grid item xs={2} sm={3} md={3} key={index}>
-                <Card sx={{ maxWidth: 330, paddingLeft: "25px" }} key={index}>
+                <Card
+                  sx={{ maxWidth: 330, paddingLeft: "25px" }}
+                  key={index}
+                  onClick={() => handleCausalWearApi(item)}
+                >
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -111,15 +125,6 @@ const CausalWearApi = () => {
               </Grid>
             );
           })}
-          {/* <Grid item xs={6}>
-          <Item>2</Item>
-        </Grid>
-        <Grid item xs={6}>
-          <Item>3</Item>
-        </Grid>
-        <Grid item xs={6}>
-          <Item>4</Item>
-        </Grid> */}
         </Grid>
       </Box>
     </>

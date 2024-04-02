@@ -13,6 +13,7 @@ import Rating from "@mui/material/Rating";
 import { productApi } from "./ProductApi";
 import DoneIcon from "@mui/icons-material/Done";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -25,7 +26,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const ProductComponent = () => {
   const [productData, setProductData] = useState([]);
   const [value, setValue] = React.useState(2);
-
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get(productApi)
@@ -36,10 +37,20 @@ const ProductComponent = () => {
       .catch((error) => console.error(error));
   }, []);
   // console.log("hhgf", productData.products);
+
+  const handleDetailPage = (item) => {
+    navigate("/details", {
+      state: {
+        item,
+      },
+    });
+
+    // console.log("bfhvcndsjdf", item);
+  };
   return (
     <>
       {productData ? (
-        <Box>
+        <Box sx={{ display: "flex", flexWrap: "wrap" }}>
           <Grid
             container
             spacing={{ xs: 2, md: 4 }}
@@ -50,7 +61,10 @@ const ProductComponent = () => {
               return (
                 <>
                   <Grid item xs={2} sm={3} md={3} key={index}>
-                    <Card sx={{ maxWidth: 300, paddingLeft: "25px" }}>
+                    <Card
+                      sx={{ maxWidth: 300, paddingLeft: "25px" }}
+                      onClick={() => handleDetailPage(item)}
+                    >
                       <CardActionArea>
                         <CardMedia
                           component="img"
@@ -70,7 +84,7 @@ const ProductComponent = () => {
                           color="text.secondary"
                           sx={{ display: "flex" }}
                         >
-                          <Typography>₹</Typography>
+                          <Typography>$</Typography>
                           <Typography sx={{ color: "#353434" }}>
                             {item?.price}
                           </Typography>

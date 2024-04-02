@@ -9,6 +9,7 @@ import ProductComponent from "./HomePage/ApiComponent/Api/ProductComponent";
 import Header from "./component/Header";
 import CausalWearApi from "./HomePage/ApiComponent/Api/CausalWearApi";
 import DetailPage from "./component/DetailPage";
+import DetailPageSecond from "./component/DetailPageSecond";
 function App() {
   return (
     <>
@@ -22,10 +23,10 @@ function App() {
         <Route path="/ProductComponent" element={<ProductComponent />} />
         <Route path="/CausalWearApi" element={<CausalWearApi />} />
         <Route path="/details" element={<DetailPage />} />
+        <Route path="/DetailPageSecond" element={<DetailPageSecond />} />
       </Routes>
 
       <Footer />
-      {/* <DetailPage /> */}
     </>
   );
 }
