@@ -33,7 +33,7 @@ const DetailPage = () => {
 
           return (
             <>
-              <Box onClick={() => handleImage(item)}>
+              <Box onClick={() => handleImage(item)} key={index}>
                 <img src={item} style={{ height: "69px", width: "59px" }} />
               </Box>
             </>

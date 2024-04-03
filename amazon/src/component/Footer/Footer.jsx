@@ -25,7 +25,7 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
-  console.log("item", countryName);
+  // console.log("item", countryName);
   return (
     <Box sx={{ marginTop: "20px" }}>
       <Typography
@@ -261,7 +261,7 @@ const Footer = () => {
             }}
           >
             {countryName.map((item, index) => {
-              console.log("inneritem", item);
+              // console.log("inneritem", item);
               return (
                 <>
                   <Typography

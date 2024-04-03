@@ -41,7 +41,7 @@ const CausalWearApi = () => {
       },
     });
 
-    // console.log("bfhvcndsjdf", item);
+    console.log("bfhvcndsjdf", item);
   };
   return (
     <>
